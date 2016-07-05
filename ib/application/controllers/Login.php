@@ -57,7 +57,7 @@ class login extends CI_Controller {
 				'id' => $id,
                 'pw' => $pw,
 				);
-			$api_re = $this->api_lib->call_api(API_PATH.'login_api/ib', json_encode($param));
+			$api_re = $this->api_lib->call_api(API_PATH.'ib_api/login', json_encode($param));
 			if($api_re['status'] === TRUE){
                 //設定語系
                 $api_re['data']['lang'] = 'zh-tw';
