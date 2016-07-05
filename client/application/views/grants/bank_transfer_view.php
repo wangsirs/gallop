@@ -48,7 +48,7 @@ $(document).ready(function() {
                   BootstrapDialog.alert({
                      title: '成功訊息',
                      type: BootstrapDialog.TYPE_SUCCESS,
-                     message: '出金程序成功！',
+                     message: '入金程序成功！',
                      callback: function(result) {
                       location.href = '/grants/funding';
                      }
@@ -57,7 +57,7 @@ $(document).ready(function() {
                   BootstrapDialog.alert({
                      title: '失敗訊息',
                      type: BootstrapDialog.TYPE_DANGER,
-                     message: '出金程序失敗！',
+                     message: '入金程序失敗！',
                      callback: function(result) {}
                   });
                }
@@ -65,7 +65,7 @@ $(document).ready(function() {
             error: function() {
                BootstrapDialog.alert({
                   title: 'Message',
-                  message: '出金程序失敗，請聯絡客服處理！',
+                  message: '入金程序失敗，請聯絡客服處理！',
                   callback: function(result) {}
                });
                $('body').unmask();
