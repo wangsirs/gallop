@@ -8,7 +8,7 @@ ln -s /etc/nginx/sites-available/ib.gamfx-inside.dev.com "/etc/nginx/sites-enabl
 ln -s /etc/nginx/sites-available/ib.gamfx.dev.com "/etc/nginx/sites-enabled/ib.gamfx.dev.com"
 ln -s /etc/nginx/sites-available/ib.gamfx.com "/etc/nginx/sites-enabled/ib.gamfx.com"
 #client
-ln -s /etc/nginx/sites-available/client.gamfx-inside.com "/etc/nginx/sites-enabled/"client.gamfx-inside.com
+ln -s /etc/nginx/sites-available/client.gamfx-inside.com "/etc/nginx/sites-enabled/client.gamfx-inside.com"
 ln -s /etc/nginx/sites-available/client.gamfx-inside.dev.com "/etc/nginx/sites-enabled/client.gamfx-inside.dev.com"
 ln -s /etc/nginx/sites-available/client.gamfx.beta.com "/etc/nginx/sites-enabled/client.gamfx.beta.com"
 ln -s /etc/nginx/sites-available/client.gamfx.com "/etc/nginx/sites-enabled/client.gamfx.com"
