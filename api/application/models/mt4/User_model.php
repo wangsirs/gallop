@@ -122,7 +122,7 @@ class user_model extends CI_Model{
     public function detail($user_id){   
         $sql = "SELECT * FROM `user` as u "
                 . "left join `user_detail` d ON u.user_id = d.user_id "
-                . "left join `mt4_user` m ON u.user_id = m.user_id "
+                . "left join ".self::TB_MU." m ON u.user_id = m.user_id "
                 . "WHERE u.user_id = '".$user_id."'";
         
         $query = $this->db->query($sql);

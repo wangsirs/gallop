@@ -27,7 +27,7 @@
                 ?>
                 <li>
                     <!-- Task item -->
-                    <a href="mt4/profile#list">
+                    <a href="grants/profile#list">
                         <h3>
                             MT4 ID: <?=$item['mt4_id']?>
                             <small class="pull-right">餘額: <?=round($item['balance'], BAL_DIGITS);?></small>

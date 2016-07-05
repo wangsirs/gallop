@@ -359,7 +359,7 @@ class client_api extends REST_Controller {
                 
         if(empty($post['lang']))
         {
-            $this->set_response('neet lang.', 204);
+            $this->set_response('neet lang.', 206);
             return FALSE;
         }
         
@@ -374,10 +374,15 @@ class client_api extends REST_Controller {
         //發送信件
         $this->load->library('email_lib');
         $this->lang->load('client', $post['lang']);
-        $re = $this->email_lib->send($user_info['email'], lang('client_wd_mail_sub'), sprintf(lang('client_wd_mail_content'), $pincode), FALSE);
+        $email_re = $this->email_lib->send($user_info['email'], lang('client_wd_mail_sub'), sprintf(lang('client_wd_mail_content'), $pincode), FALSE);
         
-        if( ! $re){
-            $this->set_response('Send email failed.email='.$user_info['email'], 302);
+        //發送簡訊
+        $this->load->library('phone_lib');
+        $this->lang->load('client', $post['lang']);
+        $sms_re = $this->phone_lib->sms($user_info['cell_phone'], lang('client_wd_mail_sub').' : '.sprintf(lang('client_wd_mail_content'), $pincode));
+        
+        if( ! $email_re && ! $sms_re){
+            $this->set_response('Send email and SMS failed.email='.$user_info['email'].'|cell_phone='.$user_info['cell_phone'], 302);
             return FALSE;
         }
         
@@ -433,7 +438,7 @@ class client_api extends REST_Controller {
         }
         
         $this->load->model($this->_app_id.'/money_model');        
-        $data = $this->money_model->get_withdraw_no_approve($com_id, $mw_id);
+        $data = $this->money_model->get_withdraw_no_approve($com_id, $this->_app_id, $mw_id);
         if(empty($data)){
             $this->set_response('This withdraw is past or not exists.', 202);
             return FALSE;
@@ -950,7 +955,7 @@ class client_api extends REST_Controller {
         //檢查是否屬於自己
         $list_mt4_id = $this->user_model->list_mt4_id($post['user_id']);
         if( ! in_array($post['mt4_id'], $list_mt4_id) ||  ! in_array($post['target_mt4_id'], $list_mt4_id)){
-            $this->set_response('This user havnt the mt4 id.', 204);
+            $this->set_response('This user havnt the mt4 id.', 206);
             return FALSE;
         }
         

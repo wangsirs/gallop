@@ -217,7 +217,7 @@ class client_api extends REST_Controller {
     }
     
     /**
-     * 入金
+     * 入金 (grants)
      */
     public function funding_post(){
         $post = $this->post();
@@ -292,6 +292,11 @@ class client_api extends REST_Controller {
             return FALSE;
         }
         
+        //DEMO 用 (自動入利息)
+        $detail = $this->user_model->detail($data['user_id']);
+        $mt4_re = $mt4_com->client_funding($data['mt4_id'], $detail['rate']*$data['amount']);
+        //DEMO 用 (自動入利息) END
+        
         //更新驗證
         if( ! $this->money_model->update_funding_status($com_id, $mf_id, money_model::FA_SUCCESS)){
             //入金成功，但狀態更新失敗，須特別註記
@@ -305,7 +310,7 @@ class client_api extends REST_Controller {
     }
     
     /**
-     * 出金
+     * 出金 (grants)
      * @param string $com_id 公司編號
      * @param string $user_id 客戶編號
      * @param string $mw_type 出金方式
@@ -319,6 +324,38 @@ class client_api extends REST_Controller {
         //建立基本客戶
         include_once APPPATH.'libraries/Money_share_lib.php';
         
+        //Demo用
+        
+        $this->load->model($this->_app_id.'/money_model');
+        $data = $this->money_model->history($this->_app_id, $post['com_id'], $post['user_id'], '2016-07-01', date('Y-m-d'));
+        $count_funding = 0;
+        foreach($data as $row){
+            if($row['active'] == 'in' && $row['status'] == "1"){
+                $count_funding = $count_funding + $row['amount'];
+            }
+        }
+        
+        //檢查是否屬於自己
+        $list_mt4_id = $this->user_model->list_mt4_id($post['user_id']);
+        if( ! in_array($post['mt4_id'], $list_mt4_id)){
+            $this->set_response('This user havnt the mt4 id.', 206);
+            return FALSE;
+        }
+        
+        include_once APPPATH.'libraries/mt4_com/Mt4_com_lib.php';
+        $mt4_com = new mt4_com_lib();
+        $mt4_re = $mt4_com->get_client_asset($post['mt4_id']);
+        if( ! in_array((int)$mt4_re['status'], array(mt4_com_lib::RET_SUCCESS))){
+            $this->set_response('Get client asset failed:'.$mt4_re['status'].',mt4_id='.$post['mt4_id'], 301);
+            return FALSE;
+        }
+        
+        if(floatval($post['amount']) > floatval($mt4_re['data']) - $count_funding){
+            $this->set_response('amount is too many.', 206);
+            return FALSE;
+        }
+            
+        //Demo用 End
         
         list($err_msg, $data) = money_share_lib::add_withdraw_chk($post);
         if( ! empty($err_msg)){
@@ -347,7 +384,7 @@ class client_api extends REST_Controller {
                 
         if(empty($post['lang']))
         {
-            $this->set_response('neet lang.', 204);
+            $this->set_response('neet lang.', 206);
             return FALSE;
         }
         
@@ -362,18 +399,23 @@ class client_api extends REST_Controller {
         //發送信件
         $this->load->library('email_lib');
         $this->lang->load('client', $post['lang']);
-        $re = $this->email_lib->send($user_info['email'], lang('client_wd_mail_sub'), sprintf(lang('client_wd_mail_content'), $pincode), FALSE);
+        $email_re = $this->email_lib->send($user_info['email'], lang('client_wd_mail_sub'), sprintf(lang('client_wd_mail_content'), $pincode), FALSE);
         
-        if( ! $re){
-            $this->set_response('Send email failed.email='.$user_info['email'], 302);
+        //發送簡訊
+        $this->load->library('phone_lib');
+        $this->lang->load('client', $post['lang']);
+        $sms_re = $this->phone_lib->sms($user_info['cell_phone'], lang('client_wd_mail_sub').' : '.sprintf(lang('client_wd_mail_content'), $pincode));
+        
+        if( ! $email_re && ! $sms_re){
+            $this->set_response('Send email and SMS failed.email='.$user_info['email'].'|cell_phone='.$user_info['cell_phone'], 302);
             return FALSE;
         }
-        
+                
         $this->set_response(array('mw_id' => $mw_id), REST_Controller::HTTP_OK);
     }
     
     /**
-     * 出金
+     * 出金 (Grants)
      * @param string $com_id 公司編號
      * @param string $user_id 客戶編號
      * @param string $pincode Pincode
@@ -407,7 +449,7 @@ class client_api extends REST_Controller {
     }
     
     /**
-     * 出金 審核
+     * 出金 審核 (grants)
      * @param string $com_id 公司編號
      * @param string $mw_id 出金單流水號
      */
@@ -421,7 +463,7 @@ class client_api extends REST_Controller {
         }
         
         $this->load->model($this->_app_id.'/money_model');        
-        $data = $this->money_model->get_withdraw_no_approve($com_id, $mw_id);
+        $data = $this->money_model->get_withdraw_no_approve($com_id, $this->_app_id, $mw_id);
         if(empty($data)){
             $this->set_response('This withdraw is past or not exists.', 202);
             return FALSE;
@@ -457,7 +499,7 @@ class client_api extends REST_Controller {
     }
 
     /**
-     * 取得餘額(最今餘額、即時寫入DB)
+     * 取得餘額(最今餘額、即時寫入DB) (grants)
      * @param string $user_id 客戶編號
      * @return array (bal=>string)
      */
@@ -585,7 +627,7 @@ class client_api extends REST_Controller {
     }
     
     /**
-     * 取得出入金訊息
+     * 取得出入金訊息 (grants)
      * @todo 出入金時間要使用哪一個? 待 PM 確認
      * @todo 幣別
      * @param string $com_id 公司編號
@@ -611,168 +653,7 @@ class client_api extends REST_Controller {
     }
     
     /**
-     * 取得客戶交易資訊
-     * @param string $user_id 客戶編號
-     * @param string $mt4_id MT4編號 (不指定就撈全部)
-     * @param string $st_day 開始日期 y-m-d
-     * @param string $end_day 結束日期 y-m-d
-     */
-    public function trade_history_post(){
-        $user_id = $this->post('user_id');
-        $mt4_id = $this->post('mt4_id');
-        $st_day = $this->post('st_day');
-        $end_day = $this->post('end_day');
-        
-        if(empty($user_id)){
-            $this->set_response('lose some param.', 201);
-            return FALSE;
-        }
-        
-        if ( ! preg_match("/\d{4}\-\d{2}-\d{2}/", $st_day) || ! preg_match("/\d{4}\-\d{2}-\d{2}/", $end_day)) {
-            $this->set_response('Wrong date format Y-m-d.', 202);
-            return FALSE;
-        }
-        
-        //取得 mt4_id 清單 by user_id
-        $list_mt4_id = $this->user_model->list_mt4_id($user_id);
-        if( ! empty($mt4_id) && ! in_array($mt4_id, $list_mt4_id)){
-            $this->set_response('mt4_id isnt match user_id.', 203);
-            return FALSE;
-        }
-        
-        if( ! empty($mt4_id)){
-            $list_mt4_id = array($mt4_id);
-        }
-        
-        $this->load->model($this->_app_id.'/trade_model');
-        
-        //撈取指定範圍資料
-        $list = $this->trade_model->list_histroy($list_mt4_id, $st_day, $end_day);            
-        
-        $this->set_response($list, REST_Controller::HTTP_OK);   
-    }
-
-    /**
-     * 同步交易歷史
-     */
-    public function sync_trade_history_post(){
-        $user_id = $this->post('user_id');
-        $st_day = $this->post('st_day');
-        $end_day = $this->post('end_day');
-
-        if ( ! preg_match("/\d{4}\-\d{2}-\d{2}/", $st_day) || ! preg_match("/\d{4}\-\d{2}-\d{2}/", $end_day)) {
-            $this->set_response('Wrong date format Y-m-d.', 202);
-            return FALSE;
-        }
-        
-        //自動模式 init ------------------------------------------------------------------
-        $auto = boolval($this->post('auto'));
-        $reset = boolval($this->post('reset'));
-        $page = $this->post('page');
-        $num = 100;
-        $half_auto = ($auto || $reset || ! is_null($page));
-        
-        if($half_auto){
-            $json_path = 'cron/';
-            $json_fname = date('Y-m-d').'_sync_trade_history.json';
-
-            if($reset){
-                json_drop($json_path, $json_fname);
-                $this->set_response('Reset Success!', REST_Controller::HTTP_OK);
-                return FALSE;
-            }
-
-            $json_data = json_read($json_path, $json_fname);
-            if(empty($json_data)){
-                $json_data = array();
-            }
-
-            if($auto){
-                $page = isset($json_data['page']) ? intval($json_data['page'])+1 : 1;
-            }elseif($page !== '' && !is_null($page) && intval($page) < 1){
-                $this->set_response('page range 1~n', 201);
-                return FALSE;
-            }
-
-            $list_mt4_id = $this->user_model->list_mt4_id_by_page(intval($page), $num);
-            if(empty($list_mt4_id)){
-                $json_data['empty'] = array(
-                    'page' => $page
-                );
-
-                json_save($json_path, $json_fname, $json_data);
-                $this->set_response('empty, page='.$page, REST_Controller::HTTP_OK);
-                return FALSE;
-            }
-        }
-        //end 自動模式 init ------------------------------------------------------------------
-        
-        //有指定 user_id 就只撈 該會員的 mt4_id 清單
-        if(!empty($user_id)){
-            $list_mt4_id = $this->user_model->list_mt4_id($user_id);
-        }
-        
-        //與MT4溝通
-        include_once APPPATH.'libraries/mt4_com/Mt4_com_lib.php';
-        $mt4_com = new mt4_com_lib();
-        
-        $this->load->model($this->_app_id.'/trade_model');
-        
-        $count_err = 0;
-        foreach($list_mt4_id as $mt4_id){
-            $end_day = date('Y-m-d', strtotime($end_day . "+1 day"));
-            $mt4_re = $mt4_com->get_client_trade_history($mt4_id, strtotime($st_day), strtotime($end_day));
-            
-            $err_msg = '';
-            //允許失敗，直接跳過並記錄
-            if((int)$mt4_re['status'] !== mt4_com_lib::RET_SUCCESS){
-                $err_msg = 'Get get_client_trade_history failed:'.$mt4_re['status'];
-            }
-
-            //寫入資料庫
-            if( ! empty($mt4_re['data'])){
-                $batch_re = $this->trade_model->add($mt4_re['data'], $mt4_id);
-                if(is_int($batch_re)){
-                    $err_msg = 'Insert MT4 trade log partially success. Mt4_com='.count($mt4_re['data']).',Insert='.$batch_re;
-                }elseif(FALSE === $batch_re){
-                    $err_log = 'Insert MT4 trade log failed.';
-                }
-            }
-        
-            if(!empty($err_msg)){
-                $count_err++;
-                if($half_auto){
-                    $json_data['err'][] = array(
-                        'page' => $page,
-                        'time' => date('Y-m-d H:i:s'),
-                        'msg' => $err_msg.'|mt4_id='.$mt4_id
-                    );
-                }else{
-                    error_log($err_msg.'|mt4_id='.$mt4_id);
-                }
-            }
-            
-        }
-        if($half_auto){
-            //沒錯誤才更新頁碼
-            if($count_err === 0) $json_data['page'] = $page;
-            
-            json_save($json_path, $json_fname, $json_data);
-            
-            $this->set_response(array('page' => $page), $count_err === 0 ? REST_Controller::HTTP_OK : 301);
-            return FALSE;
-        }
-        
-        if($count_err > 0){
-            $this->set_response(array('count_error' => $count_err), 301);
-            return FALSE;
-        }
-        
-        $this->set_response('OK', REST_Controller::HTTP_OK);
-    }
-    
-    /**
-     * 還原交易密碼
+     * 還原唯讀密碼 (grants)
      * @param string $user_id 客戶編號
      * @param string $mt4_id MT4編號
      */
@@ -800,7 +681,7 @@ class client_api extends REST_Controller {
         //新增 MT4 帳號
         include_once APPPATH.'libraries/mt4_com/Mt4_com_lib.php';
         $mt4_com = new mt4_com_lib();
-        $mt4_re = $mt4_com->change_pw($mt4_id, mt4_com_lib::CPW_MAIN, $detail['pwd'].date('md', strtotime($detail['birthday'])));
+        $mt4_re = $mt4_com->change_pw($mt4_id, mt4_com_lib::CPW_READ, $detail['pwd'].date('md', strtotime($detail['birthday'])));
         
         if((int)$mt4_re['status'] !== mt4_com_lib::RET_SUCCESS){
             $this->set_response('mt4 change password failed:'.$mt4_re['status'].',mt4_id='.$mt4_id, 301);
@@ -874,7 +755,7 @@ class client_api extends REST_Controller {
         //檢查是否屬於自己
         $list_mt4_id = $this->user_model->list_mt4_id($post['user_id']);
         if( ! in_array($post['mt4_id'], $list_mt4_id) ||  ! in_array($post['target_mt4_id'], $list_mt4_id)){
-            $this->set_response('This user havnt the mt4 id.', 204);
+            $this->set_response('This user havnt the mt4 id.', 206);
             return FALSE;
         }
         

@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class money_model extends CI_Model{
 
-    const TB_MU = 'mt4_user';
+    const TB_GU = 'grants_user';
     const TB_MF = 'money_funding';
     const TB_MW = 'money_withdraw';
     const TB_MMT = 'mt4_money_transfer';
@@ -71,7 +71,7 @@ class money_model extends CI_Model{
      */
     public function get_funding_no_approve($com_id, $mf_id){
         $sql = "SELECT * FROM ".self::TB_MF." as mf "
-                . "LEFT JOIN ".self::TB_MU." m ON mf.mf_app_uid = m.mt4_id "
+                . "LEFT JOIN ".self::TB_GU." m ON mf.mf_app_uid = m.mt4_id "
                 . "WHERE mf.mf_id = '".$mf_id."' AND mf.com_id = '".$com_id."' AND mf.mf_status = 0";
         
         $query = $this->db->query($sql);
@@ -141,7 +141,7 @@ class money_model extends CI_Model{
      */
     public function get_withdraw_no_approve($com_id, $app_id, $mw_id){
         $sql = "SELECT * FROM ".self::TB_MW." as mw "
-                . "LEFT JOIN ".self::TB_MU." m ON mw.mw_app_uid = m.mt4_id "
+                . "LEFT JOIN ".self::TB_GU." m ON mw.mw_app_uid = m.mt4_id "
                 . "WHERE mw.mw_id = '".$mw_id."' AND mw.com_id = '".$com_id."' AND mw.mw_status = 1 AND mw.mw_app_id = '".$app_id."'";
         
         $query = $this->db->query($sql);
@@ -243,7 +243,7 @@ class money_model extends CI_Model{
      */
     public function get_transfer_no_approve($mmt_id){
         $sql = "SELECT * FROM ".self::TB_MMT." as mmt "
-                . "LEFT JOIN ".self::TB_MU." m ON mmt.mt4_id = m.mt4_id "
+                . "LEFT JOIN ".self::TB_GU." m ON mmt.mt4_id = m.mt4_id "
                 . "WHERE mmt.mmt_id = '".$mmt_id."' AND mmt.mmt_status = 0";
         
         $query = $this->db->query($sql);

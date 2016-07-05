@@ -54,13 +54,13 @@ class phone_lib {
         $client = new Services_Twilio($sid, $token);
         $message = $client->account->messages->sendMessage(
           empty($from) ? '+61481072375' : $from, // From a valid Twilio number
-          $to, // Text this number
-          $msg
+          '+'.$to, // Text this number
+          '+'.$msg
         );
-        echo '<pre>';
-        var_dump($message);
-        echo '</pre>';
-        exit();
+//        echo '<pre>';
+//        var_dump($message);
+//        echo '</pre>';
+//        exit();
         return TRUE;
     }
     
