@@ -1,0 +1,15 @@
+server {
+	listen 80;
+        server_name admin.qoo.cn;
+
+	location ~ \.(gif|jpg|png|js|css|woff2|woff)$ {
+	#location ^~ \$ {
+	    root /var/www/admin.gamfx.dev.com/public_html/;
+	#    try_files $uri @img_proxy
+	}
+
+        location / {
+		proxy_pass http://admin.gamfx-inside.dev.com/A00002/;
+	}
+
+}
