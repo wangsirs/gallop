@@ -1,0 +1,52 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:   martin - mt4 daemon
+# Short-Description: starts the mt4 socket server
+# Description:       starts mt4 using start-stop-daemon
+### END INIT INFO
+
+start_workers() {
+    pkill -f MT4API.exe
+    pkill -f ApMonitor.py
+    /etc/mt4/MT4API.exe 2>/dev/null 1>&2 &
+    python /etc/init.d/ApMonitor.py &
+}
+
+stop_workers(){
+    pkill -f MT4API.exe
+    pkill -f ApMonitor.py
+}
+
+restart_workers(){
+    pkill -f MT4API.exe
+    pkill -f ApMonitor.py
+    /etc/mt4/MT4API.exe 2>/dev/null 1>&2 &
+    python /etc/init.d/ApMonitor.py &    
+}
+
+case "$1" in
+    start)
+start_workers
+;;
+    stop)
+stop_workers
+    ;;
+
+    reload|force-reload)
+        echo "Use restart"
+    ;;
+
+    status)
+    ;;
+
+    restart)
+    restart_workers
+    ;;
+    *)
+        echo "Usage: /etc/init.d/mt4 {start|stop|restart}"
+        exit 64
+  ;;
+esac
+
+:

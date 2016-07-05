@@ -1,0 +1,38 @@
+@media (min-width:768px) {
+    .funding-content {
+        width: 80%;
+        min-width: 30em;
+        margin: 0 10%;
+    }
+}
+
+@media (max-width:768px) {
+    .funding-content {
+        width: 100%;
+    }
+    .invoice{
+        padding:5px;
+        margin:5px 10px;
+    }
+}
+
+.funding-step tbody tr td {
+    border-top: 0px;
+}
+
+.funding-step tbody tr td:first-child {
+    background: -moz-linear-gradient(left, rgba(194, 239, 249, 0.25) 0%, rgba(217, 246, 249, 0.25) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(194, 239, 249, 0.25) 0%, rgba(217, 246, 249, 0.25) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(194, 239, 249, 0.25) 0%, rgba(217, 246, 249, 0.25) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#40c2eff9', endColorstr='#40d9f6f9', GradientType=1);
+    /* IE6-9 */
+    font-weight: bold;
+    color: #492418;
+}
+
+.Union-Pay {
+    width: 20em;
+}

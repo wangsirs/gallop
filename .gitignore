@@ -1,0 +1,21 @@
+.DS_Store
+.log
+/ib/nbproject
+/api/nbproject
+/client/nbproject
+/gamfx-share/nbproject
+/mt4/TradeLogin/Debug/MT4API.tlog/*.tlog
+/mt4/TradeLogin/Debug
+/api/*.json
+/mt4/mt4 source code/Debug
+/mt4/mt4 source code/x64/Debug/MT4API.tlog/MT4API.lastbuildstate
+/mt4/mt4 source code/x64/Debug/MT4API.tlog/*.tlog
+/mt4/mt4 source code/logs
+/mt4/mt4 source code/x64/Debug
+/mt4/mt4 source code/.vs/MT4API/v14/*.suo
+/mt4/mt4 source code/.vs/TradeLogin/v14/*.suo
+/ib/*.json
+*.json
+/mt4/mt4 source code/MT4API.opensdf
+/mt4/mt4 source code/MT4API.sdf
+/mt4/mt4 source code/ipch
