@@ -4,8 +4,10 @@ server {
 	root /var/www/api.gamfx.dev.com/public_html;
 	index index.php index.html index.htm;
 	server_name api.gamfx.dev.com;
-	access_log /var/www/api.gamfx.dev.com/public_html/access.log;
-	error_log /var/www/api.gamfx.dev.com/public_html/error.log;
+	#access_log /var/www/api.gamfx.dev.com/public_html/access.log;
+	#error_log /var/www/api.gamfx.dev.com/public_html/error.log;
+	access_log /var/log/api.gamfx.dev.com.access.log;
+	error_log /var/log/api.gamfx.dev.com.error.log;
 
         if ($request_uri ~* ^/system/|^/application/)
         {
