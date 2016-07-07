@@ -139,7 +139,7 @@
 			}
 		},
 		"nginx3": {
-			"display" : "api.gamfx.dev.com.error",
+			"display" : "[DEV-API] .dev.com.error",
 			"path"    : "\/var\/log\/api.gamfx.dev.com.error.log",
 			"refresh" : 5,
 			"max"     : 10,
@@ -173,7 +173,7 @@
 			}
 		},
 		"nginx4": {
-			"display" : "api.gamfx.dev.com.access",
+			"display" : "[DEV-API] .dev.com.access",
 			"path"    : "\/var\/log\/api.gamfx.dev.com.access.log",
 			"refresh" : 0,
 			"max"     : 10,
@@ -209,7 +209,7 @@
 			}
 		},
 		"nginx5": {
-			"display" : "client.gamfx-inside.dev.com.error",
+			"display" : "[DEV-CLIENT] -inside.dev.com.error",
 			"path"    : "\/var\/log\/client.gamfx-inside.dev.com.error.log",
 			"refresh" : 5,
 			"max"     : 10,
@@ -243,7 +243,7 @@
 			}
 		},
 		"nginx6": {
-			"display" : "client.gamfx-inside.dev.com.access",
+			"display" : "[DEV-CLIENT] -inside.dev.com.access",
 			"path"    : "\/var\/log\/client.gamfx-inside.dev.com.access.log",
 			"refresh" : 0,
 			"max"     : 10,
@@ -279,7 +279,7 @@
 			}
 		},
 		"nginx7": {
-			"display" : "ib.gamfx-inside.dev.com.error",
+			"display" : "[DEV-IB] -inside.dev.com.error",
 			"path"    : "\/var\/log\/ib.gamfx-inside.dev.com.error.log",
 			"refresh" : 5,
 			"max"     : 10,
@@ -313,7 +313,7 @@
 			}
 		},
 		"nginx8": {
-			"display" : "ib.gamfx-inside.dev.com.access",
+			"display" : "[DEV-IB] -inside.dev.com.access",
 			"path"    : "\/var\/log\/ib.gamfx-inside.dev.com.access.log",
 			"refresh" : 0,
 			"max"     : 10,
@@ -349,7 +349,7 @@
 			}
 		},
 		"nginx9": {
-			"display" : "client.gamfx-inside.com.error",
+			"display" : "[ONLINE-CLIENT] -inside.com.error",
 			"path"    : "\/var\/log\/client.gamfx-inside.com.error.log",
 			"refresh" : 5,
 			"max"     : 10,
@@ -383,7 +383,7 @@
 			}
 		},
 		"nginx10": {
-			"display" : "client.gamfx-inside.com.access",
+			"display" : "[ONLINE-CLIENT] -inside.com.access",
 			"path"    : "\/var\/log\/client.gamfx-inside.com.access.log",
 			"refresh" : 0,
 			"max"     : 10,
@@ -419,7 +419,7 @@
 			}
 		},
 		"nginx11": {
-			"display" : "ib.gamfx-inside.com.error",
+			"display" : "[ONLINE-IB] -inside.com.error",
 			"path"    : "\/var\/log\/ib.gamfx-inside.com.error.log",
 			"refresh" : 5,
 			"max"     : 10,
@@ -453,7 +453,7 @@
 			}
 		},
 		"nginx12": {
-			"display" : "ib.gamfx-inside.com.access",
+			"display" : "[ONLINE-IB] -inside.com.access",
 			"path"    : "\/var\/log\/ib.gamfx-inside.com.access.log",
 			"refresh" : 0,
 			"max"     : 10,
