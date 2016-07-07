@@ -496,29 +496,13 @@
 			"notify"  : true,
 			"format"    : {
 				"type"         : "NGINX",
-				"regex"        : "@^(.*)/(.*)/(.*) (.*):(.*):(.*) \\[(.*)\\] [0-9#]*: \\*[0-9]+ (((.*), client: (.*), server: (.*), request: \"(.*) (.*) HTTP.*\", host: \"(.*)\"(, referrer: \"(.*)\")*)|(.*))$@U",
+				"regex"        : "@^(.*)$@U",
 				"export_title" : "Error",
 				"match"        : {
-					"Date"     : [1,"\/",2,"\/",3," ",4,":",5,":",6],
-					"Severity" : 7,
-					"Error"    : [10,18],
-					"Client"   : 11,
-					"Server"   : 12,
-					"Method"   : 13,
-					"Request"  : 14,
-					"Host"     : 15,
-					"Referer"  : 17
+					"Message"  : 1
 				},
 				"types"    : {
-					"Date"     : "date:d\/m\/Y H:i:s \/100",
-					"Severity" : "badge:severity",
-					"Error"    : "pre",
-					"Client"   : "ip:http",
-					"Server"   : "txt",
-					"Method"   : "txt",
-					"Request"  : "txt",
-					"Host"     : "ip:http",
-					"Referer"  : "link"
+					"Message"  : "txt"
 				}
 			}
 		},
