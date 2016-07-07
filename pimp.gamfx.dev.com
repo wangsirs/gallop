@@ -4,8 +4,8 @@ server {
 	root /var/www/pimp.gamfx.dev.com;
 	index index.php index.html index.htm;
 	server_name pimp.gamfx.dev.com;
-	access_log /var/www/pimp.gamfx.dev.com.access.log;
-	error_log /var/www/pimp.gamfx.dev.com.error.log;
+	access_log /var/log/pimp.gamfx.dev.com.access.log;
+	error_log /var/log/pimp.gamfx.dev.com.error.log;
 
 	location / {
 		try_files $uri $uri/ =404;
