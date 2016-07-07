@@ -1,27 +1,16 @@
 server {
 	listen 80;
 
-	root /var/www/ib.gamfx.dev.com/public_html;
+	root /var/www/pimp.gamfx.dev.com;
 	index index.php index.html index.htm;
-	server_name ib.gamfx-inside.com;
-	access_log /var/log/ib.gamfx-inside.com.access.log;
-	error_log /var/log/ib.gamfx-inside.com.error.log;
-
-	if ($request_uri ~* ^/system/|^/application/)
-    	{
-        	rewrite ^/(.*)$ /index.php?/$1 last;
-        	break;
-    	}
+	server_name pimp.gamfx.dev.com;
+	access_log /var/www/pimp.gamfx.dev.com.access.log;
+	error_log /var/www/pimp.gamfx.dev.com.error.log;
 
 	location / {
-		#try_files $uri $uri/ =404;
-		try_files $uri $uri/ /index.php;
+		try_files $uri $uri/ =404;
+		#try_files $uri $uri/ /index.php;
 	}
-
-	# Only for nginx-naxsi used with nginx-naxsi-ui : process denied requests
-	#location /RequestDenied {
-	#	proxy_pass http://127.0.0.1:8080;    
-	#}
 
 	error_page 404 /404.html;
     	error_page 500 502 503 504 /50x.html;

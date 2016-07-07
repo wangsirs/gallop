@@ -4,10 +4,8 @@ server {
 	root /var/www/ib.gamfx.dev.com/public_html;
 	index index.php index.html index.htm;
 	server_name ib.gamfx-inside.dev.com;
-	#access_log /var/www/ib.gamfx.dev.com/public_html/access.log;
-	#error_log /var/www/ib.gamfx.dev.com/public_html/error.log;
-	access_log /var/log/ib.gamfx.dev.com.access.log;
-	error_log /var/log/ib.gamfx.dev.com.error.log;
+	access_log /var/log/ib.gamfx-inside.dev.com.access.log;
+	error_log /var/log/ib.gamfx-inside.dev.com.error.log;
 
 	if ($request_uri ~* ^/system/|^/application/)
     	{

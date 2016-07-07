@@ -4,8 +4,8 @@ server {
 	root /var/www/client.gamfx.dev.com/public_html;
 	index index.php index.html index.htm;
 	server_name client.gamfx-inside.com;
-	access_log /var/www/client.gamfx.dev.com/public_html/access.log;
-	error_log /var/www/client.gamfx.dev.com/public_html/error.log;
+        access_log /var/log/client.gamfx-inside.com.access.log;
+        error_log /var/log/client.gamfx-inside.com.error.log;
 
         if ($request_uri ~* ^/system/|^/application/)
         {

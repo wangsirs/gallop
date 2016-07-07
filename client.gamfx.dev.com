@@ -1,6 +1,8 @@
 server {
 	listen 80;
         server_name client.gamfx.dev.com;
+        access_log /var/log/client.gamfx.dev.com.access.log;
+        error_log /var/log/client.gamfx.dev.com.error.log;
 
 	location ~ \.(gif|jpg|png|js|css|woff2|woff|ico|eot)$ {
 	    root /var/www/client.gamfx.dev.com/public_html/;

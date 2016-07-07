@@ -1,8 +1,8 @@
 server {
 	listen 80;
         server_name ib.gamfx.com;
-        access_log /var/www/ib.gamfx.dev.com/public_html/access_front_o.log;
-        error_log /var/www/ib.gamfx.dev.com/public_html/error_front_o.log;
+        access_log /var/log/ib.gamfx.com.access.log;
+        error_log /var/log/ib.gamfx.com.errror.log;
 
 	location ~ \.(gif|jpg|png|js|css|woff2|woff|ico|eot)$ {
 	    root /var/www/ib.gamfx.dev.com/public_html/;
