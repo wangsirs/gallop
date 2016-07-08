@@ -90,7 +90,7 @@
 					"Referer"  : 17
 				},
 				"types"    : {
-					"Date"     : "date:d\/m\/Y H:i:s \/100",
+					"Date"     : "date:Y\/m\/d H:i:s \/100",
 					"Severity" : "badge:severity",
 					"Error"    : "pre",
 					"Client"   : "ip:http",
@@ -160,7 +160,7 @@
 					"Referer"  : 17
 				},
 				"types"    : {
-					"Date"     : "date:d\/m\/Y H:i:s \/100",
+					"Date"     : "date:Y\/m\/d H:i:s \/100",
 					"Severity" : "badge:severity",
 					"Error"    : "pre",
 					"Client"   : "ip:http",
@@ -230,7 +230,7 @@
 					"Referer"  : 17
 				},
 				"types"    : {
-					"Date"     : "date:d\/m\/Y H:i:s \/100",
+					"Date"     : "date:Y\/m\/d H:i:s \/100",
 					"Severity" : "badge:severity",
 					"Error"    : "pre",
 					"Client"   : "ip:http",
@@ -300,7 +300,7 @@
 					"Referer"  : 17
 				},
 				"types"    : {
-					"Date"     : "date:d\/m\/Y H:i:s \/100",
+					"Date"     : "date:Y\/m\/d H:i:s \/100",
 					"Severity" : "badge:severity",
 					"Error"    : "pre",
 					"Client"   : "ip:http",
@@ -370,7 +370,7 @@
 					"Referer"  : 17
 				},
 				"types"    : {
-					"Date"     : "date:d\/m\/Y H:i:s \/100",
+					"Date"     : "date:Y\/m\/d H:i:s \/100",
 					"Severity" : "badge:severity",
 					"Error"    : "pre",
 					"Client"   : "ip:http",
@@ -440,7 +440,7 @@
 					"Referer"  : 17
 				},
 				"types"    : {
-					"Date"     : "date:d\/m\/Y H:i:s \/100",
+					"Date"     : "date:Y\/m\/d H:i:s \/100",
 					"Severity" : "badge:severity",
 					"Error"    : "pre",
 					"Client"   : "ip:http",
@@ -523,7 +523,7 @@
                     "message"  : 10                    
 				},
 				"types"    : {
-					"Date"     : "date:d\/m\/Y H:i:s.B \/100",
+					"Date"     : "date:Y\/m\/d H:i:s \/100",
                     "class"    : "txt",
 					"Severity" : "badge:severity",
                     "message"  : "txt"
