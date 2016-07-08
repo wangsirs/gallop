@@ -523,7 +523,7 @@
                     "message"  : 10                    
 				},
 				"types"    : {
-					"Date"     : "date:Y\/m\/d H:i:s \/100",
+					"Date"     : "date:Y\/m\/d H:i:s.B \/100",
                     "class"    : "txt",
 					"Severity" : "badge:severity",
                     "message"  : "txt"
