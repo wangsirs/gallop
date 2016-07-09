@@ -1,105 +1,153 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Gallop 行政後台管理</title>
-    <!-- Mainly scripts -->
-    <script src="<?=ASSETS_CUSTOM_JS?>jquery-2.1.1.js"></script>
-    <script src="<?=ASSETS_CUSTOM_JS?>bootstrap.min.js"></script>
-    <script src="<?=ASSETS_CUSTOM_JS?>plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="<?=ASSETS_CUSTOM_JS?>plugins/slimscroll/jquery.slimscroll.min.js"></script>
-    <!-- Flot -->
-    <script src="<?=ASSETS_CUSTOM_JS?>plugins/flot/jquery.flot.js"></script>
-    <script src="<?=ASSETS_CUSTOM_JS?>plugins/flot/jquery.flot.tooltip.min.js"></script>
-    <script src="<?=ASSETS_CUSTOM_JS?>plugins/flot/jquery.flot.spline.js"></script>
-    <script src="<?=ASSETS_CUSTOM_JS?>plugins/flot/jquery.flot.resize.js"></script>
-    <script src="<?=ASSETS_CUSTOM_JS?>plugins/flot/jquery.flot.pie.js"></script>
-    <!-- Peity -->
-    <script src="<?=ASSETS_CUSTOM_JS?>plugins/peity/jquery.peity.min.js"></script>
-    <script src="<?=ASSETS_CUSTOM_JS?>demo/peity-demo.js"></script>
-    <!-- Custom and plugin javascript -->
-    <script src="<?=ASSETS_CUSTOM_JS?>inspinia.js"></script>
-    <script src="<?=ASSETS_CUSTOM_JS?>plugins/pace/pace.min.js"></script>
-    <!-- jQuery UI -->
-    <script src="<?=ASSETS_CUSTOM_JS?>plugins/jquery-ui/jquery-ui.min.js"></script>
-    <!-- GITTER -->
-    <script src="<?=ASSETS_CUSTOM_JS?>plugins/gritter/jquery.gritter.min.js"></script>
-    <!-- Sparkline -->
-    <script src="<?=ASSETS_CUSTOM_JS?>plugins/sparkline/jquery.sparkline.min.js"></script>
-    <!-- Sparkline demo data  -->
-    <script src="<?=ASSETS_CUSTOM_JS?>demo/sparkline-demo.js"></script>
-    <!-- ChartJS-->
-    <script src="<?=ASSETS_CUSTOM_JS?>plugins/chartJs/Chart.min.js"></script>
-    <!-- Toastr -->
-    <script src="<?=ASSETS_CUSTOM_JS?>plugins/toastr/toastr.min.js"></script>
-    <link href="<?=ASSETS_CUSTOM_CSS?>bootstrap.min.css" rel="stylesheet">
-    <link href="<?=ASSETS_CUSTOM_CSS?>font-awesome/css/font-awesome.css" rel="stylesheet">
-    <!-- Toastr style -->
-    <link href="<?=ASSETS_CUSTOM_CSS?>plugins/toastr/toastr.min.css" rel="stylesheet">
-    <!-- Gritter -->
-    <link href="<?=ASSETS_CUSTOM_JS?>plugins/gritter/jquery.gritter.css" rel="stylesheet">
-    <link href="<?=ASSETS_CUSTOM_CSS?>animate.css" rel="stylesheet">
-    <link href="<?=ASSETS_CUSTOM_CSS?>style.css" rel="stylesheet">
-</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--兼容ie 使用chrome-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="keywords" content="" />
+<title>Home</title>
 
+<link href="<?=ASSETS_CSS?>bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="<?=ASSETS_CSS?>style.css" rel="stylesheet" type="text/css" media="all" />   
+<!--//theme-style-->
+<!--引用元素 css-->
+<link href="<?=ASSETS_CSS?>xenon-core.css" rel="stylesheet" type="text/css" media="all" />
+<!--引用兼容ie bootstrap ui css-->
+<link href="<?=ASSETS_CSS?>bootstrap-ie7.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--自寫 css-->
+<link href="<?=ASSETS_CSS?>common.css" rel="stylesheet" type="text/css">
+<link href="<?=ASSETS_CSS?>menu.css" rel="stylesheet" type="text/css">
+<link href="<?=ASSETS_CSS?>txt_style.css" rel="stylesheet" type="text/css">
+
+<!--fonts-->
+<link href="<?=ASSETS_CSS?>font_style.css" rel="stylesheet" type="text/css" media="all" />
+<link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+<link href='http://fonts.useso.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'><!--//fonts-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+  <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+
+</head>
 <body>
-    <div id="wrapper">
-        <nav class="navbar-default navbar-static-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav metismenu" id="side-menu">
-                    <li class="nav-header">
-                        <div class="dropdown profile-element"> <span>
-                            <img alt="image" class="img-circle" src="<?=ASSETS_CUSTOM_IMG?>profile_small.jpg" />
-                             </span>
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold"><?=$username?></strong>
-                             </span> <span class="text-muted text-xs block">行政管理人員<b class="caret"></b></span> </span>
-                            </a>
-                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                                <li class="divider"></li>
-                                <li><a href="/logout">Logout</a></li>
-                            </ul>
-                        </div>
-                        <div class="logo-element">
-                            GAM
-                        </div>
-                    </li>
+
+<!--phone選單列start-->
+<div class="phone_MenuGroup" id="phone_MenuGroup">
+    <span class="btn_close" id="BTN_CLOSE">&times;</span>
+    <ul>
+<?php if( ! empty($menu)){ foreach($menu as $item):?>
+                            <?php if(isset($item['list']) && ! empty($item['list'])){?>
+        <li><a href="#"><?=$item['name']?></a>
+            <ul class="sub_menu" id="sub_Menu_01">
+                <?php foreach ($item['list'] as $num => $item2):?>
+                <li><a href="<?=empty($item2['url']) ? 'javascript:void();' : $item2['url']?>"><?=$item2['name']?></a></li>
+                <?php endforeach; }?>
+            </ul>
+        </li>
+        <?php endforeach; }?>
+        <li><a href="#">切換語系</a></li>
+        <li><a href="#">開戶</a></li>
+        <li><a href="#">提款</a></li>
+        <li><a href="#">提款</a></li>
+        <li><a href="#">提款</a></li>
+        <li><a href="#">提款</a></li>
+    </ul>
+</div>
+<div class="mask" id="Mask"></div>
+<!--phone選單列end------>
+            
+            
+<!--header-->
+<div class="header">
+    <div class="header-top">
+        <div class="container">         
+            <div class="header-left">       
+                    <ul>
+                        <li><a href="#">切換語系</a></li>
+                        <li><a  href="#">開戶<span class="badge badge-lemon badge_Width bacg_pc_Position">1</span></a></li>
+                        <li><a  href="#">提款<span class="badge badge-lemon badge_Width bacg_pc_Position">1</span></a></li>
+                        <li><a  href="#">提款</a></li>
+                        <li><a  href="#">提款</a></li>
+                        <li><a  href="#">提款<span class="badge badge-lemon badge_Width bacg_pc_Position">45</span></a></li>
+                    </ul>
+                    <div class="clearfix"> </div>
+            </div>
+                <div class="clearfix"> </div>
+        </div>
+        </div>
+        <div class="container">
+            <div class="head-top">
+                <div class="logo">
+                    <a href="/"><img src="<?=ASSETS_IMG?>logo.png" alt=""></a> 
+                </div>
+                
+          <!-----------------桌機版menu start---------------->
+            <div class="nav rig">
+                <ul class="menu">
+<?php if( ! empty($menu)){ foreach($menu as $key => $item):?>
+                            <?php if(isset($item['list']) && ! empty($item['list'])){?>
+        <li><a href="#"><?=$item['name']?><?php if(intval($item['count']) > 0){ echo '<span class="tip_txt">'.$item['count'].'</span>';} ?></a>
+            <ul class="sub-menu sub-menu_0<?=intval($key) + 1?>" id="Sub_menu_0<?=intval($key) + 1?>" >
+                <?php foreach ($item['list'] as $key2 => $item2):?>
+                <li><a href="<?=empty($item2['url']) ? '#' : $item2['url']?>"><?=$item2['name']?><?php if(intval($item2['count']) > 0){ echo '<span class="tip_txt">'.$item2['count'].'</span>';} ?></a>
+                <?php if(isset($item2['list']) && ! empty($item2['list'])){?>
+                    <ul class="sub-menu" id="child_menu_0<?php if($key >1){ ?><?=intval($key) + 1?>_<?=intval($key2) + 1?><?php }else{ ?><?=intval($key2) + 1?><?php } ?>" >
+                    <?php foreach ($item2['list'] as $key3 => $item3):?>
+                        <li><a href="<?=empty($item3['url']) ? '#' : $item3['url']?>"><?=$item3['name']?><?php if(intval($item3['count']) > 0){ echo '<span class="tip_txt">'.$item3['count'].'</span>';} ?></a></li>
+                        <?php endforeach;?>
+                        </ul>
+                        <?php } ?></li>
+                <?php endforeach; }?>
+            </ul>
+        </li>
+        <?php endforeach; }?>
                 </ul>
             </div>
-        </nav>
-        <div id="page-wrapper" class="gray-bg dashbard-1">
-            <div class="row border-bottom">
-                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
-                    <div class="navbar-header">
-                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-                    </div>
-                    <ul class="nav navbar-nav">
-                        <?php if( ! empty($menu)){ foreach($menu as $item):?>
-                        <?php if(isset($item['list']) && ! empty($item['list'])){?>
-                        <li class="dropdown">
-                            <a aria-expanded="false" role="button" href="" class="dropdown-toggle" data-toggle="dropdown">
-                                <?=$item['name']?><span class="badge badge-warning">6</span><span class="caret"></span></a>
-                            <ul role="menu" class="dropdown-menu">
-                                <?php foreach ($item['list'] as $num => $item2):?>
-                                <li>
-                                    <a href="/<?=empty($item2['url']) ? 'javascript:void();' : $item2['url']?>">
-                                        <?=$item2['name']?></a>
-                                </li>
-                                <?php endforeach;?>
-                            </ul>
-                        </li>
-                        <?php }?>
-                        <?php endforeach;}?>
-                    </ul>
-                </nav>
-                <?=$bread_crumb?>
+            <div class="clr"></div>
+            <!------------------桌機版menu end----------------->
+            <!--手機版menuBar start--> 
+            <div class="phone_MenuBar" id="Phone_MenuBar">
+                <li class="showhide" style="display: list-item;">
+                    <span class="title">MENU</span>
+                    <span class="icon1"></span>
+                    <span class="icon2"></span>
+                </li>            
             </div>
-            <?=$content?>
+            <!--手機版menuBar end --->          
+            
+            <div class="clearfix"> </div>
         </div>
-    </div>
-</body>
+        </div>
 
+    </div>
+    <?=$content?>
+
+
+<!--footer start-->
+<div class="footer">
+    <div class="footer-class">
+        <p>Copyright &copy; 2016 <a href="#">GALLOP Studio</a>. All rights reserved.</p>
+    </div>
+</div>
+<!--footer end-->
+
+<!--引用Google CDN jQuery-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!--<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>-->
+
+<!-- menu -->
+<script src="<?=ASSETS_JS?>menu.js"></script> 
+<!--phone_Menu手機版選單-->
+<script type="text/javascript" src="<?=ASSETS_JS?>phone_Menu.js"></script>
+
+
+</body>
 </html>
+            

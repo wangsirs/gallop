@@ -1,0 +1,64 @@
+
+/************************
+
+  Author:Lainie
+  time:2016-07-03
+  document:index.html (txt_style)
+
+ ************************/
+.txt_family{font-family:"微軟正黑體",Arial, Helvetica, sans-serif;}
+.txt_Weight{  font-weight: bold;}
+.txt_Size{font-size: 1em;}
+.txtC{text-align:center;}
+.txt_Red{color:#d9534f;}
+
+.margin_Right{  margin-right: 20px;}
+.margin_Bottom{margin-bottom: 25px;}
+.margin_Top{margin-top:10px;}
+.margin_Left{margin-left: 10px;}
+
+.min_Width{min-width: 100px;}
+
+h1{ 
+	font-size: 1.5em;    
+	text-align: center;
+	padding-top:15px;
+	padding-bottom:15px;
+	font-family:"微軟正黑體",Arial, Helvetica, sans-serif;
+}
+
+h2.txt_title_information{
+	font-size: 1.125em;
+    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 7px;
+    font-family: "微軟正黑體",Arial, Helvetica, sans-serif;
+	border-bottom: dashed 1px #605136;
+	color: #5a400f;
+	text-shadow: 1px 1px 10px #f6f1db;
+    font-weight: 600;
+}
+
+
+.badge_Width{
+	border-radius: 50%;
+	behavior: url(../images/border-radius.htc);/*針對ie8*/
+    width: 20px;
+    height: 20px;
+	display: inline;
+	margin-left: 5px;
+	padding: 2px 7px;
+	font-family:"微軟正黑體",Arial, Helvetica, sans-serif;
+}
+
+.badge-lemon{
+	background:#def4aa;
+	color:#666;
+}
+
+.bacg_pc_Position{
+	position:absolute;
+	top: 3px;
+    left: 33px;
+	padding:3px;
+}

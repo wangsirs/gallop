@@ -29,23 +29,6 @@ if(empty($_SERVER['SERVER_NAME'])){
     $_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
 }
 
-$list_comany = array(
-    'A00001' => array('host' => 'admin.gamfx.com'),
-    'A00002' => array('host' => 'admin.qoo.cn'),
-);
-
-$com_id = explode('/', $_SERVER['REQUEST_URI'])[1];
-$host = @$list_comany[$com_id]['host'];
-unset($list_comany);
-if(empty($host)) die('None company id');
-if($com_id === 'A00001'){
-    $list_name = explode('.', $_SERVER['SERVER_NAME']);
-    if(count($list_name) === 4){
-        $host = str_replace('com', $list_name[2].'.com', $host);
-    }
-    unset($list_name);
-}
-
 $config['base_url'] = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ? 'https' : 'http').'://';
 
 $config['base_url'] .= empty($host) ? $_SERVER['SERVER_NAME'] : $host;
