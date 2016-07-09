@@ -230,7 +230,7 @@ class Client_api extends REST_Controller {
         
         $list = $this->user_comm_model->apps($user_id);
         if(empty($list)){
-            error_log('app list is empty:'.$user_id);
+            logger_err(__CLASS__, __FUNCTION__, 'app list is empty:'.$user_id);
         }
         
         $this->set_response($list, REST_Controller::HTTP_OK);

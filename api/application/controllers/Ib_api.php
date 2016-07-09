@@ -114,7 +114,7 @@ class Ib_api extends REST_Controller {
         
         $list = $this->ib_comm_model->apps($ib_id);
         if(empty($list)){
-            error_log('app list is empty:'.$ib_id);
+            logger_err(__CLASS__, __FUNCTION__, 'app list is empty:'.$ib_id);
         }
         
         

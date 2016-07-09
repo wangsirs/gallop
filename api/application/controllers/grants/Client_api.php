@@ -300,7 +300,7 @@ class client_api extends REST_Controller {
         //更新驗證
         if( ! $this->money_model->update_funding_status($com_id, $mf_id, money_model::FA_SUCCESS)){
             //入金成功，但狀態更新失敗，須特別註記
-            error_log('MT4 funding success, but log update failed. mf_id='.$mf_id);
+            logger_warn(__CLASS__, __FUNCTION__, 'MT4 funding success, but log update failed. mf_id='.$mf_id);
             
             $this->set_response('update mt4 approve failed.', 302);
             return FALSE;
@@ -489,7 +489,7 @@ class client_api extends REST_Controller {
         //更新驗證
         if( ! $this->money_model->update_withdraw_status($com_id, $mw_id, money_model::MA_SUCCESS)){
             //入金成功，但狀態更新失敗，須特別註記
-            error_log('MT4 funding success, but log update failed. mf_id='.$mw_id);
+            logger_warn(__CLASS__, __FUNCTION__, 'MT4 funding success, but log update failed. mf_id='.$mw_id);
             
             $this->set_response('update mt4 approve failed.', 302);
             return FALSE;

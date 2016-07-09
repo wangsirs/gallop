@@ -430,7 +430,7 @@ class ib_api extends REST_Controller {
                 if($msg !== TRUE){
                     //寫入錯誤紀錄檔
                     //須改寫
-                    error_log($_user_id.' count error='.$msg);
+                    logger_err(__CLASS__, __FUNCTION__, $_user_id.' count error='.$msg);
                     json_push($log_path, $log_fname, array($_user_id => $msg));
                 }
             }
@@ -524,7 +524,7 @@ class ib_api extends REST_Controller {
             if($msg !== TRUE){
                 //寫入錯誤紀錄檔
                 //須改寫
-                error_log($_ib_id.' count error='.$msg);
+                logger_err(__CLASS__, __FUNCTION__, $_user_id.' count error='.$msg);
                 json_push($log_path, $log_fname, array($_ib_id => $msg));
             }
         }

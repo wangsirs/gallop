@@ -515,8 +515,13 @@ abstract class REST_Controller extends CI_Controller {
         );
         
         //Add by bs 20160530
-        error_log('Call api:'.json_encode($this->_post_args));
-
+//        error_log("Call api:".json_encode($this->_post_args));
+        logger(LOG_INFO, 'Call api:'.json_encode($this->_post_args));
+//        
+//        openlog('class->function', LOG_PID | LOG_PERROR, LOG_LOCAL4);
+//        syslog(LOG_WARNING, '['.$this->request->method.']Call api:'.json_encode($this->_post_args));
+//        closelog();
+//        syslog(LOG_INFO, '['.$this->request->method.']Call api:'.json_encode($this->_post_args));
         // Which format should the data be returned in?
         $this->response->format = $this->_detect_output_format();
 
@@ -818,7 +823,8 @@ abstract class REST_Controller extends CI_Controller {
      */
     public function set_response($data = NULL, $http_code = NULL)
     {
-        error_log('API RESP:'.$http_code.', '.json_encode($data));
+        logger(LOG_INFO, "API RESP:".$http_code.', '.json_encode($data));
+//        error_log("API RESP:".$http_code.', '.json_encode($data));
         $this->response($data, $http_code, TRUE);
     }
 
