@@ -10,16 +10,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @param boolean $tree
  * @param string $view
  */
-function load_frame($app, $classname, $funcname, $view_data = array(), $tree = FALSE, $view = '', $show_crumb = TRUE){
+function load_frame($classname, $funcname, $view_data = array(), $tree = FALSE, $view = '', $show_crumb = FALSE){
     
     $CI =& get_instance();
     $CI->load->library('session');
     $CI->load->library('parser');
     
-    $CI->load->library('menu_lib', array('app' => $app, 'classname' => $classname, 'funcname' => $funcname));
+    $CI->load->library('menu_lib', array('classname' => $classname, 'funcname' => $funcname));
     
     if($tree){
-        $CI->load->library('tree_lib', array('app' => $app));        
+        $CI->load->library('tree_lib');        
     }
     
     $view_data['page_title'] = $CI->menu_lib->page_title();
@@ -33,8 +33,7 @@ function load_frame($app, $classname, $funcname, $view_data = array(), $tree = F
         'bread_crumb' => $show_crumb ?
          $CI->parser->parse('frame/bread_crumb_view', array('data' => $CI->menu_lib->bread_crumb()), TRUE):'',
         'left' => $tree ? $CI->tree_lib->load() : '',
-        'content' => empty($view) ? '' : $CI->parser->parse($view, $view_data, TRUE),
-        'username' => ib_lib::full_name()
+        'content' => empty($view) ? '' : $CI->parser->parse($view, $view_data, TRUE)
     );
     $CI->load->view('frame/base_frame_view', $data);
 }

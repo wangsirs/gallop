@@ -107,12 +107,9 @@ define('IS_ADMIN', $list_name[0] === 'admin');
 unset($list_name);
 
 //Web資源
-define('ASSETS_IMG', '/share/img/');
-define('ASSETS_CSS', '/share/css/');
-define('ASSETS_JS', '/share/js/');
-define('ASSETS_CUSTOM_IMG', '/assets/img/');
-define('ASSETS_CUSTOM_CSS', '/assets/css/');
-define('ASSETS_CUSTOM_JS', '/assets/js/');
+define('ASSETS_IMG', '/assets/images/');
+define('ASSETS_CSS', '/assets/css/');
+define('ASSETS_JS', '/assets/js/');
 //其他路徑
 define('S3_ROOT', 'https://s3-ap-northeast-1.amazonaws.com/gallop/');
 define('IMG_ROOT', S3_ROOT.'img/');

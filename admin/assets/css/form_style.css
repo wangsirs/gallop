@@ -1,0 +1,207 @@
+
+/************************
+
+  Author:Lainie
+  time:2016-07-02
+  document:index.html (form)
+
+ ************************/
+ 
+ 
+.panel{    padding:0px;}
+.panel .panel-body{padding-top:0;}
+ 
+input[type="search"]{
+	 padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    box-shadow: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+input[type="search"]:hover ,  input[type="search"]:focus , .Blue_Box_Blur:hover, .Blue_Box_Blur:focus{
+	border:1px solid #66afe9;
+	box-shadow:1px 1px 6px 1px #66afe9;
+	-webkit-box-shadow:1px 1px 6px 1px #66afe9;
+	-moz-box-shadow:1px 1px 6px 1px #66afe9;
+	outline:none;
+}
+
+
+/*---select---*/
+select  , .select_Style{
+	border: solid 1px #ccc;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	-o-appearance:none;
+   	appearance:none; /*取消預設選擇框外觀*/
+	background-color:#fff;
+	background: url("../images/arrows_BG_down.png") no-repeat scroll right center transparent!important;
+    padding: 5px 30px 5px 13px;
+	border-radius:3px;
+}
+select::-ms-expand {display: none;}/*取消ie預設選擇框，hide the select arrow*/
+
+/*option:selectd {
+	color:red;
+	background:orange;
+}*/
+
+select option{color:#8f8d8d;}
+
+option:checked {/*被選中的*/
+	color:#6f6f6f;
+	background:#f1f1f1;
+}
+
+option:hover{background:#f1f1f1;}
+
+option:focus{color:red;}
+
+
+
+/*---checkbox---*/
+input[type="checkbox"] {
+    -webkit-appearance: none;/*取消預設外觀*/
+	-moz-appearance:none;
+	-o-appearance:none;
+	appearance:none;
+	
+	/*visibility:hidden;*/
+	
+    margin-top: 0;
+    border: 1px solid #bcbbbb;
+    background-color: #d7d7d7;
+	background-image:url(../images/checkBox_default.png) no-repeat center center;
+    width: 19px;
+    height: 19px;
+	border-radius: 3px;
+    vertical-align: middle;
+	margin-right: 5px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+input[type=checkbox]::-ms-check{display: none;}
+
+input[type="checkbox"]:checked {
+	background:url(../images/checkBox_Checked.png) no-repeat center center;
+	border:1px solid #acabab;
+	outline:none;
+}
+
+input[type="checkbox"]:focus{outline:none;}
+
+
+
+.txt_Group{
+	width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+	margin-bottom: 10px;
+	padding-top: 16px;
+    padding-bottom: 16px;
+	/*漸層*/
+	background: #fefefe;
+    background: -moz-linear-gradient(top, #fefefe 0%, #dbdbdb 100%);
+    background: -webkit-linear-gradient(top, #fefefe 0%,#dbdbdb 100%);
+    background: linear-gradient(to bottom, #fefefe 0%,#dbdbdb 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#dbdbdb',GradientType=0 );
+    -webkit-box-shadow: inset 1px 1px 20px 3px #C2BFBF;
+	-moz-box-shadow: inset 1px 1px 20px 3px #C2BFBF;
+    box-shadow: inset 1px 1px 20px 3px #C2BFBF;
+}
+
+label.title_txt_Style{
+	font-size:1em;
+	font-weight: 600;
+	color: #757575;
+	text-align: left;
+	font-family: "微軟正黑體",Arial, Helvetica, sans-serif;
+}
+
+div.formGroup_Style{margin-bottom:0;}
+div.panel_BG{background:none;}
+
+div.btn_Position{    
+	margin-top: 10px;
+    margin-bottom: 10px;
+	padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+/*checkBox style*/
+.cbr-replaced .cbr-state{    
+	width: 20px;
+    height: 20px;
+	border-radius: 2px;
+	background:none!important;
+}
+
+
+div.id_Card_Number_Group , div.id_Card_Number_Group_02 , div.id_Card_Number_Group_03{
+	width: 100%;
+    height: 300px;
+	background: #d7d7d7;
+	overflow:scroll;
+	display:none;/*預設隱藏*/
+}
+
+
+.dataTables_wrapper .dataTables_length {margin-top:10px;margin-bottom:10px;}
+
+@media (min-width: 768px) {  /**桌機版*/
+	input, select {min-width:85px;}
+	input[type="checkbox"]{min-width:20px;}
+	input[type="radio"]{min-width:20px;}
+}
+@media (max-width: 768px) { /**手機版*/
+	.txt_Group{width: 98%;}
+	
+	<!--.btn_Width{
+		width: 100%;
+		margin-left:auto;
+		margin-right:auto;
+		margin-top: 5px;
+    	margin-bottom: 5px;
+	}-->
+	
+	.form_control_style{
+		height: 45px;
+		padding: 8px 12px;
+		font-size: 1em;
+		line-height: 1.5;
+	}
+	
+	div.formGroup_Style{    margin-bottom: 15px;}
+	.panel{margin-bottom: 0px;}
+	
+	div.btn_Position{width: 100%;}
+	
+		/*checkBox style*/
+	.cbr-replaced .cbr-state{    
+		width: 30px;
+		height: 30px;
+		background:none!important;
+	}
+	
+	input, select {min-width:100px;}
+	
+	input[type="checkbox"]{min-width:20px;}
+	input[type="radio"]{min-width:30px;}
+
+}
