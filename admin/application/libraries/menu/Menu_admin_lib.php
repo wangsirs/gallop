@@ -17,13 +17,13 @@ class Menu_admin_lib
                 'name' => lang('menu_admin_manage'),
                 'page_title' => '',
                 'url' => '',
-                'count' => 0,
+                'count' => 6,
                 'list' => array(
                     array('name' => lang('menu_user_manage'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
                     array('name' => lang('menu_email_manage'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
                     array('name' => lang('menu_email_record'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
                     array('name' => lang('menu_rate_manage'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
-                    array('name' => lang('menu_role_manage'), 'url' => '', 'popup' => FALSE, 'page_title' => ''),
+                    array('name' => lang('menu_role_manage'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
                     array('name' => lang('menu_lv_setup'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
                     array('name' => lang('menu_scale_setup'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
                     array('name' => lang('menu_msg_manage'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
@@ -37,8 +37,8 @@ class Menu_admin_lib
                 'count' => 0,
                 'list' => array(
                     array('name' => lang('menu_mt4_add_great_ib'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
-                    array('name' => lang('menu_mt4_staff_check'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0, 'list' => array(
-                        array('name' => lang('menu_mt4_ib_check'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
+                    array('name' => lang('menu_mt4_staff_check'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 3, 'list' => array(
+                        array('name' => lang('menu_mt4_ib_check'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 4),
                         array('name' => lang('menu_mt4_client_check'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
                         array('name' => lang('menu_mt4_sub_check'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
                         )),

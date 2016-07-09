@@ -85,7 +85,7 @@
         <div class="container">
             <div class="head-top">
                 <div class="logo">
-                    <a href="index.html"><img src="<?=ASSETS_IMG?>logo.png" alt=""></a> 
+                    <a href="/"><img src="<?=ASSETS_IMG?>logo.png" alt=""></a> 
                 </div>
                 
           <!-----------------桌機版menu start---------------->
@@ -93,15 +93,14 @@
                 <ul class="menu">
 <?php if( ! empty($menu)){ foreach($menu as $key => $item):?>
                             <?php if(isset($item['list']) && ! empty($item['list'])){?>
-        <li><a href="#"><?=$item['name']?></a>
+        <li><a href="#"><?=$item['name']?><?php if(intval($item['count']) > 0){ echo '<span class="tip_txt">'.$item['count'].'</span>';} ?></a>
             <ul class="sub-menu sub-menu_0<?=intval($key) + 1?>" id="Sub_menu_0<?=intval($key) + 1?>" >
                 <?php foreach ($item['list'] as $key2 => $item2):?>
-                <li><a href="<?=empty($item2['url']) ? 'javascript:void();' : $item2['url']?>"><?=$item2['name']?></a>
+                <li><a href="<?=empty($item2['url']) ? '#' : $item2['url']?>"><?=$item2['name']?><?php if(intval($item2['count']) > 0){ echo '<span class="tip_txt">'.$item2['count'].'</span>';} ?></a>
                 <?php if(isset($item2['list']) && ! empty($item2['list'])){?>
-                    <ul class="sub-menu" id="child_menu_0<?=intval($key) + 1?><?php if($key >1){ ?>_0<?=intval($key2) + 1?><?php } ?>
-                    " >
+                    <ul class="sub-menu" id="child_menu_0<?php if($key >1){ ?><?=intval($key) + 1?>_<?=intval($key2) + 1?><?php }else{ ?><?=intval($key2) + 1?><?php } ?>" >
                     <?php foreach ($item2['list'] as $key3 => $item3):?>
-                        <li><a href="<?=empty($item3['url']) ? 'javascript:void();' : $item3['url']?>"><?=$item3['name']?></a></li>
+                        <li><a href="<?=empty($item3['url']) ? '#' : $item3['url']?>"><?=$item3['name']?><?php if(intval($item3['count']) > 0){ echo '<span class="tip_txt">'.$item3['count'].'</span>';} ?></a></li>
                         <?php endforeach;?>
                         </ul>
                         <?php } ?></li>
@@ -128,26 +127,7 @@
         </div>
 
     </div>
-
-    
-
-<!--content start-->
-<div class="content content_BG">
-    <div class="container">
-    <div class="content-top">
-        <h1 class="txt_fontFamily txt_icon">行政畫面功能</h1>
-        <div class="grid-in">
-            
-        <div class="clearfix"> </div>
-        </div>
-    </div>
-    <!----->
-
-    </div>
-    <!---->
-    
-</div>
-<!--content end-->
+    <?=$content?>
 
 
 <!--footer start-->

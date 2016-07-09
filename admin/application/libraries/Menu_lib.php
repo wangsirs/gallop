@@ -14,7 +14,7 @@ class Menu_lib
     {        
         $this->_params = $params;
 
-        if(file_exists(APPPATH.'libraries/menu/Menu_lib.php')){
+        if(file_exists(APPPATH.'libraries/menu/Menu_admin_lib.php')){
             $CI =& get_instance();
             $CI->load->library('menu/Menu_admin_lib');
             $this->_menu = $CI->{'menu_admin_lib'}->lists();
