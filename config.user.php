@@ -138,6 +138,42 @@
 				}
 			}
 		},
+		"syslog1": {
+			"display" : "[DEV-SYS]",
+			"path"    : "\/var\/log\/gallop_dev.log",
+			"refresh" : 5,
+			"max"     : 10,
+			"notify"  : true,
+			"format"    : {
+				"type"         : "NGINX",
+                "regex"        : "@^(.*?) ([0-9]{1,2}) ([0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}) (ip-[0-9]{1,3}-[0-9]{1,3}-[0-9]{1,3}-[0-9]{1,3}) \\[(.*)\\]\\[(.*)\\]\\[[0-9]{1,10}]: (((.*), client: (.*), server: (.*), request: \"(.*) (.*) HTTP.*\", host: \"(.*)\"(, referrer: \"(.*)\")*)|(.*))$@U",
+				"export_title" : "Error",
+				"match"        : {
+                    "Date": [1," ",2," ",3],
+                    "Class": 5,
+					"Severity" : 6,
+					"Message"  : 9,
+					"Client"   : 10,
+					"Server"   : 11,
+					"Method"   : 12,
+					"Request"  : 13,
+					"Host"     : 14,
+					"Referer"  : 15
+				},
+				"types"    : {
+                    "Date": "date:m-d H:i:s",
+                    "Class": "txt",
+					"Severity" : "badge:severity",
+					"Message"  : "txt",
+					"Client"   : "ip:http",
+					"Server"   : "txt",
+					"Method"   : "txt",
+					"Request"  : "txt",
+					"Host"     : "ip:http",
+					"Referer"  : "link"
+				}
+			}
+		},
 		"nginx3": {
 			"display" : "[DEV-API] .dev.com.error",
 			"path"    : "\/var\/log\/api.gamfx.dev.com.error.log",
