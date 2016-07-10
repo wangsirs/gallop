@@ -24,9 +24,5 @@ class admin extends CI_Controller {
         $data = array();
         load_frame( __CLASS__, __FUNCTION__, $data, FALSE, __FUNCTION__.'_view');
     }
-    
-    public function client_register(){
-        $data = array();
-        load_frame($this->_app, __CLASS__, __FUNCTION__, $data);
-    }
+
 }
