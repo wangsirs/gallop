@@ -122,7 +122,7 @@ void logToFile(LPCSTR log) {
 	ofstream outfile;
 	outfile.open(LOG_FILE, ios_base::app);
 
-	strftime(buffer, 80, "[%Y-%m-%d %I:%M:%S] ", now);
+	strftime(buffer, 80, "[%Y-%m-%d %H:%M:%S] ", now);
 	string str(buffer);
 	outfile << buffer << log;
 	return;
@@ -218,6 +218,8 @@ int main(int argc, char* argv[])
 					{
 						_snprintf(logStr, sizeof(logStr), "Connect to %s as '%s' failed (%s)\n", hostname, login_id, manager->ErrorDescription(res));
 						logToFile(logStr);
+						char * sendbuf = "-1\r\nend\r\n";
+						send(sConnect, sendbuf, sizeof(sendbuf), 0);
 						continue;
 					}
 				}
