@@ -10,7 +10,7 @@ class results_model extends CI_Model{
     const TB_USER = 'user';
     const TB_MI = 'mt4_ib';
     const TB_MIR = 'mt4_ib_relation';
-    const TB_MTL = 'mt4_trade_log';
+    const TB_MST = 'mt4_sync_trade';
     const TB_MF = 'money_funding';
     const TB_MRC = 'mt4_results_cus';
     const TB_MRO = 'mt4_results_org';
@@ -38,11 +38,11 @@ class results_model extends CI_Model{
         
         $sql_target = !empty($mt4_id) ? "mt4_id = '".$mt4_id."'" : "user_id = '".$user_id."'";
         
-        //注意，子查詢 MTL 統計每日， close_time 必須是 < $end_day，不會將結束日期計入!! 否則 end_day 會被偷計算 00:00 那一筆
+        //注意，子查詢 MST 統計每日， close_time 必須是 < $end_day，不會將結束日期計入!! 否則 end_day 會被偷計算 00:00 那一筆
         $sql = "SELECT r.*, u.ib_id, m.scale, (r.volume*m.scale/100)comission FROM ("
                     . "SELECT mt4_id, user_id, sum(volume) volume, DATE(close_time) close_date, sum(profit) profit , 0 funding "
-                    //. "(SELECT sum(amount) FROM ".self::TB_MF." mf WHERE mf.user_id = mtl.user_id AND ctime >= '".$st_day."' AND ctime <= '".$end_day."' AND mf_status = 1 group by user_id) funding "
-                    . "FROM `mt4_trade_log` mtl "
+                    //. "(SELECT sum(amount) FROM ".self::TB_MF." mf WHERE mf.user_id = mst.user_id AND ctime >= '".$st_day."' AND ctime <= '".$end_day."' AND mf_status = 1 group by user_id) funding "
+                    . "FROM `mt4_sync_trade` mst "
                     . "WHERE $sql_target AND close_time >= '".$st_day."' AND close_time < '".$end_day."' "
                     . "GROUP BY mt4_id,DATE(close_time)"
                 . ") r LEFT JOIN user u ON r.user_id = u.user_id LEFT JOIN mt4_ib m ON m.ib_id = u.ib_id";

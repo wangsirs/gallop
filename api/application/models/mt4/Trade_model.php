@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class trade_model extends CI_Model{
 
-    const TB_MTL = 'mt4_trade_log';
+    const TB_MST = 'mt4_sync_trade';
     const TB_MU = 'mt4_user';
     
     function __construct()
@@ -45,7 +45,7 @@ class trade_model extends CI_Model{
                         .$row['profit'].",'".$row['comment']."')";
             }
             //交易紀錄只要釋出，就不會再修改
-            $sql = "INSERT IGNORE INTO ".self::TB_MTL."(".$sql_key.") values".implode(',', $sql_batch);
+            $sql = "INSERT IGNORE INTO ".self::TB_MST."(".$sql_key.") values".implode(',', $sql_batch);
 
             $this->db->trans_start();
             
@@ -73,7 +73,7 @@ class trade_model extends CI_Model{
      * @return array (mt4_id => mt4_order, ...)
      */
     public function list_last_order($user_id){        
-        $sql = "SELECT mt4_id, mt4_order FROM ( SELECT * FROM ".self::TB_MTL." WHERE user_id = '".$user_id."' ORDER BY close_time DESC ) s GROUP BY s.mt4_id";
+        $sql = "SELECT mt4_id, mt4_order FROM ( SELECT * FROM ".self::TB_MST." WHERE user_id = '".$user_id."' ORDER BY close_time DESC ) s GROUP BY s.mt4_id";
         
         $query = $this->db->query($sql);
         if($query->num_rows() <= 0){
@@ -100,9 +100,9 @@ class trade_model extends CI_Model{
         }
         $end_day = date('Y-m-d', strtotime($end_day . "+1 day"));
         
-        $sql = "SELECT * FROM ".self::TB_MTL." mtl "
-                . "WHERE mtl.mt4_id IN ('".  implode("','", $list_mt4_id)."') AND mtl.close_time >= '".$st_day."' AND mtl.close_time < '".$end_day."' "
-                . "ORDER BY mtl.close_time DESC";
+        $sql = "SELECT * FROM ".self::TB_MST." mst "
+                . "WHERE mst.mt4_id IN ('".  implode("','", $list_mt4_id)."') AND mst.close_time >= '".$st_day."' AND mst.close_time < '".$end_day."' "
+                . "ORDER BY mst.close_time DESC";
         
         $query = $this->db->query($sql);
         if($query->num_rows() <= 0){

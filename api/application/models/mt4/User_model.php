@@ -34,7 +34,7 @@ class user_model extends CI_Model{
      * @param boolean $old_user 舊客戶
      * @return boolean
      */
-    public function add(&$base_data, &$app_data, $old_user = FALSE){
+    public function add($base_data, &$app_data, $old_user = FALSE){
                 
         $this->db->trans_start();
                 
