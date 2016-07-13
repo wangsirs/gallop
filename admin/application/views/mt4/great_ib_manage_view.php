@@ -6,7 +6,7 @@
     <!--兼容ie 使用chrome-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="keywords" content="" />
-    <title>MT4客戶管理</title>
+    <title>大IB顧問管理</title>
 
 
     <link href="<?=ASSETS_CSS?>common.css" rel="stylesheet" type="text/css">
@@ -65,7 +65,7 @@
      <div class="container">
          <!---開始-->
          <div class="wrapper">
-            <h1>MT4客戶管理</h1>
+            <h1>大IB顧問管理</h1>
 
             <div class="contentGroup">
 
@@ -76,14 +76,13 @@
                         <table id="myTable" class="cell-border display nowrap dataTable dtr-inline table_style" cellspacing="0" width="" role="grid" aria-describedby="example_info" style="width: 100%;">
                             <thead>
                                 <tr role="row" class="BG_Gray">
-                                	<th class="sorting Color_Gray min_Width" tabindex="0" aria-controls="example" rowspan="1" colspan="1">客戶帳號</th>
-                                    <th id="" class="sorting Color_Gray min_Width" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="">客戶姓名</th>
+                                	<th class="sorting Color_Gray min_Width" tabindex="0" aria-controls="example" rowspan="1" colspan="1">顧問帳號</th>
+                                    <th id="" class="sorting Color_Gray min_Width" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="">顧問姓名</th>
                                     <th id="" class="sorting_asc Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending">開戶日期</th>
-                                    <th id="" class="sorting Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 150px;">累積入金</th>
+                                    <th id="" class="sorting Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 150px;">佣金比例</th>
                                     <th id="" class="sorting_asc Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="">餘額</th>
                                     <th id="" class="sorting Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1">狀態</th>
-                                    <th id="" class="sorting_asc Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="">明細</th>
-                                    <th id="" class="dt-body-right sorting Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 79px;"></th>
+                                    <th id="" class="sorting_asc Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="">功能</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -96,16 +95,7 @@
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                     	<div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">明細</a>
-                                        </div>
-                                    </td>
-                                    <td class=" dt-body-right sorting_1">
-                                        <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="#">修改</a>
-                                        </div>
-                                        <br/>
-                                        <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="customer_Manage_Multiple_Account.html">多帳號管理</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">修改</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -117,17 +107,8 @@
                                     <td class="sorting_1">9999.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
-                                    	<div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">明細</a>
-                                        </div>
-                                    </td>
-                                    <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="#">修改</a>
-                                        </div>
-                                        <br/>
-                                        <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="customer_Manage_Multiple_Account.html">多帳號管理</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">修改</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -139,17 +120,8 @@
                                     <td class="sorting_1">9999.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
-                                    	<div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">明細</a>
-                                        </div>
-                                    </td>
-                                    <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="#">修改</a>
-                                        </div>
-                                        <br/>
-                                        <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="customer_Manage_Multiple_Account.html">多帳號管理</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">修改</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -161,17 +133,8 @@
                                     <td class="sorting_1">9999.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
-                                    	<div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">明細</a>
-                                        </div>
-                                    </td>
-                                    <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="#">修改</a>
-                                        </div>
-                                        <br/>
-                                        <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="customer_Manage_Multiple_Account.html">多帳號管理</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">修改</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -183,17 +146,8 @@
                                     <td class="sorting_1">9999.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
-                                    	<div class="btn-group btn-group-justified btn_Width btn_Width_100 ">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">明細</a>
-                                        </div>
-                                    </td>
-                                    <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="#">修改</a>
-                                        </div>
-                                        <br/>
-                                        <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="customer_Manage_Multiple_Account.html">多帳號管理</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">修改</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -205,17 +159,8 @@
                                     <td class="sorting_1">9999.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
-                                    	<div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">明細</a>
-                                        </div>
-                                    </td>
-                                    <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="#">修改</a>
-                                        </div>
-                                        <br/>
-                                        <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="customer_Manage_Multiple_Account.html">多帳號管理</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">修改</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -227,17 +172,8 @@
                                     <td class="sorting_1">9999.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
-                                    	<div class="btn-group btn-group-justified btn_Width btn_Width_100 ">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">明細</a>
-                                        </div>
-                                    </td>
-                                    <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="#">修改</a>
-                                        </div>
-                                        <br/>
-                                        <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="customer_Manage_Multiple_Account.html">多帳號管理</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">修改</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -249,17 +185,8 @@
                                     <td class="sorting_1">9999.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
-                                    	<div class="btn-group btn-group-justified btn_Width btn_Width_100 ">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">明細</a>
-                                        </div>
-                                    </td>
-                                    <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="#">修改</a>
-                                        </div>
-                                        <br/>
-                                        <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="customer_Manage_Multiple_Account.html">多帳號管理</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">修改</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -271,17 +198,8 @@
                                     <td class="sorting_1">9999.94</td>
                                     <td><span class="sorting_1s">ok</span></td>
                                     <td class="sorting_1">
-                                    	<div class="btn-group btn-group-justified btn_Width btn_Width_100 ">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">明細</a>
-                                        </div>
-                                    </td>
-                                    <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="#">修改</a>
-                                        </div>
-                                        <br/>
-                                        <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="customer_Manage_Multiple_Account.html">多帳號管理</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">修改</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -293,17 +211,8 @@
                                     <td class="sorting_1">9999.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
-                                    	<div class="btn-group btn-group-justified btn_Width btn_Width_100 ">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">明細</a>
-                                        </div>
-                                    </td>
-                                    <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg btn_Width_100 Gradient_Blue btn_Modify" href="#">修改</a>
-                                        </div>
-                                        <br/>
-                                        <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="customer_Manage_Multiple_Account.html">多帳號管理</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">修改</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -315,17 +224,8 @@
                                     <td class="sorting_1">9999.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
-                                    	<div class="btn-group btn-group-justified btn_Width btn_Width_100 ">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">明細</a>
-                                        </div>
-                                    </td>
-                                    <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="#">修改</a>
-                                        </div>
-                                        <br/>
-                                        <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="customer_Manage_Multiple_Account.html">多帳號管理</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">修改</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -337,17 +237,8 @@
                                     <td class="sorting_1">9999.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
-                                    	<div class="btn-group btn-group-justified btn_Width btn_Width_100 ">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">明細</a>
-                                        </div>
-                                    </td>
-                                    <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="#">修改</a>
-                                        </div>
-                                        <br/>
-                                        <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="customer_Manage_Multiple_Account.html">多帳號管理</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">修改</a>
                                         </div>
                                     </td>
                                 </tr>
