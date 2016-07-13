@@ -102,7 +102,7 @@ class mt4 extends CI_Controller {
     /**
     * 直客獎金
     */
-    public function org_bonus(){
+    public function client_bonus(){
         $data = array();
         load_frame( __CLASS__, __FUNCTION__, $data);
     }
