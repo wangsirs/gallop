@@ -404,11 +404,12 @@ class mt4_com_lib {
 
 	/**
 	* @author martin
-	* @version [1.0.0] [change password for specific user]
+	* @version [1.0.0] [Get all the symbol information]
 	* @todo nothing
 	* @return array ('status'=>$retVal, 'data'=> $data)
 	* @return symbol 商品名稱
 	* @return sec_group 商品類別
+	* @return symbol_id 商品ID
 	*/		
 	public function get_all_symbols(){
 		try{
@@ -426,6 +427,9 @@ class mt4_com_lib {
 							break;
 						case 1:
 							$data['sec_group'] = $val2;
+							break;
+						case 2:
+							$data['symbol_id'] = $val2;
 							break;
 						default:
 							# do nothing

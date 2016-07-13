@@ -430,9 +430,10 @@ int main(int argc, char* argv[])
 						cs = manager->SymbolsGetAll(&total);
 						for (int i = 0; i < total; i++) {
 							int sec_type = cs[i].type;
-							offset += _snprintf(offset + sendbuf, sizeof(sendbuf), "%s,%s\r\n",
+							offset += _snprintf(offset + sendbuf, sizeof(sendbuf), "%s,%s,%d\r\n",
 								cs[i].symbol,
-								csg[sec_type].name
+								csg[sec_type].name,
+								cs[i].count
 								);
 						}
 						manager->MemFree(cs);
