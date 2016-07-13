@@ -215,4 +215,19 @@ class mt4_com_api extends REST_Controller {
 		var_dump($mt4_re);
 		echo '</pre>';
 	}
+
+	/*
+	*
+	 */
+	public function get_all_symbols_post(){
+		
+		include_once APPPATH.'libraries/mt4_com/Mt4_com_lib.php';
+		$mt4_com = new mt4_com_lib();
+		
+		$mt4_re = $mt4_com->get_all_symbols();
+		
+		echo '<pre>';
+		var_dump($mt4_re);
+		echo '</pre>';
+	}
 }

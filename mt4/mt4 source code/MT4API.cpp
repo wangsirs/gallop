@@ -420,6 +420,24 @@ int main(int argc, char* argv[])
 						int ret = manager->UserPasswordSet(loginID, passwd, pwType, 1);
 						_snprintf(sendbuf, sizeof(sendbuf), "%d\r\n", ret);
 					}
+					else if (strcmp(opcode, "get_all_symbols") == 0) {
+						int total = 0;
+						int offset = 0;
+						ConSymbol* cs = {};
+						ConSymbolGroup* csg = new ConSymbolGroup[MAX_SEC_GROUPS];
+						manager->SymbolsRefresh();
+						manager->SymbolsGroupsGet(csg);
+						cs = manager->SymbolsGetAll(&total);
+						for (int i = 0; i < total; i++) {
+							int sec_type = cs[i].type;
+							offset += _snprintf(offset + sendbuf, sizeof(sendbuf), "%s,%s\r\n",
+								cs[i].symbol,
+								csg[sec_type].name
+								);
+						}
+						manager->MemFree(cs);
+						manager->MemFree(csg);
+					}
 					else {
 						_snprintf(sendbuf, sizeof(sendbuf), "14\r\n");
 					}

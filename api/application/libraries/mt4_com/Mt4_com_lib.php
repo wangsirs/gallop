@@ -404,6 +404,44 @@ class mt4_com_lib {
 
 	/**
 	* @author martin
+	* @version [1.0.0] [change password for specific user]
+	* @todo nothing
+	* @return array ('status'=>$retVal, 'data'=> $data)
+	* @return symbol 商品名稱
+	* @return sec_group 商品類別
+	*/		
+	public function get_all_symbols(){
+		try{
+			$query='OP='.__FUNCTION__;
+			$query_result = $this->MQ_Query($query);
+			$retVal = array();
+
+			foreach(explode("\r\n", $query_result) as $key => $val){
+				if(strlen($val) === 0) continue;
+				$data = array();
+				foreach(explode(',', $val) as $key2 => $val2){
+					switch ($key2) {
+						case 0:
+							$data['symbol'] = $val2;
+							break;
+						case 1:
+							$data['sec_group'] = $val2;
+							break;
+						default:
+							# do nothing
+							break;
+					}
+				}
+				array_push($retVal, $data);
+			}
+			return array('status' => 0, 'data' => $retVal);
+		}catch(Exception $e){
+			return array('status' => self::RET_EXCEPTION, 'data' => $e->getMessage());
+		}
+	}
+
+	/**
+	* @author martin
 	* @version [1.0.0] [start to query using socket connection, notice that this function call should be protected]
 	* @todo [Add isEmpty() judgement for each params]
 	* @todo  目前只支援繁中，後期需支援多國語系 (至少需支援簡中)
