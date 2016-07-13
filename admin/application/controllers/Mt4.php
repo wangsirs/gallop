@@ -62,6 +62,30 @@ class mt4 extends CI_Controller {
     /**
     * 客戶管理
     */
+    public function sub_check_detail(){
+        $data = array();
+        load_frame( __CLASS__, __FUNCTION__, $data);
+    }
+
+    /**
+    * 大IB管理
+    */
+    public function great_ib_manage(){
+        $data = array();
+        load_frame( __CLASS__, __FUNCTION__, $data);
+    }
+
+    /**
+    * 顧問管理
+    */
+    public function ib_manage(){
+        $data = array();
+        load_frame( __CLASS__, __FUNCTION__, $data);
+    }
+
+    /**
+    * 客戶管理
+    */
     public function client_manage(){
         $data = array();
         load_frame( __CLASS__, __FUNCTION__, $data);
@@ -71,6 +95,14 @@ class mt4 extends CI_Controller {
     * 組織獎金
     */
     public function org_bonus(){
+        $data = array();
+        load_frame( __CLASS__, __FUNCTION__, $data);
+    }
+
+    /**
+    * 直客獎金
+    */
+    public function client_bonus(){
         $data = array();
         load_frame( __CLASS__, __FUNCTION__, $data);
     }

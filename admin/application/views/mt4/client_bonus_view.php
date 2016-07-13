@@ -71,7 +71,7 @@
         <div class="container">
             <!---開始-->
             <div class="wrapper">
-                <h1>MT4組織獎金</h1>
+                <h1>MT4客戶獎金</h1>
 
                 <div class="contentGroup">
                     <!--文字start-->
@@ -97,8 +97,8 @@
                             <table id="myTable" class="cell-border display nowrap dataTable dtr-inline table_style" cellspacing="0" width="" role="grid" aria-describedby="example_info" style="width: 100%;">
                                 <thead>
                                     <tr role="row" class="BG_Gray">
-                                        <th class="sorting Color_Gray min_Width" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 120px;">顧問帳號</th>
-                                        <th id="" class="sorting Color_Gray min_Width" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="" style="width: 136px;">顧問姓名</th>
+                                        <th class="sorting Color_Gray min_Width" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 120px;">客戶帳號</th>
+                                        <th id="" class="sorting Color_Gray min_Width" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="" style="width: 136px;">客戶姓名</th>
                                         <th id="" class="sorting_asc Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending">交易量</th>
                                         <th id="" class="sorting Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 150px;">佣金</th>
                                         <th id="" class="sorting_asc Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="">入金金額</th>
