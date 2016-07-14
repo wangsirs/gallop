@@ -6,7 +6,7 @@
     <!--兼容ie 使用chrome-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="keywords" content="" />
-    <title>MT4顧問開戶審核</title>
+    <title>MT4客戶管理資料修改</title>
 
     <link href="<?=ASSETS_CSS?>reset.css" rel="stylesheet" type="text/css">
     <link href="<?=ASSETS_CSS?>bootstrap.css" rel="stylesheet" type="text/css" media="all" />
@@ -36,6 +36,8 @@
 
     <!--fonts-->
     <link href="<?=ASSETS_CSS?>font_style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'><!--//fonts-->
     <link href="<?=ASSETS_CSS?>font-awesome.min.css" rel="stylesheet" />
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -53,7 +55,7 @@
      <div class="container">
          <!---開始-->
          <div class="wrapper">
-            <h1>MT4顧問開戶審核</h1>
+            <h1>MT4客戶管理資料修改</h1>
 
             <div class="contentGroup">
                 <form id="customer_Account_Check_form" action="" method="post">
@@ -65,12 +67,16 @@
                                 <tr role="row" class="BG_Gray">
                                     <th id="Open_an_Account" class="sorting sorting_NONE Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="" style="width: 136px;">帳號</th>
                                     <th id="Open_an_Account_Date" class="sorting_asc sorting_asc_NONE Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="" style="width: 216px;" aria-sort="ascending">開戶日期</th>
+                                    <th id="Open_an_Account_Type" class="sorting sorting_NONE Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="" style="width: 102px;">開戶方式</th>
+                                    <th id="Open_an_Account_Feature" class="dt-body-right sorting sorting_NONE Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="" style="width: 42px;">帳戶狀態</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr role="row" class="odd parent">
-                                    <td class="txt_Bold sorting_1">I75647</td>
+                                    <td class="txt_Bold sorting_1">U75647</td>
                                     <td class="txt_Weight">范小小</td>
+                                    <td class="">個人帳戶</td>
+                                    <td class="">正常戶</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -104,7 +110,7 @@
                                     <td>男</td>
                                     <td class="">台灣</td>
                                     <td class="">A123456789<br/>
-                                    	<div class="btn_Position">
+                                        <div class="btn_Position">
                                          <span class="btn btn-info btn-sm btn_Shadow disLine_Block btn_ID_Card_Number" id="ID_Card_Number">顯示資料</span>
                                      </div>
                                  </td>
@@ -175,35 +181,58 @@
                         <table id="myTable_Bank_Office" class="cell-border display nowrap dataTable dtr-inline table_style" cellspacing="0" width="" role="grid" aria-describedby="example_info" style="width: 100%;">
                             <thead>
                                 <tr role="row" class="BG_Gray">
-                                    <th class="sorting sorting_NONE Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="" style="width: 250px;">介紹人代碼</th>
+                                    <th class="sorting sorting_NONE Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="" style="width: 250px;">代理商代碼</th>
                                     <th class="sorting_asc sorting_asc_NONE Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="" aria-sort="ascending">群組代碼</th>
-                                    <th class="sorting sorting_NONE Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="">佣金比例</th>
+                                    <th class="sorting sorting_NONE Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="">槓桿比例</th>
                                     <th class="dt-body-right sorting sorting_NONE Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="" >狀態</th>
-                                    <th class="dt-body-right sorting sorting_NONE Color_Gray min_Width" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="">高階管理權限</th>
-                                    <th class="dt-body-right sorting sorting_NONE Color_Gray min_Width" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="">開戶審核結果</th>
+                                    <th class="dt-body-right sorting sorting_NONE Color_Gray min_Width" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="">附加信息</th>
+                                    <th class="dt-body-right sorting sorting_NONE Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="" style="width: 42px;">請填管理者MT4帳號</th>
+                                    <th class="dt-body-right sorting sorting_NONE Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label=""></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr role="row" class="odd parent">
-                                    <td class="txt_Bold sorting_1">B36272</td>
+                                    <td class="txt_Bold sorting_1">
+                                        <input class="form-control form_control_style" name="Agents_number" id="Agents_number" data-validate="required" placeholder="代理商代碼" />
+                                    </td>
                                     <td id="Group_number">GAM</td>
-                                    <td  id="">200:1</td>
+                                    <td  id="">
+                                        <input class="form-control form_control_style" name="Lever_percent" id="Lever_percent" data-validate="required" placeholder="槓桿比例" />
+                                    </td>
                                     <td class="">
                                         <select class="form-control form_control_style select_Style" id="sboxit-1">
-                                            <option value="0" selected="selected">Active</option>
-                                            <option value="1">Inactive</option>
-                                            <option value="2">Refused</option>
+                                            <option value="0">active</option>
+                                            <option value="1">11111</option>
+                                            <option value="2">22222</option>
+                                            <option value="3" selected="selected">33333</option>
+                                            <option value="4">44444</option>
+                                            <option value="5">5555555</option>
+                                            <option value="6">666666</option>
+                                            <option value="7">77777</option>
+                                            <option value="8">888888</option>
+                                            <option value="9">999999</option>
+                                            <option value="10">1000000</option>
                                         </select>
                                     </td>
-                                    <td class="">YES</td>
                                     <td class="">
-                                        <div class="btn_Position">
-                                            <button class="btn btn-info btn_Width Gradient_Blue" id="Agree">同意</button>
-                                        </div>
-                                        <div class="btn_Position">
-                                            <button class="btn btn-danger btn_Width Gradient_Red" id="Refuse">拒絕</button>
-                                        </div>
+                                        <label>
+                                            <input type="checkbox" class="cbr cbr-gray">授權第三方管理我的帳戶
+                                        </label>
                                     </td>
+                                    <td class="">
+                                        <input class="form-control form_control_style" name="Manager_number" id="Manager_number" data-validate="required" placeholder="請填管理者MT4帳號" />
+                                    </td>
+                                    <td class="">
+                                     <div class="btn_Position">
+                                        <button class="btn btn-info btn_Width Gradient_Blue" id="Agree">提交</button>
+                                    </div>
+                                    <div class="btn_Position">
+                                        <button class="btn btn-danger btn_Width Gradient_Red" id="Refuse">歷史紀錄</button>
+                                    </div>
+                                    <div class="btn_Position">
+                                        <button class="btn btn-success btn_Width Gradient_Green" id="Refuse">返回</button>
+                                    </div>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -216,9 +245,9 @@
 
     </div>
 
-		<!--結束--->
+        <!--結束--->
 
-	</div>
+    </div>
 </div>
 <!--content end-->
 
@@ -232,15 +261,15 @@
 <!--修改 引用的data table 的功能-->
 <script>
     $(function () {
-		/*$(document).ready(function() {
-			$('#myTable').DataTable( {
-				responsive : true, //打開 #myTable表格RWD 的功能
-				paging:   false, //關掉 檔案原來的頁碼功能
-				ordering: false, //關掉 檔案原來的 排序功能
-				info:     false //關掉 檔案原來的info功能
-			} );
-		} );*/
-		$('#myTable').DataTable({ //讓#myTable 執行DataTable 函式套件
+        /*$(document).ready(function() {
+            $('#myTable').DataTable( {
+                responsive : true, //打開 #myTable表格RWD 的功能
+                paging:   false, //關掉 檔案原來的頁碼功能
+                ordering: false, //關掉 檔案原來的 排序功能
+                info:     false //關掉 檔案原來的info功能
+            } );
+        } );*/
+        $('#myTable').DataTable({ //讓#myTable 執行DataTable 函式套件
         //order : [[ 3, 'desc' ]], // asc是遞增；第四欄排序功能是往下遞減
         responsive : true, //打開 #myTable表格RWD 的功能
         paging:   false,
@@ -263,7 +292,7 @@
     });
 
 
-	$('#myTable_Bank_Office').DataTable({ //讓#myTable 執行DataTable 函式套件
+    $('#myTable_Bank_Office').DataTable({ //讓#myTable 執行DataTable 函式套件
         //order : [[ 3, 'desc' ]], // asc是遞增；第四欄排序功能是往下遞減
         responsive : true, //打開 #myTable表格RWD 的功能
         paging:   false,
@@ -286,7 +315,7 @@
     });
 
 
-	$('#myTable_information').DataTable({ //讓#myTable 執行DataTable 函式套件
+    $('#myTable_information').DataTable({ //讓#myTable 執行DataTable 函式套件
         //order : [[ 3, 'desc' ]], // asc是遞增；第四欄排序功能是往下遞減
         responsive : true, //打開 #myTable表格RWD 的功能
         paging:   false,
@@ -310,7 +339,7 @@
             //身份證
             $(".btn_ID_Card_Number").click(function(){ //顯示資料按鈕用class 去綁
                 $("#ID_Card_Number_Group").toggle(); //切換
-				$("#Bank_Account_Number_Group , #Living_Address_Group").hide(); //其他兩個關
+                $("#Bank_Account_Number_Group , #Living_Address_Group").hide(); //其他兩個關
             });
             $(".btn_Close_details").click(function(){
                 $("#ID_Card_Number_Group").hide();

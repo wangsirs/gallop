@@ -96,16 +96,16 @@
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                     	<div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">明細</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/client_manage_edit">明細</a>
                                         </div>
                                     </td>
                                     <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="#">修改</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="/mt4/client_manage_edit">修改</a>
                                         </div>
                                         <br/>
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="customer_Manage_Multiple_Account.html">多帳號管理</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="/mt4/client_multi_account">多帳號管理</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -118,16 +118,16 @@
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                     	<div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">明細</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/client_manage_edit">明細</a>
                                         </div>
                                     </td>
                                     <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="#">修改</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="/mt4/client_manage_edit">修改</a>
                                         </div>
                                         <br/>
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="customer_Manage_Multiple_Account.html">多帳號管理</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="/mt4/client_multi_account">多帳號管理</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -140,16 +140,16 @@
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                     	<div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">明細</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/client_manage_edit">明細</a>
                                         </div>
                                     </td>
                                     <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="#">修改</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="/mt4/client_manage_edit">修改</a>
                                         </div>
                                         <br/>
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="customer_Manage_Multiple_Account.html">多帳號管理</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="/mt4/client_multi_account">多帳號管理</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -162,16 +162,16 @@
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                     	<div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">明細</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/client_manage_edit">明細</a>
                                         </div>
                                     </td>
                                     <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="#">修改</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="/mt4/client_manage_edit">修改</a>
                                         </div>
                                         <br/>
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="customer_Manage_Multiple_Account.html">多帳號管理</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="/mt4/client_multi_account">多帳號管理</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -184,16 +184,16 @@
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                     	<div class="btn-group btn-group-justified btn_Width btn_Width_100 ">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">明細</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/client_manage_edit">明細</a>
                                         </div>
                                     </td>
                                     <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="#">修改</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="/mt4/client_manage_edit">修改</a>
                                         </div>
                                         <br/>
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="customer_Manage_Multiple_Account.html">多帳號管理</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="/mt4/client_multi_account">多帳號管理</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -206,16 +206,16 @@
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                     	<div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">明細</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/client_manage_edit">明細</a>
                                         </div>
                                     </td>
                                     <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="#">修改</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="/mt4/client_manage_edit">修改</a>
                                         </div>
                                         <br/>
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="customer_Manage_Multiple_Account.html">多帳號管理</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="/mt4/client_multi_account">多帳號管理</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -228,16 +228,16 @@
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                     	<div class="btn-group btn-group-justified btn_Width btn_Width_100 ">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">明細</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/client_manage_edit">明細</a>
                                         </div>
                                     </td>
                                     <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="#">修改</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="/mt4/client_manage_edit">修改</a>
                                         </div>
                                         <br/>
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="customer_Manage_Multiple_Account.html">多帳號管理</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="/mt4/client_multi_account">多帳號管理</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -250,16 +250,16 @@
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                     	<div class="btn-group btn-group-justified btn_Width btn_Width_100 ">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">明細</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/client_manage_edit">明細</a>
                                         </div>
                                     </td>
                                     <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="#">修改</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="/mt4/client_manage_edit">修改</a>
                                         </div>
                                         <br/>
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="customer_Manage_Multiple_Account.html">多帳號管理</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="/mt4/client_multi_account">多帳號管理</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -272,16 +272,16 @@
                                     <td><span class="sorting_1s">ok</span></td>
                                     <td class="sorting_1">
                                     	<div class="btn-group btn-group-justified btn_Width btn_Width_100 ">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">明細</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/client_manage_edit">明細</a>
                                         </div>
                                     </td>
                                     <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="#">修改</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="/mt4/client_manage_edit">修改</a>
                                         </div>
                                         <br/>
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="customer_Manage_Multiple_Account.html">多帳號管理</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="/mt4/client_multi_account">多帳號管理</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -294,16 +294,16 @@
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                     	<div class="btn-group btn-group-justified btn_Width btn_Width_100 ">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">明細</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/client_manage_edit">明細</a>
                                         </div>
                                     </td>
                                     <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg btn_Width_100 Gradient_Blue btn_Modify" href="#">修改</a>
+                                            <a type="button" class="btn btn-success bg-lg btn_Width_100 Gradient_Blue btn_Modify" href="/mt4/client_manage_edit">修改</a>
                                         </div>
                                         <br/>
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="customer_Manage_Multiple_Account.html">多帳號管理</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="/mt4/client_multi_account">多帳號管理</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -316,16 +316,16 @@
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                     	<div class="btn-group btn-group-justified btn_Width btn_Width_100 ">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">明細</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/client_manage_edit">明細</a>
                                         </div>
                                     </td>
                                     <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="#">修改</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="/mt4/client_manage_edit">修改</a>
                                         </div>
                                         <br/>
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="customer_Manage_Multiple_Account.html">多帳號管理</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="/mt4/client_multi_account">多帳號管理</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -338,16 +338,16 @@
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                     	<div class="btn-group btn-group-justified btn_Width btn_Width_100 ">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">明細</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/client_manage_edit">明細</a>
                                         </div>
                                     </td>
                                     <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="#">修改</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Blue btn_Modify" href="/mt4/client_manage_edit">修改</a>
                                         </div>
                                         <br/>
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="customer_Manage_Multiple_Account.html">多帳號管理</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Orange btn_Multiple_Account_Manage" href="/mt4/client_multi_account">多帳號管理</a>
                                         </div>
                                     </td>
                                 </tr>

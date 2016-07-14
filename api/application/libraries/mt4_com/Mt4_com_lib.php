@@ -260,6 +260,11 @@ class mt4_com_lib {
 	*/
 	public function get_client_trade_history($id, $from = NULL, $to = NULL){
 		try{
+			$get_all_symbols = $this->get_all_symbols();
+			$symbol_id_mappings = array();
+			foreach($get_all_symbols['data'] as $val){
+				$symbol_id_mappings[$val['symbol']] = $val['symbol_id'];
+			}
 			if($from === NULL){
 				$from = 0;
 			}
@@ -287,6 +292,7 @@ class mt4_com_lib {
 							break;
 						case 2:
 							$data['symbol'] = $val2;
+							$data['symbol_id'] = $symbol_id_mappings[$val2];
 							break;
 						case 3:
 							$data['volume'] = $val2;
