@@ -6,7 +6,7 @@
     <!--兼容ie 使用chrome-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="keywords" content="" />
-    <title>MT4顧問開戶審核</title>
+    <title>MT4顧問管理資料修改</title>
 
     <link href="<?=ASSETS_CSS?>reset.css" rel="stylesheet" type="text/css">
     <link href="<?=ASSETS_CSS?>bootstrap.css" rel="stylesheet" type="text/css" media="all" />
@@ -53,7 +53,7 @@
      <div class="container">
          <!---開始-->
          <div class="wrapper">
-            <h1>MT4顧問開戶審核</h1>
+            <h1>MT4顧問管理資料修改</h1>
 
             <div class="contentGroup">
                 <form id="customer_Account_Check_form" action="" method="post">
@@ -187,7 +187,7 @@
                                 <tr role="row" class="odd parent">
                                     <td class="txt_Bold sorting_1">B36272</td>
                                     <td id="Group_number">GAM</td>
-                                    <td  id="">200:1</td>
+                                    <td  id="">10%</td>
                                     <td class="">
                                         <select class="form-control form_control_style select_Style" id="sboxit-1">
                                             <option value="0" selected="selected">Active</option>
@@ -198,10 +198,13 @@
                                     <td class="">YES</td>
                                     <td class="">
                                         <div class="btn_Position">
-                                            <button class="btn btn-info btn_Width Gradient_Blue" id="Agree">同意</button>
+                                            <button class="btn btn-info btn_Width Gradient_Blue" id="Agree">提交</button>
                                         </div>
                                         <div class="btn_Position">
-                                            <button class="btn btn-danger btn_Width Gradient_Red" id="Refuse">拒絕</button>
+                                            <button class="btn btn-danger btn_Width Gradient_Red" id="Refuse">歷史紀錄</button>
+                                        </div>
+                                        <div class="btn_Position">
+                                            <button class="btn btn-danger btn_Width Gradient_Red" id="Refuse">返回</button>
                                         </div>
                                     </td>
                             </tr>

@@ -6,7 +6,7 @@
     <!--兼容ie 使用chrome-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="keywords" content="" />
-    <title>MT4顧問開戶審核</title>
+    <title>大IB管理資料修改</title>
 
     <link href="<?=ASSETS_CSS?>reset.css" rel="stylesheet" type="text/css">
     <link href="<?=ASSETS_CSS?>bootstrap.css" rel="stylesheet" type="text/css" media="all" />
@@ -53,7 +53,7 @@
      <div class="container">
          <!---開始-->
          <div class="wrapper">
-            <h1>MT4顧問開戶審核</h1>
+            <h1>大IB管理資料修改</h1>
 
             <div class="contentGroup">
                 <form id="customer_Account_Check_form" action="" method="post">
@@ -104,7 +104,7 @@
                                     <td>男</td>
                                     <td class="">台灣</td>
                                     <td class="">A123456789<br/>
-                                    	<div class="btn_Position">
+                                        <div class="btn_Position">
                                          <span class="btn btn-info btn-sm btn_Shadow disLine_Block btn_ID_Card_Number" id="ID_Card_Number">顯示資料</span>
                                      </div>
                                  </td>
@@ -187,7 +187,7 @@
                                 <tr role="row" class="odd parent">
                                     <td class="txt_Bold sorting_1">B36272</td>
                                     <td id="Group_number">GAM</td>
-                                    <td  id="">200:1</td>
+                                    <td  id="">10%</td>
                                     <td class="">
                                         <select class="form-control form_control_style select_Style" id="sboxit-1">
                                             <option value="0" selected="selected">Active</option>
@@ -198,10 +198,13 @@
                                     <td class="">YES</td>
                                     <td class="">
                                         <div class="btn_Position">
-                                            <button class="btn btn-info btn_Width Gradient_Blue" id="Agree">同意</button>
+                                            <button class="btn btn-info btn_Width Gradient_Blue" id="Agree">提交</button>
                                         </div>
                                         <div class="btn_Position">
-                                            <button class="btn btn-danger btn_Width Gradient_Red" id="Refuse">拒絕</button>
+                                            <button class="btn btn-danger btn_Width Gradient_Red" id="Refuse">歷史紀錄</button>
+                                        </div>
+                                        <div class="btn_Position">
+                                            <button class="btn btn-success btn_Width Gradient_Red" id="Refuse">返回</button>
                                         </div>
                                     </td>
                             </tr>
@@ -216,9 +219,9 @@
 
     </div>
 
-		<!--結束--->
+        <!--結束--->
 
-	</div>
+    </div>
 </div>
 <!--content end-->
 
@@ -232,15 +235,15 @@
 <!--修改 引用的data table 的功能-->
 <script>
     $(function () {
-		/*$(document).ready(function() {
-			$('#myTable').DataTable( {
-				responsive : true, //打開 #myTable表格RWD 的功能
-				paging:   false, //關掉 檔案原來的頁碼功能
-				ordering: false, //關掉 檔案原來的 排序功能
-				info:     false //關掉 檔案原來的info功能
-			} );
-		} );*/
-		$('#myTable').DataTable({ //讓#myTable 執行DataTable 函式套件
+        /*$(document).ready(function() {
+            $('#myTable').DataTable( {
+                responsive : true, //打開 #myTable表格RWD 的功能
+                paging:   false, //關掉 檔案原來的頁碼功能
+                ordering: false, //關掉 檔案原來的 排序功能
+                info:     false //關掉 檔案原來的info功能
+            } );
+        } );*/
+        $('#myTable').DataTable({ //讓#myTable 執行DataTable 函式套件
         //order : [[ 3, 'desc' ]], // asc是遞增；第四欄排序功能是往下遞減
         responsive : true, //打開 #myTable表格RWD 的功能
         paging:   false,
@@ -263,7 +266,7 @@
     });
 
 
-	$('#myTable_Bank_Office').DataTable({ //讓#myTable 執行DataTable 函式套件
+    $('#myTable_Bank_Office').DataTable({ //讓#myTable 執行DataTable 函式套件
         //order : [[ 3, 'desc' ]], // asc是遞增；第四欄排序功能是往下遞減
         responsive : true, //打開 #myTable表格RWD 的功能
         paging:   false,
@@ -286,7 +289,7 @@
     });
 
 
-	$('#myTable_information').DataTable({ //讓#myTable 執行DataTable 函式套件
+    $('#myTable_information').DataTable({ //讓#myTable 執行DataTable 函式套件
         //order : [[ 3, 'desc' ]], // asc是遞增；第四欄排序功能是往下遞減
         responsive : true, //打開 #myTable表格RWD 的功能
         paging:   false,
@@ -310,7 +313,7 @@
             //身份證
             $(".btn_ID_Card_Number").click(function(){ //顯示資料按鈕用class 去綁
                 $("#ID_Card_Number_Group").toggle(); //切換
-				$("#Bank_Account_Number_Group , #Living_Address_Group").hide(); //其他兩個關
+                $("#Bank_Account_Number_Group , #Living_Address_Group").hide(); //其他兩個關
             });
             $(".btn_Close_details").click(function(){
                 $("#ID_Card_Number_Group").hide();

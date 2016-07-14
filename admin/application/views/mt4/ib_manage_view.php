@@ -28,8 +28,6 @@
     <!--引用兼容ie bootstrap ui css-->
     <link href="<?=ASSETS_CSS?>bootstrap-ie7.css" rel="stylesheet" type="text/css" media="all" />
 
-    <!--fonts-->
-    <link href="<?=ASSETS_CSS?>font_style.css" rel="stylesheet" type="text/css" media="all" />
     <link href="<?=ASSETS_CSS?>font-awesome.min.css" rel="stylesheet" />
 
     <!--引用 表單樣式 css-->
@@ -95,7 +93,7 @@
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">修改</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/ib_manage_edit" >修改</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -108,7 +106,7 @@
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">修改</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/ib_manage_edit" >修改</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -121,7 +119,7 @@
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">修改</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/ib_manage_edit" >修改</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -134,7 +132,7 @@
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">修改</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/ib_manage_edit" >修改</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -147,7 +145,7 @@
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">修改</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/ib_manage_edit" >修改</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -160,7 +158,7 @@
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">修改</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/ib_manage_edit" >修改</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -173,7 +171,7 @@
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">修改</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/ib_manage_edit" >修改</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -186,7 +184,7 @@
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">修改</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/ib_manage_edit" >修改</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -199,7 +197,7 @@
                                     <td><span class="sorting_1s">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">修改</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/ib_manage_edit" >修改</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -212,7 +210,7 @@
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">修改</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/ib_manage_edit" >修改</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -225,7 +223,7 @@
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="#">修改</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/ib_manage_edit" >修改</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -238,7 +236,7 @@
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" >修改</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/ib_manage_edit" >修改</a>
                                         </div>
                                     </td>
                                 </tr>
