@@ -93,7 +93,7 @@
             <div class="col-sm-6">
                <div class="form-group">
                   <label>國籍</label>
-                  <input name="ppName" class="form-control " type="text" value="地球人" disabled>
+                  <input name="ppName" class="form-control " type="text" value="<?=$info['country']?>" disabled>
                </div>
                
             </div>
