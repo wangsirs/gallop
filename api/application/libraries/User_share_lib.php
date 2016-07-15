@@ -68,6 +68,10 @@ class user_share_lib {
             return array('email is exist.', '');
         }
         
+        if($base_data['cell_phone'][0] !== '+'){
+            return array('cell_phone is wrong format. ex.+886933001122', '');
+        }
+        
         return array('', $base_data);
     }
     
