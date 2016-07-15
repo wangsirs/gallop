@@ -68,6 +68,7 @@ class user_share_lib {
             return array('email is exist.', '');
         }
         
+        //手機號碼前面需帶 +
         if($base_data['cell_phone'][0] !== '+'){
             return array('cell_phone is wrong format. ex.+886933001122', '');
         }
