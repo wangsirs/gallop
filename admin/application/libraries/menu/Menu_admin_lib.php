@@ -38,18 +38,18 @@ class Menu_admin_lib
                 'list' => array(
                     array('name' => lang('menu_mt4_add_great_ib'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
                     array('name' => lang('menu_mt4_staff_check'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 3, 'list' => array(
-                        array('name' => lang('menu_mt4_ib_check'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 4),
+                        array('name' => lang('menu_mt4_ib_check'), 'url' => '/mt4/ib_check', 'popup' => FALSE, 'page_title' => '', 'count' => 4),
                         array('name' => lang('menu_mt4_client_check'), 'url' => '/mt4/client_check', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
                         array('name' => lang('menu_mt4_sub_check'), 'url' => '/mt4/sub_check', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
                         )),
                     array('name' => lang('menu_mt4_staff_mgt'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0, 'list' => array(
-                        array('name' => lang('menu_mt4_great_ib_mgt'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
-                        array('name' => lang('menu_mt4_ib_mgt'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
+                        array('name' => lang('menu_mt4_great_ib_mgt'), 'url' => '/mt4/great_ib_manage', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
+                        array('name' => lang('menu_mt4_ib_mgt'), 'url' => '/mt4/ib_manage', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
                         array('name' => lang('menu_mt4_client_mgt'), 'url' => '/mt4/client_manage', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
                         )),
                     array('name' => lang('menu_mt4_scale_rep'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0,'list' => array(
                         array('name' => lang('menu_mt4_org_bonus'), 'url' => '/mt4/org_bonus', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
-                        array('name' => lang('menu_mt4_dir_bonus'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
+                        array('name' => lang('menu_mt4_dir_bonus'), 'url' => '/mt4/client_bonus', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
                         )),
                     array('name' => lang('menu_mt4_scale_detail'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0, 'list' => array(
                         array('name' => lang('menu_mt4_scale_io'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),

@@ -25,8 +25,6 @@
 
     <!--fonts-->
     <link href="<?=ASSETS_CSS?>font_style.css" rel="stylesheet" type="text/css" media="all" />
-    <link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'><!--//fonts-->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -50,12 +48,19 @@
     <div class="phone_MenuGroup" id="phone_MenuGroup">
         <span class="btn_close" id="BTN_CLOSE">&times;</span>
         <ul>
-            <?php if( ! empty($menu)){ foreach($menu as $item):?>
-                <?php if(isset($item['list']) && ! empty($item['list'])){?>
-                    <li><a href="#"><?=$item['name']?></a>
-                        <ul class="sub_menu" id="sub_Menu_01">
-                            <?php foreach ($item['list'] as $num => $item2):?>
-                            <li><a href="<?=empty($item2['url']) ? 'javascript:void();' : $item2['url']?>"><?=$item2['name']?></a></li>
+        <?php if( ! empty($menu)){ foreach($menu as $key => $item):?>
+            <?php if(isset($item['list']) && ! empty($item['list'])){?>
+                <li><a href="#"><?=$item['name']?><?php if(intval($item['count']) > 0){ echo '<span class="tip_txt">'.$item['count'].'</span>';} ?></a>
+                    <ul class="sub-menu" id="sub_Menu_0<?=intval($key) + 1?>" >
+                        <?php foreach ($item['list'] as $key2 => $item2):?>
+                        <li><a href="<?=empty($item2['url']) ? '#' : $item2['url']?>"><?=$item2['name']?><?php if(intval($item2['count']) > 0){ echo '<span class="tip_txt">'.$item2['count'].'</span>';} ?></a>
+                            <?php if(isset($item2['list']) && ! empty($item2['list'])){?>
+                                <ul class="sub-menu" id="child_menu_0<?php if($key >1){ ?><?=intval($key) + 1?>_<?=intval($key2) + 1?><?php }else{ ?><?=intval($key2) + 1?><?php } ?>" >
+                                    <?php foreach ($item2['list'] as $key3 => $item3):?>
+                                    <li><a href="<?=empty($item3['url']) ? '#' : $item3['url']?>"><?=$item3['name']?><?php if(intval($item3['count']) > 0){ echo '<span class="tip_txt">'.$item3['count'].'</span>';} ?></a></li>
+                                <?php endforeach;?>
+                            </ul>
+                            <?php } ?></li>
                         <?php endforeach; }?>
                     </ul>
                 </li>

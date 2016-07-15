@@ -23,11 +23,11 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `mt4_trade_log`
+-- 資料表結構 `mt4_sync_trade`
 --
 
-DROP TABLE IF EXISTS `mt4_trade_log`;
-CREATE TABLE IF NOT EXISTS `mt4_trade_log` (
+DROP TABLE IF EXISTS `mt4_sync_trade`;
+CREATE TABLE IF NOT EXISTS `mt4_sync_trade` (
   `mt4_id` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'MT4帳號',
   `user_id` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '客戶編號',
   `mt4_order` int(11) NOT NULL COMMENT '交易單號',

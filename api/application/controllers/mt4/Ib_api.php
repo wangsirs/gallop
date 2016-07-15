@@ -312,7 +312,8 @@ class ib_api extends REST_Controller {
         
         include_once APPPATH.'libraries/Ib_share_lib.php';
         $list = $this->ib_model->tree($ib_id);
-        if( ! $list){
+        
+        if($list === FALSE){
             $this->set_response('select failed.', 301);
             return FALSE;
         }

@@ -205,6 +205,7 @@ class client_api extends REST_Controller {
      */
     public function detail_post(){
         $user_id = $this->post('user_id');
+        $lang = $this->post('lang');
         
         if(empty($user_id)){
             $this->set_response('param is empty.', 201);
@@ -212,6 +213,8 @@ class client_api extends REST_Controller {
         }
         
         $user_info = $this->user_model->detail($user_id);
+        
+        $user_info['country'] = country_name($user_info['country'], $lang);
         
         $this->set_response($user_info, REST_Controller::HTTP_OK);
     }
@@ -406,10 +409,11 @@ class client_api extends REST_Controller {
         $this->lang->load('client', $post['lang']);
         $sms_re = $this->phone_lib->sms($user_info['cell_phone'], lang('client_wd_mail_sub').' : '.sprintf(lang('client_wd_mail_content'), $pincode));
         
-        if( ! $email_re && ! $sms_re){
-            $this->set_response('Send email and SMS failed.email='.$user_info['email'].'|cell_phone='.$user_info['cell_phone'], 302);
-            return FALSE;
-        }
+        //FIXME: return 值不是 boolean
+//        if( ! $email_re && ! $sms_re){
+//            $this->set_response('Send email and SMS failed.email='.$user_info['email'].'|cell_phone='.$user_info['cell_phone'], 302);
+//            return FALSE;
+//        }
                 
         $this->set_response(array('mw_id' => $mw_id), REST_Controller::HTTP_OK);
     }

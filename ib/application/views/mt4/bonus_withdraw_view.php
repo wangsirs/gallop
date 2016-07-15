@@ -170,7 +170,7 @@
                     <a><h3 class="box-title"><span class="fa fa-list"></span>&nbsp;&nbsp;提領紀錄</h3></a>
                 </div>
                 <div class="box-body">
-                    <table class="table table-bordered table-hover">
+                    <table class="cell-border display nowrap dataTable dtr-inline table_style" cellspacing="0" width="" role="grid" aria-describedby="example_info" style="width: 100%;">
                         <thead>
                             <tr>
                                 <th>日期</th>

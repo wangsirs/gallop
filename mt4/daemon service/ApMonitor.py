@@ -13,7 +13,7 @@ logFile = '/var/log/mt4.log'
 def log(strContent):
 	global logFile
 	timeStr = time.strftime('[20%y-%m-%d %H:%M:%S]')
-	os.system("echo '[%s] => %s' >> %s" %(timeStr, str(strContent), logFile))
+	os.system("echo '%s => %s' >> %s" %(timeStr, str(strContent), logFile))
 
 def main():
 	global host, port, bufSize

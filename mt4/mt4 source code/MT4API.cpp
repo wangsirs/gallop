@@ -122,7 +122,7 @@ void logToFile(LPCSTR log) {
 	ofstream outfile;
 	outfile.open(LOG_FILE, ios_base::app);
 
-	strftime(buffer, 80, "[%Y-%m-%d %I:%M:%S] ", now);
+	strftime(buffer, 80, "[%Y-%m-%d %H:%M:%S] ", now);
 	string str(buffer);
 	outfile << buffer << log;
 	return;
@@ -218,6 +218,8 @@ int main(int argc, char* argv[])
 					{
 						_snprintf(logStr, sizeof(logStr), "Connect to %s as '%s' failed (%s)\n", hostname, login_id, manager->ErrorDescription(res));
 						logToFile(logStr);
+						char * sendbuf = "-1\r\nend\r\n";
+						send(sConnect, sendbuf, sizeof(sendbuf), 0);
 						continue;
 					}
 				}
@@ -417,6 +419,25 @@ int main(int argc, char* argv[])
 						GetStrParam(buffer, "PASSWD=", passwd, sizeof(passwd) - 1);
 						int ret = manager->UserPasswordSet(loginID, passwd, pwType, 1);
 						_snprintf(sendbuf, sizeof(sendbuf), "%d\r\n", ret);
+					}
+					else if (strcmp(opcode, "get_all_symbols") == 0) {
+						int total = 0;
+						int offset = 0;
+						ConSymbol* cs = {};
+						ConSymbolGroup* csg = new ConSymbolGroup[MAX_SEC_GROUPS];
+						manager->SymbolsRefresh();
+						manager->SymbolsGroupsGet(csg);
+						cs = manager->SymbolsGetAll(&total);
+						for (int i = 0; i < total; i++) {
+							int sec_type = cs[i].type;
+							offset += _snprintf(offset + sendbuf, sizeof(sendbuf), "%s,%s,%d\r\n",
+								cs[i].symbol,
+								csg[sec_type].name,
+								cs[i].count
+								);
+						}
+						manager->MemFree(cs);
+						manager->MemFree(csg);
 					}
 					else {
 						_snprintf(sendbuf, sizeof(sendbuf), "14\r\n");

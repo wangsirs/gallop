@@ -260,6 +260,11 @@ class mt4_com_lib {
 	*/
 	public function get_client_trade_history($id, $from = NULL, $to = NULL){
 		try{
+			$get_all_symbols = $this->get_all_symbols();
+			$symbol_id_mappings = array();
+			foreach($get_all_symbols['data'] as $val){
+				$symbol_id_mappings[$val['symbol']] = $val['symbol_id'];
+			}
 			if($from === NULL){
 				$from = 0;
 			}
@@ -287,6 +292,7 @@ class mt4_com_lib {
 							break;
 						case 2:
 							$data['symbol'] = $val2;
+							$data['symbol_id'] = $symbol_id_mappings[$val2];
 							break;
 						case 3:
 							$data['volume'] = $val2;
@@ -397,6 +403,48 @@ class mt4_com_lib {
 			'PASSWD='.$passwd;
 			$retVal = $this->MQ_Query($query);
 			return array('status' => intval($retVal), 'data' => null);
+		}catch(Exception $e){
+			return array('status' => self::RET_EXCEPTION, 'data' => $e->getMessage());
+		}
+	}
+
+	/**
+	* @author martin
+	* @version [1.0.0] [Get all the symbol information]
+	* @todo nothing
+	* @return array ('status'=>$retVal, 'data'=> $data)
+	* @return symbol 商品名稱
+	* @return sec_group 商品類別
+	* @return symbol_id 商品ID
+	*/		
+	public function get_all_symbols(){
+		try{
+			$query='OP='.__FUNCTION__;
+			$query_result = $this->MQ_Query($query);
+			$retVal = array();
+
+			foreach(explode("\r\n", $query_result) as $key => $val){
+				if(strlen($val) === 0) continue;
+				$data = array();
+				foreach(explode(',', $val) as $key2 => $val2){
+					switch ($key2) {
+						case 0:
+							$data['symbol'] = $val2;
+							break;
+						case 1:
+							$data['sec_group'] = $val2;
+							break;
+						case 2:
+							$data['symbol_id'] = $val2;
+							break;
+						default:
+							# do nothing
+							break;
+					}
+				}
+				array_push($retVal, $data);
+			}
+			return array('status' => 0, 'data' => $retVal);
 		}catch(Exception $e){
 			return array('status' => self::RET_EXCEPTION, 'data' => $e->getMessage());
 		}
