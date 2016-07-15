@@ -130,7 +130,7 @@ function country_name($country_code, $lang = 'en'){
         $lang = 'en';
     }
 
-    get_instance()->lang->load('country', strtolower($lang));
+    get_instance()->lang->load('env', strtolower($lang));
     $ct = lang('ct_'.strtolower($country_code));
     if($ct !== FALSE){
         $country_code = $ct;

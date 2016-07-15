@@ -23,40 +23,44 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `country`
+-- 資料表結構 `phone_code`
 --
 
-CREATE TABLE `country` (
+CREATE TABLE `phone_code` (
   `country` varchar(2) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '2字母國籍代號 ISO3166-1',
-  `lang` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '預設語系 ISO639-1 加 ISO3166-1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='國家與語系';
+  `territory` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '國家領土',
+  `code` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '電話國際碼+區碼'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='電話國際碼';
 
 --
--- 資料表的匯出資料 `country`
+-- 資料表的匯出資料 `phone_code`
 --
 
-INSERT INTO `country` (`country`, `lang`) VALUES
-('AU', 'en'),
-('CN', 'zh-cn'),
-('HK', 'en'),
-('ID', 'en'),
-('MO', 'zh-tw'),
-('MY', 'en'),
-('NZ', 'en'),
-('PH', 'en'),
-('SG', 'en'),
-('TW', 'zh-tw'),
-('VN', 'en');
+INSERT INTO `phone_code` (`country`, `territory`, `code`) VALUES
+('AU', 'aat', '672'),
+('AU', 'au', '61'),
+('AU', 'macquarie_island', '672'),
+('AU', 'nf', '672'),
+('CN', 'cn', '86'),
+('HK', 'hk', '852'),
+('ID', 'id', '62'),
+('MO', 'mo', '853'),
+('MY', 'my', '60'),
+('NZ', 'nz', '64'),
+('PH', 'ph', '63'),
+('SG', 'sg', '65'),
+('TW', 'tw', '886'),
+('VN', 'vn', '84');
 
 --
 -- 已匯出資料表的索引
 --
 
 --
--- 資料表索引 `country`
+-- 資料表索引 `phone_code`
 --
-ALTER TABLE `country`
-  ADD PRIMARY KEY (`country`,`lang`);
+ALTER TABLE `phone_code`
+  ADD PRIMARY KEY (`country`,`territory`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
