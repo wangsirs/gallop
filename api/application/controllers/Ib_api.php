@@ -60,6 +60,7 @@ class Ib_api extends REST_Controller {
      */
     public function detail_post(){
         $ib_id = $this->post('ib_id');
+        $lang = $this->post('lang');
         
         if(empty($ib_id)){
             $this->set_response(array('need ib_id.'), 201);
@@ -73,6 +74,8 @@ class Ib_api extends REST_Controller {
         }
         
         unset($detail['pwd']);
+        
+        $detail['country'] = country_name($detail['country'], $lang);
         
         $this->set_response($detail, REST_Controller::HTTP_OK);
     }
