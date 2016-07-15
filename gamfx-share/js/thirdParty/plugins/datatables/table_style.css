@@ -1,0 +1,116 @@
+
+/****************************
+	Author:Lainie
+	Time:2016-06-28
+	document:index.html (RWD table)
+****************************/
+
+div.contentGroup{
+	width:100%;
+	height:auto;
+	background: #fff;
+	padding: 20px;
+	margin-left: auto;
+    margin-right: auto;
+	border: 1px solid #eaeaea;
+	box-shadow: 1px 1px 8px 1px #ddd;
+	-webkit-box-shadow: 1px 1px 8px 1px #ddd;
+	-moz-box-shadow: 1px 1px 8px 1px #ddd;
+}
+
+table.table_style{
+	font-size:1em;
+	font-family:"微軟正黑體",Arial, Helvetica, sans-serif;
+	color: #8b8d8d;
+	
+	word-wrap:break-word;/*中文字換行(不切斷單字)*/
+	border-left: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
+	/*box-shadow: 1px 1px 8px 1px #ddd;	
+	-webkit-box-shadow: 1px 1px 8px 1px #d7d7d7;*/
+	border: 1px solid #d6d6d6;
+}
+
+table.dataTable.nowrap th, table.dataTable.nowrap td{
+	word-wrap:break-word;/*中文字換行(不切斷單字)*/
+	overflow:hidden;
+	/*white-space: inherit;繼承*/
+	/*word-break: keep-all;*/
+	/*word-break: break-all;*/
+}
+
+table.table_style.no-footer{border-bottom: 1px solid #eaeaea;border-bottom: 1px solid #d7d7d7;}
+
+table.table_style thead th{  border-bottom: 1px solid #ddd;}
+
+tr.BG_Blue{
+	background:#5fafe4;
+	/*background-color: #40bbea;*/
+}
+
+tr.BG_Gray{ background:#d7d7d7;}
+
+.Color_White{color:#fff;}
+.Color_Gray{color:#757575;}
+
+/*table.table_style thead .sorting_asc {
+    background:none;	
+}
+
+table.table_style thead .sorting_desc {
+    background:none;
+}
+
+table.dataTable thead .sorting{
+	background:none;
+}*/
+
+table.table_style thead .sorting_asc_NONE {
+    background:none;	
+}
+
+table.table_style thead .sorting_desc_NONE {
+    background:none;
+}
+
+table.dataTable thead .sorting_NONE {
+	background:none;
+}
+
+td:nth-child(1){font-weight:600;}
+
+table.table_style tfoot th{border-top: 1px solid #eaeaea;}
+
+.pagination > .active> a , .pagination > .active > a:hover{ 
+	/*background-color: #5fafe4;*/
+	border-color:#5fafe4;
+	
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5fafe4+0,015cf5+100 */
+	background: #5fafe4; /* Old browsers */
+	background: -moz-linear-gradient(top,  #5fafe4 0%, #015cf5 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #5fafe4 0%,#015cf5 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #5fafe4 0%,#015cf5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5fafe4', endColorstr='#015cf5',GradientType=0 ); /* IE6-9 */
+}
+
+@media (min-width: 768px) {  /**桌機版*/
+	div.Table_Layout{
+		width:100%;    
+		margin-left: auto;
+    	margin-right: auto;
+		margin-bottom: 10px;
+	}
+}
+
+@media (max-width: 768px) { /**手機版*/
+	div.contentGroup{width:100%;padding:0;}
+	
+	div.Table_Layout{
+		width:100%;    
+		margin-left: auto;
+    	margin-right: auto;
+		margin-bottom: 10px;
+	}
+	
+	table.dataTable.nowrap th, table.dataTable.nowrap td{white-space: inherit;/*繼承*/}
+}
