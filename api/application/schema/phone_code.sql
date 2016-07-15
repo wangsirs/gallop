@@ -37,20 +37,20 @@ CREATE TABLE `phone_code` (
 --
 
 INSERT INTO `phone_code` (`country`, `territory`, `code`) VALUES
-('AU', 'aat', '672'),
-('AU', 'au', '61'),
-('AU', 'macquarie_island', '672'),
-('AU', 'nf', '672'),
-('CN', 'cn', '86'),
-('HK', 'hk', '852'),
-('ID', 'id', '62'),
-('MO', 'mo', '853'),
-('MY', 'my', '60'),
-('NZ', 'nz', '64'),
-('PH', 'ph', '63'),
-('SG', 'sg', '65'),
-('TW', 'tw', '886'),
-('VN', 'vn', '84');
+('AU', 'aat', '+672'),
+('AU', 'au', '+61'),
+('AU', 'macquarie_island', '+672'),
+('AU', 'nf', '+672'),
+('CN', 'cn', '+86'),
+('HK', 'hk', '+852'),
+('ID', 'id', '+62'),
+('MO', 'mo', '+853'),
+('MY', 'my', '+60'),
+('NZ', 'nz', '+64'),
+('PH', 'ph', '+63'),
+('SG', 'sg', '+65'),
+('TW', 'tw', '+886'),
+('VN', 'vn', '+84');
 
 --
 -- 已匯出資料表的索引

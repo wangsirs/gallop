@@ -28,7 +28,7 @@
                     type: BootstrapDialog.TYPE_PRIMARY,
                     message: function(dialog) {
                         var msg = '<div class="col-xs-4">請填寫電話國碼: </div> \
-                        <div class="col-xs-8"><input id="input_phone_code" type="number" class="form-group"></div>';
+                        <div class="col-xs-8">+<input id="input_phone_code" type="number" class="form-group"></div>';
                         return msg;
                     },
                     buttons: [{
@@ -36,7 +36,7 @@
                         hotkey: 13,
                         cssClass: 'btn-success',
                         action: function(dialogRef) {
-                            country_code = $("#input_phone_code").val();
+                            country_code = '+'+$("#input_phone_code").val();
                             $('option[type="other"]')
                             .attr('value', country_code)
                             .text('其他 (' + country_code + ')');
