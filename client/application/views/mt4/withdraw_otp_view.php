@@ -152,7 +152,7 @@ $().ready(function() {
                   <div class="panel panel-default">
                      <div class="panel-body panel-body-enlarge">
                         <div class="form-group">
-                           <label for="" class="col-sm-4 control-label">輸入您接收到的OTP密碼(七碼)</label>
+                           <label for="" class="col-sm-4 control-label">輸入您接收到的OTP密碼(四碼)</label>
                            <div class="col-sm-5">
                               <input type="number" name="otp" class="form-control" id="wdAmt" placeholder="">
                            </div>
@@ -162,7 +162,7 @@ $().ready(function() {
                            <label for="" class="col-sm-5">簡訊OTP密碼有效時間尚餘<span class="leftTime text-red"></span></label>
                         </div>
                         <div class="form-group">
-                           <label for="" class="col-sm-12 text-red">*提醒您！簡訊OTP密碼10分鐘有效，請於時間內將簡訊中的密碼輸入於欄位中，若逾時未輸入，視同交易取消，謝謝！</label>
+                           <label for="" class="col-sm-12 text-red">*提醒您！簡訊OTP密碼5分鐘有效，請於時間內將簡訊中的密碼輸入於欄位中，若逾時未輸入，視同交易取消，謝謝！</label>
                         </div>
                      </div>
                   </div>
