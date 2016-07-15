@@ -15,7 +15,10 @@
             'css/AdminLTE.css',
             'css/skins/_all-skins.min.css',
             'css/bootstrap-dialog.css',
-            'js/thirdParty/plugins/datatables/dataTables.bootstrap.css',
+            'css/pagination_modity.css',
+            'js/thirdParty/plugins/datatables/jquery.dataTables.min.css',
+            'js/thirdParty/plugins/datatables/responsive.dataTables.min.css',
+            'js/thirdParty/plugins/datatables/table_style.css',
             'js/thirdParty/plugins/daterangepicker/daterangepicker-bs3.css',
             'js/thirdParty/plugins/iCheck/flat/blue.css',
             'js/thirdParty/plugins/iCheck/minimal/blue.css',
@@ -51,24 +54,19 @@
         'js/thirdParty/plugins/slimScroll/jquery.slimscroll.min.js',
         'js/app.min.js',
         'js/bootstrap.min.js',
-        'js/gallop.min.js',
         'js/bootstrap-dialog.js',
         'js/jquery.validate.js',
+        'js/jquery.pagination.js',
+        'js/gallop.min.js',
         'js/thirdParty/plugins/datatables/jquery.dataTables.min.js',
         'js/thirdParty/plugins/datatables/dataTables.bootstrap.min.js',
+        'js/thirdParty/plugins/datatables/dataTables.responsive.min.js',
         'js/moment.min.js',
         'js/thirdParty/plugins/daterangepicker/daterangepicker.js',
         'js/thirdParty/plugins/iCheck/icheck.min.js',
         'js/thirdParty/plugins/loadMask/jquery.loadmask.min.js'));
     echo $this->minify->deploy_js(FALSE, 'base_frame.js');
 ?>
-<script>
-$.widget.bridge('uibutton', $.ui.button);
-var apps = '<?=$apps?>';
-$().ready(function(){
-    LoadGeneral();
-});
-</script>
                     <div class="navbar-custom-menu">
                         <ul class="nav navbar-nav">
                         <?=$balance?>
@@ -104,6 +102,13 @@ $().ready(function(){
             </footer>
     </div>
     <!-- ./wrapper -->
+<script>
+$.widget.bridge('uibutton', $.ui.button);
+var apps = '<?=$apps?>';
+$().ready(function(){
+    LoadGeneral();
+});
+</script>
 </body>
 
 </html>

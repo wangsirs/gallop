@@ -68,7 +68,6 @@
 								<?=lang('login_sign_in')?>
 							</button>
 						</div>
-						<!-- /.col -->
 					</div>
 				</form>
 				<br>
@@ -78,7 +77,7 @@
 		  <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using Google+</a>-->
 		</div>
 		<!-- /.social-auth-links -->
-		<h4><a onclick="showFgDialog()" class="text-aqua" style="cursor:pointer;"><ins><?=lang('login_foget')?></ins></a></h4>
+		<!--<h4><a onclick="showFgDialog()" class="text-aqua" style="cursor:pointer;"><ins><?=lang('login_foget')?></ins></a></h4>-->
 	</div>
 	<!-- /.login-box-body -->
 </div>

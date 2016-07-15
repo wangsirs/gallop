@@ -21,13 +21,7 @@ $(document).ready(function() {
       checkboxClass: 'icheckbox_minimal-blue',
       radioClass: 'iradio_minimal-blue'
    });
-    //手機板data-table功能與版面調整
-    table_dict = (isMobileDev()) ? {
-        "scrollX": true,
-        "bFilter": true,
-        "bLengthChange": false
-    } : {};
-   $("#clientTable").DataTable(table_dict);
+   $("#clientTable").DataTable(GetDataTableAttrs());
    $('form.sub_mt4').validate({
       rules: {
          leverage: {
@@ -169,7 +163,7 @@ $(document).ready(function() {
                </form>
             </div>
             <div class="box-footer">
-               <table id="clientTable" class="table table-bordered table-hover">
+               <table id="clientTable" class="cell-border display nowrap dataTable dtr-inline table_style" cellspacing="0" width="" role="grid" aria-describedby="example_info" style="width: 100%;">
                   <thead>
                      <tr>
                         <th>申請日期</th>

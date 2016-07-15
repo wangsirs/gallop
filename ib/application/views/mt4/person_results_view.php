@@ -156,10 +156,8 @@ $(function() {
         });
     });
 
-    LoadGeneral();
-
     $("#clientTable").DataTable(GetDataTableAttrs());
-
+    LoadGeneral();
     //當按下搜尋按鈕後的事件觸發
     $('.query').click(function() {
         if (start_date.length != 0 && end_date.length != 0) {
@@ -266,7 +264,7 @@ $(function() {
                         </div>
                      </div>
                  -->
-                    <table id="clientTable" class="table table-bordered table-hover">
+                    <table id="clientTable" class="cell-border display nowrap dataTable dtr-inline table_style" cellspacing="0" width="" role="grid" aria-describedby="example_info" style="width: 100%;">
                         <thead>
                             <tr>
                                 <th>客戶帳號</th>

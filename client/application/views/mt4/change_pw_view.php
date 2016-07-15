@@ -25,7 +25,7 @@ $(document).ready(function() {
             return false;
         }
         $.ajax({
-            url: '/mt4/change_mt4_pw'+ '?is_ajax=1',
+            url: '/mt4/change_mt4_pw?is_ajax=1',
             type: 'POST',
             dataType: 'json',
             data: {mt4_id:$selItem.val()},

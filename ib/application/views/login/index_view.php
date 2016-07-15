@@ -82,8 +82,9 @@
 		  <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using Google+</a>-->
 		</div>
 		<!-- /.social-auth-links -->
+		<!--
 		<h4><a onclick="showFgDialog()" class="text-aqua" style="cursor:pointer;"><ins><?=lang('login_foget')?></ins></a></h4>
-		<h4><a href="reg?id=200001" class="text-center text-aqua"><ins><?=$this->lang->line('login_reg_ib')?></ins></a></h4>
+		<h4><a href="reg?id=200001" class="text-center text-aqua"><ins><?=$this->lang->line('login_reg_ib')?></ins></a></h4>-->
 		<!--<h4><a href="/account/adviser_register" class="text-center text-aqua"><ins><?=$this->lang->line('msg8')?></ins></a></h4>-->
 	</div>
 	<!-- /.login-box-body -->
