@@ -60,7 +60,9 @@ class login extends CI_Controller {
 			$api_re = $this->api_lib->call_api(API_PATH.'ib_api/login', json_encode($param));
 			if($api_re['status'] === TRUE){
                 //設定語系
-                $api_re['data']['lang'] = 'zh-tw';
+                if(empty($api_re['data']['last_lang'])){
+                    $api_re['data']['last_lang'] = 'zh-tw';
+                }
                 
                 //取得 app 清單
                 $app_re = $this->api_lib->call_api(API_PATH.'ib_api/apps', json_encode(array(

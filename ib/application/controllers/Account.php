@@ -58,6 +58,34 @@ class account extends CI_Controller {
 		load_frame($this->_app, __CLASS__, __FUNCTION__, $data);
 	}
 
+    /**
+     * 變更語系
+     */
+    public function change_lang($lang){
+		$re = new stdClass();
+        $re->status = FALSE;
+        if( ! in_array($lang, array('en', 'zh-tw', 'zh-cn'))){
+            die(json_encode($re));
+        }
+        
+        if($lang == ib_lib::lang()){
+            $re->status = TRUE;
+            die(json_encode($re));
+        }
+        
+		$this->load->library('api_lib');
+		$param = array(
+			'ib_id' => ib_lib::ib_id(),
+            'last_lang' => $lang
+			);
+		$api_re = $this->api_lib->call_api(API_PATH.'ib_api/update_last_lang', json_encode($param));
+        $re->status = $api_re['status'];
+        if($re->status === TRUE){
+            ib_lib::set('last_lang', $lang);
+        }
+        die(json_encode($re));
+    }
+    
 	/**
 	 * 密碼變更
 	 */

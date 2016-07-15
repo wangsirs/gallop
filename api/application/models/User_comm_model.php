@@ -106,4 +106,19 @@ class User_comm_model extends CI_Model{
         
         return $list;
     }
+    
+    /**
+     * 更新密碼
+     * @param string $user_id 客戶編號
+     * @param string $last_lang 語系
+     */
+    public function update_last_lang($user_id, $last_lang){
+        $this->db->where('user_id', $user_id);
+        
+        $this->db->set('last_lang', $last_lang);
+        
+        $this->db->update(self::TB_USER); 
+        //$this->db->last_query();
+        return $this->db->affected_rows() > 0;
+    }
 }
