@@ -94,37 +94,6 @@ $(function() {
         $('input[type="radio"][name="r2"][value="' + QueryString.choice + '"]').iCheck('check');
     }
 
-
-    $('.client-detail').click(function() {
-        $('body').mask('載入資料中...');
-        var user_id = $(this).attr('data-bind');
-        BootstrapDialog.show({
-            title: '客戶MT4子帳號明細',
-            type: BootstrapDialog.TYPE_PRIMARY,
-            message: function(dialog) {
-                var $message = $('<div></div>');
-                var pageToLoad = dialog.getData('client_detail');
-                $message.load(pageToLoad);
-
-                return $message;
-            },
-            data: {
-                'client_detail': 'mt4/person_results_detail?user_id=' + user_id
-            },
-            onshown: function(dialog) {
-                $('body').unmask();
-                $("#detail_table").DataTable(GetDataTableAttrs());
-            },
-            buttons: [{
-                label: '關閉',
-                hotkey: 13,
-                cssClass: 'btn-danger',
-                action: function(diag) {
-                    diag.close();
-                }
-            }]
-        });
-    });
     $('.client-profile').click(function() {
         $('body').mask('載入資料中...');
         var user_id = $(this).attr('data-bind');
@@ -167,6 +136,45 @@ $(function() {
         }
     });
 });
+
+function showDetail(user_id){
+    $('body').mask('載入資料中...');
+    BootstrapDialog.show({
+        title: '客戶MT4子帳號明細',
+        type: BootstrapDialog.TYPE_PRIMARY,
+        message: function(dialog) {
+            var $message = $('<div></div>');
+            var pageToLoad = dialog.getData('client_detail');
+            $message.load(pageToLoad);
+
+            return $message;
+        },
+        data: {
+            'client_detail': 'mt4/person_results_detail?user_id=' + user_id
+        },
+        onshown: function(dialog) {
+            $('body').unmask();
+            $("#detail_table").DataTable(GetDataTableAttrs());
+            $('.pagination:eq(1)').pagination({
+                first:'«', //修改first為 << 頁碼文字
+                last:'»', //修改last為 >> 頁碼文字
+                totalPages: 20, //總頁數20頁
+                visiblePages: 2, //顯示2頁
+                onPageClick: function (event, page) { //按頁碼之後會執行的事
+                    $('#page-content_sm').text('Page ' + page);
+                }
+            });
+        },
+        buttons: [{
+            label: '關閉',
+            hotkey: 13,
+            cssClass: 'btn-danger',
+            action: function(diag) {
+                diag.close();
+            }
+        }]
+    });
+}
 </script>
 <!-- Main content -->
 <section class="content">
@@ -289,7 +297,7 @@ $(function() {
                                 $profit = ! empty($item['mrc_profit'])? round($item['mrc_profit'], PROFIT_DIGITS) : '' ;
                                 echo ((float)$profit > 0)?'<span class="label label-success">'.$profit.'</span>' : '<span class="label label-danger">'.$profit.'</span>';
                                 ?></td>
-                                <td><button type="button" class="btn btn-warning client-detail" data-bind="<?=$item[ 'user_id']?>"><span class="glyphicon glyphicon-th-list"></span>&nbsp;明細</button></td>
+                                <td><a  onclick="showDetail('<?=$item[ 'user_id']?>');"><button type="button" class="btn btn-warning client-detail"><span class="glyphicon glyphicon-th-list"></span>&nbsp;明細</button></a></td>
                             </tr>
                             <?php endforeach;} ?>
                         </tbody>
