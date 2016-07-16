@@ -70,7 +70,7 @@
                             <tbody>
                                 <tr role="row" class="odd parent">
                                     <td class="txt_Bold sorting_1">I75647</td>
-                                    <td class="txt_Weight">范小小</td>
+                                    <td class="txt_Weight">2016/01/01</td>
                                 </tr>
                             </tbody>
                         </table>

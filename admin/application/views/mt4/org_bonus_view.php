@@ -109,9 +109,9 @@
                                     <tr role="row" class="odd parent">
                                         <td class="txt_Bold">AE3210695</td>
                                         <td class="txt_Weight">范小小</td>
-                                        <td class="sorting_1">無</td>
-                                        <td><span class="sorting_1 txt_Weight">2016/01/01 12:55:33</span></td>
-                                        <td class="sorting_1">無</td>
+                                        <td class="sorting_1">100000</td>
+                                        <td><span class="sorting_1 txt_Weight">2500</span></td>
+                                        <td class="sorting_1">15000</td>
                                         <td>
                                             <span class="sorting_1 txt_Weight">
                                                 <div class="btn_Position">
@@ -123,9 +123,9 @@
                                     <tr role="row" class="even">
                                         <td class="txt_Bold">AE5110012</td>
                                         <td class="txt_Weight">王大明</td>
-                                        <td class="sorting_1">無</td>
-                                        <td><span class="sorting_1 txt_Weight">2016/01/01 12:55:33</span></td>
-                                        <td class="sorting_1">無</td>
+                                        <td class="sorting_1">100000</td>
+                                        <td><span class="sorting_1 txt_Weight">2500</span></td>
+                                        <td class="sorting_1">100000</td>
                                         <td>
                                             <span class="sorting_1 txt_Weight">
                                                 <div class="btn_Position">
@@ -137,9 +137,9 @@
                                     <tr role="row" class="odd">
                                         <td class="txt_Bold">AE3210684</td>
                                         <td class="txt_Weight">林小華</td>
-                                        <td class="sorting_1">無</td>
-                                        <td><span class="sorting_1 txt_Weight">2016/01/01 12:55:33</span></td>
-                                        <td class="sorting_1">無</td>
+                                        <td class="sorting_1">100000</td>
+                                        <td><span class="sorting_1 txt_Weight">2500</span></td>
+                                        <td class="sorting_1">100000</td>
                                         <td>
                                             <span class="sorting_1 txt_Weight">
                                                 <div class="btn_Position">
@@ -151,9 +151,9 @@
                                     <tr role="row" class="even">
                                         <td class="txt_Bold">AE3210695</td>
                                         <td class="txt_Weight">范小小</td>
-                                        <td class="sorting_1">無</td>
-                                        <td><span class="sorting_1 txt_Weight">2016/01/01 12:55:33</span></td>
-                                        <td class="sorting_1">無</td>
+                                        <td class="sorting_1">100000</td>
+                                        <td><span class="sorting_1 txt_Weight">2500</span></td>
+                                        <td class="sorting_1">100000</td>
                                         <td>
                                             <span class="sorting_1 txt_Weight">
                                                 <div class="btn_Position">
@@ -165,9 +165,9 @@
                                     <tr role="row" class="odd">
                                         <td class="txt_Bold">AE5110012</td>
                                         <td class="txt_Weight">王大明</td>
-                                        <td class="sorting_1">無</td>
-                                        <td><span class="sorting_1 txt_Weight">2016/01/01 12:55:33</span></td>
-                                        <td class="sorting_1">無</td>
+                                        <td class="sorting_1">100000</td>
+                                        <td><span class="sorting_1 txt_Weight">2500</span></td>
+                                        <td class="sorting_1">100000</td>
                                         <td>
                                             <span class="sorting_1 txt_Weight">
                                                 <div class="btn_Position">
@@ -179,9 +179,9 @@
                                     <tr role="row" class="even">
                                         <td class="txt_Bold">AE3210695</td>
                                         <td class="txt_Weight">林小華</td>
-                                        <td class="sorting_1">無</td>
-                                        <td><span class="sorting_1 txt_Weight">2016/01/01 12:55:33</span></td>
-                                        <td class="sorting_1">無</td>
+                                        <td class="sorting_1">100000</td>
+                                        <td><span class="sorting_1 txt_Weight">2500</span></td>
+                                        <td class="sorting_1">100000</td>
                                         <td>
                                             <span class="sorting_1 txt_Weight">
                                                 <div class="btn_Position">
@@ -193,9 +193,9 @@
                                     <tr role="row" class="odd">
                                         <td class="txt_Bold">AE3210684</td>
                                         <td class="txt_Weight">蔡小婷</td>
-                                        <td class="sorting_1">無</td>
-                                        <td><span class="sorting_1 txt_Weight">2016/01/01 12:55:33</span></td>
-                                        <td class="sorting_1">無</td>
+                                        <td class="sorting_1">100000</td>
+                                        <td><span class="sorting_1 txt_Weight">2500</span></td>
+                                        <td class="sorting_1">100000</td>
                                         <td>
                                             <span class="sorting_1 txt_Weight">
                                                 <div class="btn_Position">
@@ -207,9 +207,9 @@
                                     <tr role="row" class="even">
                                         <td class="txt_Bold">AE3210695</td>
                                         <td class="txt_Weight">劉小雯</td>
-                                        <td class="sorting_1">無</td>
-                                        <td><span class="sorting_1 txt_Weight">2016/01/01 12:55:33</span></td>
-                                        <td class="sorting_1">無</td>
+                                        <td class="sorting_1">100000</td>
+                                        <td><span class="sorting_1 txt_Weight">2500</span></td>
+                                        <td class="sorting_1">100000</td>
                                         <td>
                                             <span class="sorting_1 txt_Weight">
                                                 <div class="btn_Position">
@@ -222,9 +222,9 @@
                                     <tr role="row" class="odd">
                                         <td class="txt_Bold">AE5110012</td>
                                         <td class="txt_Weight">林小華</td>
-                                        <td class="sorting_1">無</td>
-                                        <td><span class="sorting_1 txt_Weight">2016/01/01 12:55:33</span></td>
-                                        <td class="sorting_1">無</td>
+                                        <td class="sorting_1">100000</td>
+                                        <td><span class="sorting_1 txt_Weight">2500</span></td>
+                                        <td class="sorting_1">100000</td>
                                         <td>
                                             <span class="sorting_1 txt_Weight">
                                                 <div class="btn_Position">
@@ -236,9 +236,9 @@
                                     <tr role="row" class="even">
                                         <td class="txt_Bold">AE3210684</td>
                                         <td class="txt_Weight">王大明</td>
-                                        <td class="sorting_1">無</td>
-                                        <td><span class="sorting_1 txt_Weight">2016/01/01 12:55:33</span></td>
-                                        <td class="sorting_1">無</td>
+                                        <td class="sorting_1">100000</td>
+                                        <td><span class="sorting_1 txt_Weight">2500</span></td>
+                                        <td class="sorting_1">100000</td>
                                         <td>
                                             <span class="sorting_1 txt_Weight">
                                                 <div class="btn_Position">
@@ -250,9 +250,9 @@
                                     <tr role="row" class="odd">
                                         <td class="txt_Bold">AE3210684</td>
                                         <td class="txt_Weight">王大明</td>
-                                        <td class="sorting_1">無</td>
-                                        <td><span class="sorting_1 txt_Weight">2016/01/01 12:55:33</span></td>
-                                        <td class="sorting_1">無</td>
+                                        <td class="sorting_1">100000</td>
+                                        <td><span class="sorting_1 txt_Weight">2500</span></td>
+                                        <td class="sorting_1">100000</td>
                                         <td>
                                             <span class="sorting_1 txt_Weight">
                                                 <div class="btn_Position">
@@ -264,9 +264,9 @@
                                     <tr role="row" class="even">
                                         <td class="txt_Bold">AE3210684</td>
                                         <td class="txt_Weight">王大明</td>
-                                        <td class="sorting_1">無</td>
-                                        <td><span class="sorting_1 txt_Weight">2016/01/01 12:55:33</span></td>
-                                        <td class="sorting_1">無</td>
+                                        <td class="sorting_1">100000</td>
+                                        <td><span class="sorting_1 txt_Weight">2500</span></td>
+                                        <td class="sorting_1">100000</td>
                                         <td>
                                             <span class="sorting_1 txt_Weight">
                                                 <div class="btn_Position">
@@ -322,7 +322,7 @@ filter:     true,
 ordering :   true, //打開 排序功能
 language : {
     lengthMenu : "顯示 _MENU_ 筆記錄",
-    zeroRecords : "無符合資料",
+    zeroRecords : "100000符合資料",
     info : "目前記錄：_START_ 至 _END_, 總筆數：_TOTAL_",
     infoEmpty : "目前記錄： 0 至 0 , 總筆數：0",
     paginate : {

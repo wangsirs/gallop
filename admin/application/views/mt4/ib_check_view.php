@@ -68,24 +68,24 @@
             <div class="contentGroup">
                 <!--文字start-->
                 <div class="txt_Group">
-                    
-                        <!----輸入框 start---->
-                        <div class="col-sm-4">
-                            <div class="form-group formGroup_Style">
-                                <label class="control-label" for="BTN_enter"></label>
-                                <input class="form-control form_control_style Blue_Box_Blur" name="BTN_enter" id="BTN_enter" data-validate="required" placeholder="請輸入" />
-                            </div>
+
+                    <!----輸入框 start---->
+                    <div class="col-sm-4">
+                        <div class="form-group formGroup_Style">
+                            <label class="control-label" for="BTN_enter"></label>
+                            <input class="form-control form_control_style Blue_Box_Blur" name="BTN_enter" id="BTN_enter" data-validate="required" placeholder="帳號 姓名" />
                         </div>
+                    </div>
                         <!----輸入框 end----->
                         
                         <!--新增button start-->
                         <div class="btn_Position disLine_Block">
-                            <button class="btn btn-success btn_Width Gradient_Orange" id="BTN_Add">新增</button>
+                        <button class="btn btn-success btn_Width Gradient_Orange" id="BTN_Add"><i class="fa fa-search"></i>&nbsp;搜尋</button>
                         </div>
                         <!--新增button end---->
                         <div class="clr"></div>
-                </div>    
-                <!--文字end---->
+                    </div>    
+                    <!--文字end---->
                 
                 
                 <div class="Table_Layout">

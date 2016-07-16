@@ -1,0 +1,67 @@
+
+/************************
+
+  Author:Lainie
+  time:2016-07-16
+  document:iib_Group_Account.html (datepicker)
+
+ ************************/
+ 
+ .dropdown-menu{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,fcfcfc+26,dddddd+100 */
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #fcfcfc 26%, #dddddd 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#fcfcfc 26%,#dddddd 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #ffffff 0%,#fcfcfc 26%,#dddddd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+}
+
+.datepicker th{
+	-webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.datepicker thead >  tr:nth-child(2) > th{
+	color:#fff;
+	font-weight:bold;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b9da72+0,7c9d35+100 */
+	background: #b9da72; /* Old browsers */
+	background: -moz-linear-gradient(top,  #b9da72 0%, #7c9d35 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #b9da72 0%,#7c9d35 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #b9da72 0%,#7c9d35 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b9da72', endColorstr='#7c9d35',GradientType=0 ); /* IE6-9 */
+}
+
+.datepicker thead >  tr:nth-child(2) > th.datepicker-switch:hover{
+	background:#fff;
+	color:#91b51c;
+	font-weight:bold;
+}
+
+.datepicker thead >  tr:nth-child(2) > th.prev:hover, .datepicker thead >  tr:nth-child(2) > th.next:hover{ 
+	width: 1.8em;
+    height: 1.8em;
+	color:#7C9D35;
+	/*background:#7C9D35;*/
+	/*border-radius:50%;*/
+}
+
+.datepicker thead >  tr:nth-child(3) > th{
+	color:#556e20;
+	font-weight:800;
+	background: #eee;
+}
+
+.datepicker table tr td.day:hover{ 
+	background: #A7CC2E;
+	color:#fff;
+}
+
+.datepicker table tr td.old, .datepicker table tr td.new {
+    color: #c6c6c6;
+}
+
+.datepicker-dropdown.datepicker-orient-top:after {
+    border-top: 6px solid #dddddd;
+}

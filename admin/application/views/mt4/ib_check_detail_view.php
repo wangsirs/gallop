@@ -34,8 +34,6 @@
     <link href="<?=ASSETS_CSS?>button.css" rel="stylesheet" type="text/css">
     <link href="<?=ASSETS_CSS?>form_style.css" rel="stylesheet" type="text/css">
 
-    <!--fonts-->
-    <link href="<?=ASSETS_CSS?>font_style.css" rel="stylesheet" type="text/css" media="all" />
     <link href="<?=ASSETS_CSS?>font-awesome.min.css" rel="stylesheet" />
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -70,7 +68,7 @@
                             <tbody>
                                 <tr role="row" class="odd parent">
                                     <td class="txt_Bold sorting_1">I75647</td>
-                                    <td class="txt_Weight">范小小</td>
+                                    <td class="txt_Weight">2016/01/01</td>
                                 </tr>
                             </tbody>
                         </table>

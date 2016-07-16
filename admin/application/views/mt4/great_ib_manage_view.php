@@ -90,7 +90,7 @@
                                 	<td class="txt_Bold">AE3210695</td>
                                     <td class="txt_Weight">范小小</td>
                                     <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1">10000.000</span></td>
+                                    <td><span class="sorting_1">12%</span></td>
                                     <td class="sorting_1">9999.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
@@ -103,7 +103,7 @@
                                 	<td class="txt_Bold">AE5110012</td>
                                     <td class="txt_Weight">王大明</td>
                                     <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1">10000.000</span></td>
+                                    <td><span class="sorting_1">12%</span></td>
                                     <td class="sorting_1">9999.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
@@ -116,7 +116,7 @@
                                 	<td class="txt_Bold">AE3210684</td>
                                     <td class="txt_Weight">林小華</td>
                                     <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1">10000.000</span></td>
+                                    <td><span class="sorting_1">12%</span></td>
                                     <td class="sorting_1">9999.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
@@ -129,7 +129,7 @@
                                 	<td class="txt_Bold">AE3210695</td>
                                     <td class="txt_Weight">范小小</td>
                                     <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1">10000.000</span></td>
+                                    <td><span class="sorting_1">12%</span></td>
                                     <td class="sorting_1">9999.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
@@ -142,7 +142,7 @@
                                 	<td class="txt_Bold">AE5110012</td>
                                     <td class="txt_Weight">王大明</td>
                                     <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1">10000.000</span></td>
+                                    <td><span class="sorting_1">12%</span></td>
                                     <td class="sorting_1">9999.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
@@ -155,7 +155,7 @@
                                 	<td class="txt_Bold">AE3210695</td>
                                     <td class="txt_Weight">林小華</td>
                                     <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1">10000.000</span></td>
+                                    <td><span class="sorting_1">11%</span></td>
                                     <td class="sorting_1">9999.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
@@ -168,7 +168,7 @@
                                 	<td class="txt_Bold">AE3210684</td>
                                     <td class="txt_Weight">蔡小婷</td>
                                     <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1t">10000.000</span></td>
+                                    <td><span class="sorting_1t">11%</span></td>
                                     <td class="sorting_1">9999.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
@@ -181,7 +181,7 @@
                                 	<td class="txt_Bold">AE3210695</td>
                                     <td class="txt_Weight">劉小雯</td>
                                     <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1">10000.000</span></td>
+                                    <td><span class="sorting_1">11%</span></td>
                                     <td class="sorting_1">9999.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
@@ -194,7 +194,7 @@
                                 	<td class="txt_Bold">AE5110012</td>
                                     <td class="txt_Weight">林小華</td>
                                     <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1">10000.000</span></td>
+                                    <td><span class="sorting_1">11%</span></td>
                                     <td class="sorting_1">9999.94</td>
                                     <td><span class="sorting_1s">ok</span></td>
                                     <td class="sorting_1">
@@ -207,7 +207,7 @@
                                 	<td class="txt_Bold">AE3210684</td>
                                     <td class="txt_Weight">王大明</td>
                                     <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1">10000.000</span></td>
+                                    <td><span class="sorting_1">11%</span></td>
                                     <td class="sorting_1">9999.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
@@ -220,7 +220,7 @@
                                 	<td class="txt_Bold">AE3210684</td>
                                     <td class="txt_Weight">王大明</td>
                                     <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1">10000.000</span></td>
+                                    <td><span class="sorting_1">11%</span></td>
                                     <td class="sorting_1">9999.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
@@ -233,7 +233,7 @@
                                 	<td class="txt_Bold">AE3210684</td>
                                     <td class="txt_Weight">王大明</td>
                                     <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1">10000.000</span></td>
+                                    <td><span class="sorting_1">11%</span></td>
                                     <td class="sorting_1">9999.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">

@@ -60,10 +60,10 @@
 
     <!--content start-->
     <div class="content content_BG">
-     <div class="container">
-         <!---開始-->
-         <div class="wrapper">
-            <h1>MT4子帳號開戶審核紀錄</h1>
+       <div class="container">
+           <!---開始-->
+           <div class="wrapper">
+            <h1>MT4客戶開戶審核紀錄</h1>
             
             <div class="contentGroup">
                 <!--文字start-->
@@ -86,152 +86,141 @@
                         <div class="clr"></div>
                     </div>    
                     <!--文字end---->
-                    
-                    
+
+
                     <div class="Table_Layout">
-                        
+
                         <form id="customer_Manage_Multiple_Account_form" action="" method="post"> 
                             <!--表格內容start-->
                             <table id="myTable" class="cell-border display nowrap dataTable dtr-inline table_style" cellspacing="0" width="" role="grid" aria-describedby="example_info" style="width: 100%;">
                                 <thead>
                                     <tr role="row" class="BG_Gray">
-                                     <th class="sorting_asc Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 40px;"></th>
-                                     <th id="Edit_type" class="sorting_asc sorting_asc_NONE Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending">類型</th>
-                                     <th id="Edit_Account" class="sorting sorting_NONE Color_Gray min_Width" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="">申請人帳號</th>
-                                     <th id="Edit_Time" class="sorting_asc sorting_asc_NONE Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending">申請人姓名</th>
-                                     <th id="Editor" class="sorting sorting_NONE Color_Gray min_Width" tabindex="0" aria-controls="example" rowspan="1" colspan="1">子帳戶帳號</th> 
-                                     <th id="Edit_status" class="sorting sorting_NONE Color_Gray min_Width" tabindex="0" aria-controls="example" rowspan="1" colspan="1">狀態</th>                                   
-                                     <th id="Edit_Feature" class="dt-body-right sorting sorting_NONE Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 79px;">功能</th>
-                                 </tr>
-                             </thead>
-                             <tbody>
+                                       <th class="sorting_asc Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 40px;"></th>
+                                       <th id="Edit_Account" class="sorting sorting_NONE Color_Gray min_Width" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="">申請人帳號</th>
+                                       <th id="Edit_Time" class="sorting_asc sorting_asc_NONE Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending">姓名</th>
+                                       <th id="Editor" class="sorting sorting_NONE Color_Gray min_Width" tabindex="0" aria-controls="example" rowspan="1" colspan="1">國家</th> 
+                                       <th id="Edit_status" class="sorting sorting_NONE Color_Gray min_Width" tabindex="0" aria-controls="example" rowspan="1" colspan="1">狀態</th>                                   
+                                       <th id="Edit_Feature" class="dt-body-right sorting sorting_NONE Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 79px;">功能</th>
+                                   </tr>
+                               </thead>
+                               <tbody>
                                 <tr role="row" class="odd parent">
                                 	<td class="txt_Bold">1</td>
-                                    <td class="sorting_1">IB</td>
                                     <td class="txt_Bold">3210695</td>
                                     <td class="sorting_1">范小小</td>
-                                    <td><span class="sorting_1 txt_Weight">880123456</span></td>
+                                    <td><span class="sorting_1 txt_Weight">台灣</span></td>
                                     <td class="sorting_1">待審核</td>
                                     <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width">					
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Red btn_Delete" href="/mt4/sub_check_detail">查看資料</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Red btn_Delete" href="/mt4/ib_check_detail">查看資料</a>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
                                 	<td class="txt_Bold">2</td>
-                                    <td class="sorting_1">IB</td>
                                     <td class="">5110012</td>
                                     <td class="sorting_1">王大明</td>
-                                    <td><span class="sorting_1 txt_Weight">880123456</span></td>
+                                    <td><span class="sorting_1 txt_Weight">台灣</span></td>
                                     <td class="sorting_1">待審核</td>
                                     <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width">					
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Red btn_Delete" href="/mt4/sub_check_detail">查看資料</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Red btn_Delete" href="/mt4/ib_check_detail">查看資料</a>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
                                 	<td class="txt_Bold">3</td>
-                                    <td class="sorting_1">IB</td>
                                     <td class="">3210684</td>
                                     <td class="sorting_1">林小華</td>
-                                    <td><span class="sorting_1 txt_Weight">880123456</span></td>
+                                    <td><span class="sorting_1 txt_Weight">台灣</span></td>
                                     <td class="sorting_1">待審核</td>
                                     <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width">					
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Red btn_Delete" href="/mt4/sub_check_detail">查看資料</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Red btn_Delete" href="/mt4/ib_check_detail">查看資料</a>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
                                 	<td class="txt_Bold">4</td>
-                                    <td class="sorting_1">IB</td>
                                     <td class="">3210695</td>
                                     <td class="sorting_1">范小小</td>
-                                    <td><span class="sorting_1 txt_Weight">880123456</span></td>
+                                    <td><span class="sorting_1 txt_Weight">南極洲</span></td>
                                     <td class="sorting_1">待審核</td>
                                     <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width">					
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Red btn_Delete" href="/mt4/sub_check_detail">查看資料</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Red btn_Delete" href="/mt4/ib_check_detail">查看資料</a>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
                                 	<td class="txt_Bold">5</td>
-                                    <td class="sorting_1">IB</td>
                                     <td class="">5110012</td>
                                     <td class="sorting_1">王大明</td>
-                                    <td><span class="sorting_1 txt_Weight">880123456</span></td>
+                                    <td><span class="sorting_1 txt_Weight">南極洲</span></td>
                                     <td class="sorting_1">待審核</td>
                                     <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width">					
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Red btn_Delete" href="/mt4/sub_check_detail">查看資料</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Red btn_Delete" href="/mt4/ib_check_detail">查看資料</a>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
                                 	<td class="txt_Bold">6</td>
-                                    <td class="sorting_1">IB</td>
                                     <td class="">3210695</td>
                                     <td class="sorting_1">林小華</td>
-                                    <td><span class="sorting_1 txt_Weight">880123456</span></td>
+                                    <td><span class="sorting_1 txt_Weight">南極洲</span></td>
                                     <td class="sorting_1">待審核</td>
                                     <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width">					
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Red btn_Delete" href="/mt4/sub_check_detail">查看資料</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Red btn_Delete" href="/mt4/ib_check_detail">查看資料</a>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
                                 	<td class="txt_Bold">7</td>
-                                    <td class="sorting_1">IB</td>
                                     <td class="">3210684</td>
                                     <td class="sorting_1">蔡小婷</td>
-                                    <td><span class="sorting_1 txt_Weight">880123456</span></td>
+                                    <td><span class="sorting_1 txt_Weight">南極洲</span></td>
                                     <td class="sorting_1">待審核</td>
                                     <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width">					
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Red btn_Delete" href="/mt4/sub_check_detail">查看資料</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Red btn_Delete" href="/mt4/ib_check_detail">查看資料</a>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
                                 	<td class="txt_Bold">8</td>
-                                    <td class="sorting_1">IB</td>
                                     <td class="">3210695</td>
                                     <td class="sorting_1">劉小雯</td>
-                                    <td><span class="sorting_1 txt_Weight">880123456</span></td>
+                                    <td><span class="sorting_1 txt_Weight">西伯利亞</span></td>
                                     <td class="sorting_1">待審核</td>
                                     <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width">					
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Red btn_Delete" href="/mt4/sub_check_detail">查看資料</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Red btn_Delete" href="/mt4/ib_check_detail">查看資料</a>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
                                 	<td class="txt_Bold">9</td>
-                                    <td class="sorting_1">IB</td>
                                     <td class="">5110012</td>
                                     <td class="sorting_1">林小華</td>
-                                    <td><span class="sorting_1 txt_Weight">880123456</span></td>
+                                    <td><span class="sorting_1 txt_Weight">西伯利亞</span></td>
                                     <td class="sorting_1">待審核</td>                                    
                                     <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width">					
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Red btn_Delete" href="/mt4/sub_check_detail">查看資料</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Red btn_Delete" href="/mt4/ib_check_detail">查看資料</a>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
                                 	<td class="txt_Bold">10</td>
-                                    <td class="sorting_1">IB</td>
                                     <td class="">3210684</td>
                                     <td class="sorting_1">王大明</td>
-                                    <td><span class="sorting_1 txt_Weight">880123456</span></td>      
+                                    <td><span class="sorting_1 txt_Weight">西伯利亞</span></td>       
                                     <td class="sorting_1">待審核</td>                            
                                     <td class=" dt-body-right sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width">					
-                                            <a type="button" class="btn btn-success bg-lg Gradient_Red btn_Delete" href="/mt4/sub_check_detail">查看資料</a>
+                                            <a type="button" class="btn btn-success bg-lg Gradient_Red btn_Delete" href="/mt4/ib_check_detail">查看資料</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -278,11 +267,11 @@
                         </div>
                         <!--按鈕end---->
                     </form>                    
-                    
+
                 </div>
             </div>
         </div>	
-        
+
 		<!--結束--->
 
 	</div>	

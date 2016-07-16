@@ -23,9 +23,6 @@
     <link href="<?=ASSETS_CSS?>menu.css" rel="stylesheet" type="text/css">
     <link href="<?=ASSETS_CSS?>txt_style.css" rel="stylesheet" type="text/css">
 
-    <!--fonts-->
-    <link href="<?=ASSETS_CSS?>font_style.css" rel="stylesheet" type="text/css" media="all" />
-
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -85,10 +82,8 @@
                     <ul>
                         <li><a href="#">切換語系</a></li>
                         <li><a  href="#">開戶<span class="badge badge-lemon badge_Width bacg_pc_Position">1</span></a></li>
-                        <li><a  href="#">提款<span class="badge badge-lemon badge_Width bacg_pc_Position">1</span></a></li>
-                        <li><a  href="#">提款</a></li>
-                        <li><a  href="#">提款</a></li>
-                        <li><a  href="#">提款<span class="badge badge-lemon badge_Width bacg_pc_Position">45</span></a></li>
+                        <li><a  href="#">顧問提款<span class="badge badge-lemon badge_Width bacg_pc_Position" style="left:5.3em;">1</span></a></li>
+                        <li><a  href="#">客戶提款</a></li>
                     </ul>
                     <div class="clearfix"> </div>
                 </div>

@@ -20,6 +20,30 @@ class mt4 extends CI_Controller {
     }
 
     /**
+    * 大IB群組開戶設定 step 1
+    */
+    public function gib_reg_1(){
+        $data = array();
+        load_frame( __CLASS__, __FUNCTION__, $data);
+    }
+
+    /**
+    * 大IB群組開戶設定 step 2
+    */
+    public function gib_reg_2(){
+        $data = array();
+        load_frame( __CLASS__, __FUNCTION__, $data);
+    }
+
+    /**
+    * 大IB群組開戶設定 step 3
+    */
+    public function gib_reg_3(){
+        $data = array();
+        load_frame( __CLASS__, __FUNCTION__, $data);
+    } 
+
+    /**
     * IB審核
     */
     public function ib_check(){

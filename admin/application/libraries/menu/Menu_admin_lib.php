@@ -36,7 +36,7 @@ class Menu_admin_lib
                 'url' => '',
                 'count' => 0,
                 'list' => array(
-                    array('name' => lang('menu_mt4_add_great_ib'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
+                    array('name' => lang('menu_mt4_add_great_ib'), 'url' => '/mt4/gib_reg_1', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
                     array('name' => lang('menu_mt4_staff_check'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 3, 'list' => array(
                         array('name' => lang('menu_mt4_ib_check'), 'url' => '/mt4/ib_check', 'popup' => FALSE, 'page_title' => '', 'count' => 4),
                         array('name' => lang('menu_mt4_client_check'), 'url' => '/mt4/client_check', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
@@ -63,6 +63,7 @@ class Menu_admin_lib
                         )),
                     ),
                 ),
+            /*
             array(
                 'name' => lang('menu_grants'),
                 'page_title' => '',
@@ -91,7 +92,7 @@ class Menu_admin_lib
                         array('name' => lang('menu_grants_withdraw_mgt'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
                         )),
                     ),
-                ),
+                ),*/
             );
 }
 }
