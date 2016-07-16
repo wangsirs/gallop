@@ -24,7 +24,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">狀態</label>
+                                <label for="inputEmail3" class="col-sm-2 control-label">職稱</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" id="account" value="" disabled="true">
                                 </div>

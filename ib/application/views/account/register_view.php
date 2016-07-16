@@ -440,12 +440,12 @@ function form_step_3() {
             <div class="box-body">
                 <div class="row">
                     <div class="col-xs-12 form-group">
-                        <label for="inputEmail3" class="control-label">地址</label>
+                        <label for="inputEmail3" class="control-label">省</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 form-group">
-                        <input type="text" id="address" name="address" class="form-control">
+                        <input type="text" id="state" name="state" class="form-control">
                     </div>
                 </div>
                 <div class="row">
@@ -460,12 +460,12 @@ function form_step_3() {
                 </div>
                 <div class="row">
                     <div class="col-xs-12 form-group">
-                        <label for="inputEmail3" class="control-label">省</label>
+                        <label for="inputEmail3" class="control-label">地址</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 form-group">
-                        <input type="text" id="state" name="state" class="form-control">
+                        <input type="text" id="address" name="address" class="form-control">
                     </div>
                 </div>
                 <div class="row">
