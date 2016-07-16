@@ -7,14 +7,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class account extends CI_Controller {
 
 	private $_app;
-	
+
 	/**
 	 * 建構子，優先執行
 	 */
 	public function __construct()
 	{
 		parent::__construct();
-		
+
 		//網址尾端帶 ?ajax=1 會辨識為 ajax 方式進入
 		$is_ajax = ( ! empty($this->input->get('ajax')));
 
@@ -30,7 +30,7 @@ class account extends CI_Controller {
 				redirect(base_url('login'));
 			}
 		}
-		
+
 		//取得 app 代號
 		$this->_app = $this->uri->segment(2);
 		//不需檢查的 function
@@ -39,14 +39,14 @@ class account extends CI_Controller {
 			redirect(base_url('mt4'));
 		}
 	}
-	
+
 	/**
 	 * 此 IB 個人資料
 	 */
 	public function profile(){
 		//Load language
 
-		
+
 		$this->load->library('api_lib');
 		$param = array(
 			'ib_id' => ib_lib::ib_id()
@@ -54,10 +54,38 @@ class account extends CI_Controller {
 		$api_re = $this->api_lib->call_api(API_PATH.'ib_api/detail', json_encode($param));
 		$data = $api_re['data'];
 		$data['app'] = $this->_app;
-		
+
 		load_frame($this->_app, __CLASS__, __FUNCTION__, $data);
 	}
 
+    /**
+     * 變更語系
+     */
+    public function change_lang($lang){
+		$re = new stdClass();
+        $re->status = FALSE;
+        if( ! in_array($lang, array('en', 'zh-tw', 'zh-cn'))){
+            die(json_encode($re));
+        }
+        
+        if($lang == ib_lib::lang()){
+            $re->status = TRUE;
+            die(json_encode($re));
+        }
+        
+		$this->load->library('api_lib');
+		$param = array(
+			'ib_id' => ib_lib::ib_id(),
+            'last_lang' => $lang
+			);
+		$api_re = $this->api_lib->call_api(API_PATH.'ib_api/update_last_lang', json_encode($param));
+        $re->status = $api_re['status'];
+        if($re->status === TRUE){
+            ib_lib::set('last_lang', $lang);
+        }
+        die(json_encode($re));
+    }
+    
 	/**
 	 * 密碼變更
 	 */
@@ -68,7 +96,7 @@ class account extends CI_Controller {
 			);
 		load_frame($this->_app, __CLASS__, __FUNCTION__, $data);
 	}
-	
+
 	/**
 	 * 密碼變更處理
 	 */
@@ -78,25 +106,25 @@ class account extends CI_Controller {
 		$old_pw = $post['oldPw'];
 		$new_pw = $post['newPw'];
 		$new_pw_conf = $post['newPwConf'];
-		if(empty($old_pw) || 
-			empty($old_pw) || 
-			empty($old_pw) || 
+		if(empty($old_pw) ||
+			empty($old_pw) ||
+			empty($old_pw) ||
 			strcmp($new_pw, $new_pw_conf) != 0){
 			$re->status = FALSE;
 		$re->msg = 'Not follow the rules';
 		die(json_encode($re));
-		}
-		$this->load->library('api_lib');
-		$param = array(
-			'ib_id' => ib_lib::ib_id(),
-			'old_pass' => $old_pw,
-			'new_pass' => $new_pw_conf,
-			);
-		$api_re = $this->api_lib->call_api(API_PATH.'ib_api/update_pw', json_encode($param));
-		$re->status = ($api_re['status'] === TRUE)? TRUE: FALSE;
-		$re->msg = ! empty($api_re['data']) ? $api_re['data'] : '';
-		die(json_encode($re));
 	}
+	$this->load->library('api_lib');
+	$param = array(
+		'ib_id' => ib_lib::ib_id(),
+		'old_pass' => $old_pw,
+		'new_pass' => $new_pw_conf,
+		);
+	$api_re = $this->api_lib->call_api(API_PATH.'ib_api/update_pw', json_encode($param));
+	$re->status = ($api_re['status'] === TRUE)? TRUE: FALSE;
+	$re->msg = ! empty($api_re['data']) ? $api_re['data'] : '';
+	die(json_encode($re));
+}
 
 	/**
 	 * 登出
@@ -114,16 +142,15 @@ class account extends CI_Controller {
 	public function ib_register(){
 		$this->load->library('parser');
 		$this->load->library('country_lib');
-		
-        $this->load->library('view_block_lib', array('app' => $this->_app));
-        
+
+		$this->load->library('view_block_lib', array('app' => $this->_app));
+
 		$data = array(
 			'app' => $this->_app,
 			'app_form' => $this->view_block_lib->ib_register(),
 			'list_country' => $this->country_lib->load(),
 			'list_country_phone' => $this->country_lib->phone(),
 			);
-		
 		load_frame($this->_app, __CLASS__, __FUNCTION__, $data);
 	}
 
@@ -136,7 +163,7 @@ class account extends CI_Controller {
 
 		$this->load->library('parser');
 		$this->load->library('country_lib');
-		
+
 		$data = array(
 			'app' => $this->_app,
 			'app_form' => $this->parser->parse($this->_app.'/'.__FUNCTION__.'_view', array()),
@@ -144,39 +171,39 @@ class account extends CI_Controller {
 			'list_country_phone' => $this->country_lib->phone(),
 			'hash' => substr(md5(time()), 0, 6)
 			);
-		
+
 		//內部頁面
 		if('inside' === $view_mode){
-			
+
 			//套用此顧問 ib_id
-			
+
 			$data['ib_id'] = ib_lib::ib_id();
-			
+
 			$is_login = (boolean)$this->session->userdata('login');
 			if( ! $is_login ){
 				redirect(base_url('login'));
 			}
-			
+
 			load_frame($this->_app, __CLASS__, __FUNCTION__, $data);
 		//免登入頁面
 		}else{
 			//使用 boss ib_id
 			$data['ib_id'] = 'B00001';
-			
+
 			$lang = $this->input->get('lang');
 			$lang = empty($lang) ? 'en' : $lang;
 			$this->session->set_userdata('lang', $lang);
-			
+
 			load_light_frame(__CLASS__.'/'.__FUNCTION__.'_view', $data);
 		}
 	}
-	
+
 	/**
 	 * 暫存表單資訊
 	 */
 	public function register_tmp(){
 		$post = $this->input->post();
-		
+
 		$re = new stdClass();
 		$re->status = FALSE;
 		$re->msg = '';
@@ -185,40 +212,40 @@ class account extends CI_Controller {
 			$re->msg = 'from error!';
 			die(json_encode($re));
 		}
-		
+
 		//FIXME:從 session 取得 ib_id
 		$post['com_id'] = COM_ID;
 		$post['mod_user'] = 'E0001';
 		$sess_key = 'reg_'.$post['hash'];
 		$base_data = $this->session->userdata($sess_key);
-		
+
 		if( ! empty($base_data)){
 			$base_data = array_merge($base_data, $post);
 		}else{
 			$base_data = $post;
 		}
-		
+
 		$this->session->set_userdata($sess_key, $base_data);
-		
+
 		$re->status = TRUE;
 		die(json_encode($re));
 	}
-	
+
 	/**
 	 * 儲存客戶註冊資料
 	 */
 	public function register_save(){
 		$post = $this->input->post();
-		
+
 		$sess_key = 'reg_'.$post['hash'];
 		$base_data = $this->session->userdata($sess_key);
-		
+
 		//如果有登入 IB, 強制寫死 ib_id
 		$user_info = $this->session->userdata('user');
 		if(isset($user_info['ib_id'])){
 			$base_data['ib_id'] = $user_info['ib_id'];
 		}
-		
+
 		$require_field = array(
 			'user_name', 'com_id', 'pwd', 'first_name', 'last_name', 'nickname',
 			'passport', 'mod_user', 'ib_id', 'email', 'gender', 'birthday', 'marital',
@@ -226,9 +253,9 @@ class account extends CI_Controller {
 			'first_deposit', 'passport_path', 'bank_path', 'resident_path');
 
 		$this->load->library('api_lib');
-		
+
 		$api_re = $this->api_lib->call_api(API_PATH.$this->_app.'/client_api/add', json_encode($base_data));
-		
+
 		$re = new stdClass();
 		$re->status = FALSE;
 		$re->msg = '';
@@ -247,11 +274,11 @@ class account extends CI_Controller {
 		}
 		die(json_encode($re));
 	}
-	
+
 	/**
 	 * 儲存顧問註冊資料
 	 */
-	public function ib_register_save(){		
+	public function ib_register_save(){
 		$post  = $this->input->post();
 		$post['com_id'] = COM_ID;
 		$post['mod_user'] = COM_ID;
@@ -259,7 +286,7 @@ class account extends CI_Controller {
 		$post['bank_path'] = COM_ID;
 		$post['resident_path'] = COM_ID;
 		$post['parent_id'] = ib_lib::ib_id();
-		
+
 		$this->load->library('api_lib');
 		$api_re = $this->api_lib->call_api(API_PATH.$this->_app.'/ib_api/add', json_encode($post));
 		$re = new stdClass();

@@ -217,13 +217,17 @@ class client_api extends REST_Controller {
      */
     public function detail_post(){
         $user_id = $this->post('user_id');
+        $lang = $this->post('lang');
+        
         if(empty($user_id)){
             $this->set_response('param is empty.', 201);
             return FALSE;
         }
         
         $user_info = $this->user_model->detail($user_id);
-        
+
+        $user_info['country'] = country_name($user_info['country'], $lang);
+                
         $this->set_response($user_info, REST_Controller::HTTP_OK);
     }
     

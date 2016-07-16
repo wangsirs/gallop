@@ -190,4 +190,19 @@ class Ib_comm_model extends CI_Model{
         
         return $list;
     }
+    
+    /**
+     * 更新密碼
+     * @param string $ib_id 顧問編號
+     * @param string $last_lang 語系
+     */
+    public function update_last_lang($ib_id, $last_lang){
+        $this->db->where('ib_id', $ib_id);
+        
+        $this->db->set('last_lang', $last_lang);
+        
+        $this->db->update(self::TB_IB); 
+        //$this->db->last_query();
+        return $this->db->affected_rows() > 0;
+    }
 }

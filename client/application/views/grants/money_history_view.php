@@ -110,7 +110,7 @@
                         </div>
                      </div>
                  -->
-                 <table id="clientTable" class="table table-bordered table-hover">
+                 <table id="clientTable" class="cell-border display nowrap dataTable dtr-inline table_style" cellspacing="0" width="" role="grid" aria-describedby="example_info" style="width: 100%;">
                     <thead>
                         <tr>
                             <th>交易日期</th>

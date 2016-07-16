@@ -10,7 +10,7 @@
                   </div>
                   <!-- /.box-header -->
                   <div class="box-body">
-                     <table id="detail_table" class="table table-bordered table-hover">
+                     <table id="detail_table" class="cell-border display nowrap dataTable dtr-inline table_style" cellspacing="0" width="" role="grid" aria-describedby="example_info" style="width: 100%;">
                         <thead>
                            <tr>
                               <th>MT4帳號</th>

@@ -98,7 +98,7 @@
                         <label>國籍</label>
                         <input class="form-control " type="text" value="<?=$info['country']?>" disabled>
                      </div>
-                     <!-- /.form-group -->
+                      <!--/.form-group--> 
                   </div>
                   <div class="col-sm-6">
                      <div class="form-group">

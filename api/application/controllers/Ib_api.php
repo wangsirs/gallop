@@ -60,6 +60,7 @@ class Ib_api extends REST_Controller {
      */
     public function detail_post(){
         $ib_id = $this->post('ib_id');
+        $lang = $this->post('lang');
         
         if(empty($ib_id)){
             $this->set_response(array('need ib_id.'), 201);
@@ -73,6 +74,8 @@ class Ib_api extends REST_Controller {
         }
         
         unset($detail['pwd']);
+        
+        $detail['country'] = country_name($detail['country'], $lang);
         
         $this->set_response($detail, REST_Controller::HTTP_OK);
     }
@@ -94,9 +97,9 @@ class Ib_api extends REST_Controller {
         }
         
         if($this->ib_comm_model->update_pw($ib_id, $old_pass, $new_pass)){
-            $this->set_response(array('ok'), REST_Controller::HTTP_OK);
+            $this->set_response('ok', REST_Controller::HTTP_OK);
         }else{
-            $this->set_response(array('failed'), 301);
+            $this->set_response('failed', 301);
         }
     }
     
@@ -119,5 +122,26 @@ class Ib_api extends REST_Controller {
         
         
         $this->set_response($list, REST_Controller::HTTP_OK);
+    }
+    
+    /**
+     * 更新最後使用的語系
+     * @param string $ib_id 顧問編號
+     * @param string $last_lang 語系
+     */
+    public function update_last_lang_post(){
+        $ib_id = $this->post('ib_id');
+        $last_lang = $this->post('last_lang');
+        
+        if(empty($ib_id) || empty($last_lang)){
+            $this->set_response(array('param is empty.'), 201);
+            return FALSE;
+        }
+        
+        if($this->ib_comm_model->update_last_lang($ib_id, $last_lang)){
+            $this->set_response('ok', REST_Controller::HTTP_OK);
+        }else{
+            $this->set_response('failed', 301);
+        }
     }
 }

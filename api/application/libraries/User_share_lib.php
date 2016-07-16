@@ -68,6 +68,16 @@ class user_share_lib {
             return array('email is exist.', '');
         }
         
+        //手機號碼前面需帶 +
+        if($base_data['cell_phone'][0] !== '+'){
+            return array('cell_phone is wrong format. ex.+886933001122', '');
+        }
+        
+        //帶入 last_lang
+        $CI->load->model('env_comm_model');
+        $list_ct = $CI->env_comm_model->country();
+        $base_data['last_lang'] = (isset($list_ct[$base_data['country']])) ? $list_ct[$base_data['country']]['lang'] : '';
+        
         return array('', $base_data);
     }
     
@@ -82,7 +92,7 @@ class user_share_lib {
         $detail = array();
         if( ! empty($base_data)){
             foreach($base_data as $field => $val){
-                if(in_array($field, array('user_id', 'user_name', 'com_id', 'pwd', 'first_name', 'last_name', 'nickname', 'ib_id', 'email', 'mod_user'))){
+                if(in_array($field, array('user_id', 'user_name', 'com_id', 'pwd', 'first_name', 'last_name', 'nickname', 'ib_id', 'email', 'last_lang', 'mod_user'))){
                     $info[$field] = $val;
                 }else{
                     $detail[$field] = $val;

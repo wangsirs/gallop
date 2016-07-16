@@ -235,4 +235,25 @@ class Client_api extends REST_Controller {
         
         $this->set_response($list, REST_Controller::HTTP_OK);
     }
+    
+    /**
+     * 更新最後使用的語系
+     * @param string $user_id 客戶編號
+     * @param string $last_lang 語系
+     */
+    public function update_last_lang_post(){
+        $user_id = $this->post('user_id');
+        $last_lang = $this->post('last_lang');
+        
+        if(empty($user_id) || empty($last_lang)){
+            $this->set_response(array('param is empty.'), 201);
+            return FALSE;
+        }
+        
+        if($this->user_comm_model->update_last_lang($user_id, $last_lang)){
+            $this->set_response('ok', REST_Controller::HTTP_OK);
+        }else{
+            $this->set_response('failed', 301);
+        }
+    }
 }

@@ -74,8 +74,8 @@ class mt4 extends CI_Controller {
         $user_id = $this->input->get('user_id');
         $this->load->library('api_lib');
         $param = array(
-            'ib_id' => ib_lib::ib_id(),
-            'user_id' => $user_id
+            'user_id' => $user_id,
+            'lang' => ib_lib::lang()
             );
         $api_re = $this->api_lib->call_api(API_PATH.$this->_app.'/client_api/detail', json_encode($param));
         $data = array(
@@ -109,7 +109,9 @@ class mt4 extends CI_Controller {
         $get = $this->input->get();
 
         $param = array(
-            'ib_id' => $get['ib_id']);
+            'ib_id' => $get['ib_id'],
+            'lang' => ib_lib::lang()
+        );
         $api_re = $this->api_lib->call_api(API_PATH.'ib_api/detail', json_encode($param));
         $data['info'] = $api_re['data'];
 

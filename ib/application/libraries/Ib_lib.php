@@ -69,7 +69,7 @@ class ib_lib
      * 取得目前正在使用的語系
      */
     static function lang(){
-        return self::get('lang');
+        return self::get('last_lang');
     }
     
     /**

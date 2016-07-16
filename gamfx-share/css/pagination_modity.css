@@ -1,0 +1,62 @@
+
+/************************
+
+  Author:Lainie
+  time:2016-07-05
+  document:index.html (修改引用pagination的樣式)
+
+ ************************/
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover{
+	color:#fff!important;
+	 /* background-color: #5fafe4; */
+    border-color: #5fafe4;
+    background: #5fafe4;
+    background: -moz-linear-gradient(top, #5fafe4 0%, #015cf5 100%);
+    background: -webkit-linear-gradient(top, #5fafe4 0%,#015cf5 100%);
+    background: linear-gradient(to bottom, #5fafe4 0%,#015cf5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5fafe4', endColorstr='#015cf5',GradientType=0 );
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active{
+	border: 1px solid #ddd;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button{ 
+	padding: 1px 10px;font-size: .938em;    
+	background-color: #fff;
+    border: 1px solid #ddd;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover{
+	border: 1px solid #ddd;
+	background-color: #eee!important;
+	color: #000!important;
+	background: linear-gradient(to bottom, #eee 0%, #eee 100%);
+}
+
+.dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate { color: #757575;}
+
+
+.pagination_Group{  text-align: center;}
+
+.select_Box{ 
+	font-size:1em;
+	border-color: #ddd;
+	vertical-align: top;
+    margin: 20px 0;	    
+}
+
+.select_Box > select {
+	font-size: 12px;
+	height: 30px;
+	padding: 0 12px;
+	border-color: #ddd;
+}
+
+@media (min-width: 768px) {  /**桌機版*/
+
+}
+
+@media (max-width: 768px) { /**手機版*/
+	.pagination_Group{  text-align: center;}
+}

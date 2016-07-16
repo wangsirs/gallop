@@ -40,7 +40,7 @@ $config['compression_engine'] = array(
 $config['closurecompiler']['compilation_level'] = 'SIMPLE_OPTIMIZATIONS';
 
 //frequences of scan filetime
-$config['scan_freq'] = 3600;
+$config['scan_freq'] = 0;
 
 // End of file minify.php
 // Location: ./application/config/minify.php

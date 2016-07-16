@@ -96,8 +96,6 @@ $(function() {
             }]
         });
     });
-    LoadGeneral();
-
     $("#clientTable").DataTable(GetDataTableAttrs());
 
     //當按下搜尋按鈕後的事件觸發
@@ -110,6 +108,7 @@ $(function() {
     });
 
     $("th:eq(0)").click();
+    LoadGeneral();
 });
 </script>
 <!-- Main content -->
@@ -153,7 +152,7 @@ $(function() {
                     </div>
                 </div>
                 <div class="box-footer">
-                    <table id="clientTable" class="table table-bordered table-hover">
+                    <table id="clientTable" class="cell-border display nowrap dataTable dtr-inline table_style" cellspacing="0" width="" role="grid" aria-describedby="example_info" style="width: 100%;">
                         <thead>
                             <tr>
                                 <th>交易日期</th>

@@ -70,6 +70,7 @@ class mt4 extends CI_Controller {
         $this->load->library('api_lib');
         $param = array(
             'user_id' => client_lib::user_id(),
+            'lang' => client_lib::lang()
             );
 
         $api_re = $this->api_lib->call_api(API_PATH.$this->_app.'/client_api/detail', json_encode($param));
@@ -353,7 +354,7 @@ class mt4 extends CI_Controller {
             'com_id' =>COM_ID,
             'user_id' => client_lib::user_id(),
             'st_day' => date('Y-m-d', 0),
-            'end_day' => date('Y-m-d'),
+            'end_day' => '2017-01-01',
             );
         if( !empty($get_array = $this->input->get())){
             $param['st_day'] = $get_array['st_day'];
@@ -383,7 +384,7 @@ class mt4 extends CI_Controller {
             $param = array(
                 'user_id' => client_lib::user_id(),
                 'st_day' => date('Y-m-d'),
-                'end_day' => date('Y-m-d'),
+                'end_day' => '2017-01-01',
                 );
 
             $api_re = $this->api_lib->call_api(API_PATH.$this->_app.'/client_api/sync_trade_history', json_encode($param));
