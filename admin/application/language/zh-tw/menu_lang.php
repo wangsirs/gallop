@@ -14,6 +14,8 @@ $lang['menu_lv_setup'] = '階級設定';
 $lang['menu_scale_setup'] = '佣金設定';
 $lang['menu_msg_manage'] = '訊息管理';
 $lang['menu_consult_srv'] = '諮詢服務';
+$lang['official_website_mgt'] = '官網後台管理';
+$lang['io_internal_transfer'] = '資金互轉';
 
 $lang['menu_mt4'] = 'MT4專案';
 $lang['menu_mt4_add_great_ib'] = '新增大IB群組';

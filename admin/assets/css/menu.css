@@ -355,4 +355,10 @@ ul.child_sub_menu > li > a {text-indent: 50px;}
 		top: 23px;
     	right: 15px;
 	}
+	
+	.phone_MenuBar>li.showhide:hover{ 
+		box-shadow:1px 1px 6px 1px #cad7ab;
+		-webkit-box-shadow:1px 1px 6px 1px #cad7ab;
+		-moz-box-shadow:1px 1px 6px 1px #cad7ab;
+	}
 }

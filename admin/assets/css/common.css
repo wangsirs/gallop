@@ -11,6 +11,7 @@
  .clr{clear:both;}
  
  body{
+	 font-family:"微軟正黑體",Arial, Helvetica, sans-serif;
 	 background:url(../images/BG.png) no-repeat center center;	 
 	 background-size:cover;	 
 	 background-attachment: fixed;
@@ -26,6 +27,13 @@ div.content_BG{
 	background:url(../images/BG.png) no-repeat center center;	
 	background-attachment:fixed;
 	background-size: cover;
+}
+
+@media (max-width: 768px) { /**手機版*/
+	img{
+		width:100%;
+		height:auto;
+	}
 }
 
  

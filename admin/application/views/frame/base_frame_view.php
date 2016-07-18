@@ -104,7 +104,7 @@
                                 <li><a href="#"><?=$item['name']?><?php if(intval($item['count']) > 0){ echo '<span class="tip_txt">'.$item['count'].'</span>';} ?></a>
                                     <ul class="sub-menu sub-menu_0<?=intval($key) + 1?>" id="Sub_menu_0<?=intval($key) + 1?>" >
                                         <?php foreach ($item['list'] as $key2 => $item2):?>
-                                        <li><a href="<?=empty($item2['url']) ? '#' : $item2['url']?>"><?=$item2['name']?><?php if(intval($item2['count']) > 0){ echo '<span class="tip_txt">'.$item2['count'].'</span>';} ?></a>
+                                        <li><a href="<?=empty($item2['url']) ? '#' : $item2['url']?>" <?=$item2['popup'] === TRUE?'target="_blank"':''?> ><?=$item2['name']?><?php if(intval($item2['count']) > 0){ echo '<span class="tip_txt">'.$item2['count'].'</span>';} ?> </a>
                                             <?php if(isset($item2['list']) && ! empty($item2['list'])){?>
                                                 <ul class="sub-menu" id="child_menu_0<?php if($key >1){ ?><?=intval($key) + 1?>_<?=intval($key2) + 1?><?php }else{ ?><?=intval($key2) + 1?><?php } ?>" >
                                                     <?php foreach ($item2['list'] as $key3 => $item3):?>

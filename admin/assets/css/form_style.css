@@ -73,11 +73,10 @@ option:focus{color:red;}
 /*---checkbox---*/
 input[type="checkbox"] {
     -webkit-appearance: none;/*取消預設外觀*/
-	-moz-appearance:none;
+	-moz-appearance: none;
 	-o-appearance:none;
 	appearance:none;
-	
-	/*visibility:hidden;*/
+	outline:none;
 	
     margin-top: 0;
     border: 1px solid #bcbbbb;
@@ -97,9 +96,9 @@ input[type="checkbox"] {
 
 input[type=checkbox]::-ms-check{display: none;}
 
-input[type="checkbox"]:checked {
+input[type="checkbox"]:checked{
 	background:url(../images/checkBox_Checked.png) no-repeat center center;
-	border:1px solid #acabab;
+	/*border:1px solid #acabab;*/
 	outline:none;
 }
 
@@ -168,17 +167,29 @@ div.id_Card_Number_Group , div.id_Card_Number_Group_02 , div.id_Card_Number_Grou
 	input, select {min-width:85px;}
 	input[type="checkbox"]{min-width:20px;}
 	input[type="radio"]{min-width:20px;}
+	
+	.btn_Margin{
+		width: 100%;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	
+	.btn_PC_Margin {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
 }
+
 @media (max-width: 768px) { /**手機版*/
 	.txt_Group{width: 98%;}
 	
-	<!--.btn_Width{
+	/*.btn_Width{
 		width: 100%;
 		margin-left:auto;
 		margin-right:auto;
 		margin-top: 5px;
     	margin-bottom: 5px;
-	}-->
+	}*/
 	
 	.form_control_style{
 		height: 45px;
@@ -203,5 +214,16 @@ div.id_Card_Number_Group , div.id_Card_Number_Group_02 , div.id_Card_Number_Grou
 	
 	input[type="checkbox"]{min-width:20px;}
 	input[type="radio"]{min-width:30px;}
-
+	
+	.btn_Margin{
+		width: 100%;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	
+	select, .select_Style{
+		background: url("../images/arrows_BG_down_phone.png") no-repeat scroll right center transparent!important;
+	}
 }

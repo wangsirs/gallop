@@ -12,12 +12,29 @@
 .txtC{text-align:center;}
 .txt_Red{color:#d9534f;}
 
+.margin_Right10{  margin-right: 10px;}
 .margin_Right{  margin-right: 20px;}
+.margin_Bottom15{ margin-bottom: 15px;}
 .margin_Bottom{margin-bottom: 25px;}
 .margin_Top{margin-top:10px;}
+.margin_Top20{margin-top:20px;}
+.margin_Top50{margin-top:50px;}
 .margin_Left{margin-left: 10px;}
+.margin_Left0{margin-left: 0px;}
+.margin_Right0{  margin-right: 0px;}
+
 
 .min_Width{min-width: 100px;}
+.max_Width70{max-width: 70%;}
+.vertical_Align{vertical-align: middle!important;}
+
+hr.LineStyle{
+	border:0; 
+	height:1px;
+	border-bottom: 2px solid #ddd;
+	margin-top: 0;
+	margin-bottom: 5px;
+}
 
 h1{ 
 	font-size: 1.5em;    
@@ -29,16 +46,33 @@ h1{
 
 h2.txt_title_information{
 	font-size: 1.125em;
-    text-align: left;
     padding-top: 15px;
     padding-bottom: 7px;
     font-family: "微軟正黑體",Arial, Helvetica, sans-serif;
-	border-bottom: dashed 1px #605136;
+	margin-bottom: -1px;
+	margin-top: 41px;
 	color: #5a400f;
-	text-shadow: 1px 1px 10px #f6f1db;
+	/*text-shadow: 1px 1px 10px #f6f1db;*/
     font-weight: 600;
 }
 
+.txt_title_Bord_Gradient{
+	padding: 5px 0 0 0;
+    width: 135px;
+    line-height: 23px;
+	text-align: center;
+    border: 1px solid #c9c9c9;	
+    border-width: 1px 1px 0 1px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+	/*漸層*/
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #ffffff 0%, #fcfcfc 26%, #dddddd 100%);
+    background: -webkit-linear-gradient(top, #ffffff 0%,#fcfcfc 26%,#dddddd 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#fcfcfc 26%,#dddddd 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 );
+}
 
 .badge_Width{
 	border-radius: 50%;

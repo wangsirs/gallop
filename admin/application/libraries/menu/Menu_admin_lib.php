@@ -27,7 +27,9 @@ class Menu_admin_lib
                     array('name' => lang('menu_lv_setup'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
                     array('name' => lang('menu_scale_setup'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
                     array('name' => lang('menu_msg_manage'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
-                    array('name' => lang('menu_consult_srv'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0)
+                    array('name' => lang('menu_consult_srv'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
+                    array('name' => lang('official_website_mgt'), 'url' => 'http://ag.dev.gamfx.com/', 'popup' => TRUE, 'page_title' => '', 'count' => 0),
+                    array('name' => lang('io_internal_transfer'), 'url' => '/admin/io_transfer', 'popup' => FALSE, 'page_title' => '', 'count' => 0)
                     )
                 ),
             array(
@@ -57,9 +59,9 @@ class Menu_admin_lib
                         array('name' => lang('menu_mt4_trade_rep'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
                         )),
                     array('name' => lang('menu_mt4_assets_mgt'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0, 'list' => array(
-                        array('name' => lang('menu_mt4_io_mgt'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
-                        array('name' => lang('menu_mt4_funding_mgt'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
-                        array('name' => lang('menu_mt4_withdraw_mgt'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
+                        array('name' => lang('menu_mt4_io_mgt'), 'url' => '/mt4/io_mgt', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
+                        array('name' => lang('menu_mt4_funding_mgt'), 'url' => '/mt4/funding_mgt', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
+                        array('name' => lang('menu_mt4_withdraw_mgt'), 'url' => '/mt4/withdraw_mgt', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
                         )),
                     ),
                 ),

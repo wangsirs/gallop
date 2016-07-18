@@ -4,6 +4,7 @@
 	Time:2016-06-28
 	document:index.html (RWD table)
 ****************************/
+table.dataTable.nowrap td.overVisible{overflow: visible;/*顯示的文字或圖片會直接超出範圍，不使用捲軸*/}
 
 div.contentGroup{
 	width:100%;
@@ -93,6 +94,10 @@ table.table_style tfoot th{border-top: 1px solid #eaeaea;}
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5fafe4', endColorstr='#015cf5',GradientType=0 ); /* IE6-9 */
 }
 
+
+table.table_Style_RWD_Padding{ color: #757575;}
+table.table_Style_RWD_Padding > tbody > tr > td{ padding:10px 10px!important;}
+
 @media (min-width: 768px) {  /**桌機版*/
 	div.Table_Layout{
 		width:100%;    
@@ -100,6 +105,9 @@ table.table_style tfoot th{border-top: 1px solid #eaeaea;}
     	margin-right: auto;
 		margin-bottom: 10px;
 	}
+	.min_Width100{width:100px;}
+	.min_Width200{width:200px;}
+	.min_Width400{width:400px;}
 }
 
 @media (max-width: 768px) { /**手機版*/
@@ -113,4 +121,10 @@ table.table_style tfoot th{border-top: 1px solid #eaeaea;}
 	}
 	
 	table.dataTable.nowrap th, table.dataTable.nowrap td{white-space: inherit;/*繼承*/}
+	
+	table.table_Style_RWD_Padding > tbody > tr > td{
+		word-wrap:break-word;/*中文字換行(不切斷單字)*/
+		word-break: break-all;/*設定亞洲語言(Chinese, Japan, Korea)及非亞洲語言文字的斷行規則*/
+	}
+	table.table_Style_RWD_Padding > tbody > tr > td:first-child { min-width:50px;}
 }

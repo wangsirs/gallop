@@ -162,4 +162,60 @@ class mt4 extends CI_Controller {
         $data = array();
         load_frame( __CLASS__, __FUNCTION__, $data);
     }
+
+    /**
+    * 客戶出入金管理
+    */
+    public function io_mgt(){
+        $data = array();
+        load_frame( __CLASS__, __FUNCTION__, $data);
+    }
+
+    /**
+    * 客戶入金細節
+    */
+    public function client_funding(){
+        $data = array();
+        load_frame( __CLASS__, __FUNCTION__, $data);
+    }
+
+    /**
+    * 客戶出金細節
+    */
+    public function client_withdraw(){
+        $data = array();
+        load_frame( __CLASS__, __FUNCTION__, $data);
+    }
+
+    /**
+    * 客戶入金管理
+    */
+    public function funding_mgt(){
+        $data = array();
+        load_frame( __CLASS__, __FUNCTION__, $data);
+    }
+
+    /**
+    * 客戶入金審核
+    */
+    public function funding_check(){
+        $data = array();
+        load_frame( __CLASS__, __FUNCTION__, $data);
+    }
+
+    /**
+    * 客戶出金管理
+    */
+    public function withdraw_mgt(){
+        $data = array();
+        load_frame( __CLASS__, __FUNCTION__, $data);
+    }
+
+    /**
+    * 客戶出金審核
+    */
+    public function withdraw_check(){
+        $data = array();
+        load_frame( __CLASS__, __FUNCTION__, $data);
+    }
 }
