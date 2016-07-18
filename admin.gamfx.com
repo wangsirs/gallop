@@ -2,7 +2,7 @@ server {
 	listen 80;
         server_name admin.gamfx.com;
 
-	location ~ \.(gif|jpg|png|js|css|woff2|woff|ico|eot)$ {
+	location ~ \.(gif|jpg|png|js|css|woff2|woff|ico|eot|map)$ {
 	    root /var/www/admin.gamfx.dev.com/public_html/;
                 gzip on;
                 gzip_min_length 1k;
