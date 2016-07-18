@@ -26,6 +26,8 @@ ln -s /etc/nginx/sites-available/api.gamfx.dev.com "/etc/nginx/sites-enabled/api
 ln -s /etc/nginx/sites-available/api.gamfx.beta.com "/etc/nginx/sites-enabled/api.gamfx.beta.com"
 ln -s /etc/nginx/sites-available/api.gamfx.prev.com "/etc/nginx/sites-enabled/api.gamfx.prev.com"
 ln -s /etc/nginx/sites-available/api.gamfx.com "/etc/nginx/sites-enabled/api.gamfx.com"
+#fb api
+ln -s /etc/nginx/sites-available/fb.gamfx.com "/etc/nginx/sites-enabled/fb.gamfx.com"
 #phpmyadmin
 ln -s /etc/nginx/sites-available/phpmyadmin "/etc/nginx/sites-enabled/phpmyadmin"
 #qoo
@@ -52,6 +54,8 @@ mkdir -p /var/www/api.gamfx.com/public_html/
 mkdir -p /var/www/api.gamfx.dev.com/public_html/
 mkdir -p /var/www/api.gamfx.beta.com/public_html/
 mkdir -p /var/www/api.gamfx.prev.com/public_html/
+
+mkdir -p /var/www/fb.gamfx.com/public_html/
 
 mkdir -p /var/www/ui.gamfx.com/public_html/
 
