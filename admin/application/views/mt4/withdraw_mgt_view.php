@@ -35,10 +35,6 @@
 <!--修改 datepicker style-->
 <link href="<?=ASSETS_CSS?>datepicker_style.css" rel="stylesheet" type="text/css">
 
-<!--fonts-->
-<!--<link href="<?=ASSETS_CSS?>font_style.css" rel="stylesheet" type="text/css" media="all" />-->
-<link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
-<link href='http://fonts.useso.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'><!--//fonts-->
 <link href="<?=ASSETS_CSS?>font-awesome.min.css" rel="stylesheet" />
 
 <!--自寫 css-->
@@ -163,188 +159,188 @@
                                     <th id="" class="sorting_asc Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="">功能</th>                                     
                                 </tr>
                             </thead>
-                            <tbody>
+                                          <tbody>
                                 <tr role="row" class="odd parent">
-                                	<td class="txt_Bold">AE3210695</td>
-                                    <td class="txt_Weight">范小小</td>
-                                    <td class="sorting_1">2016/01/01</td>
-                                    <td><span class="sorting_1 txt_Weight">0</span></td>
+                                    <td class="txt_Bold">AE3210695</td>
+                                    <td class="txt_Weight">范安時</td>
+                                    <td class="sorting_1">銀聯卡</td>
+                                    <td><span class="sorting_1 txt_Weight">432211</span></td>
                                     <td class="sorting_1">處理中</td>
                                     <td>
-                                        2016/01/01 12:55:33
+                                        2015/01/04 23:21:33
                                     </td> 
                                     <td>
                                         <div class="btn_Position">
-                                            <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="BTN_Check" href="/mt4/withdraw_check">審核</a>
+                                            <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="BTN_Check" href="/mt4/funding_check">審核</a>
                                         </div>
                                     </td>                                   
                                 </tr>
                                 <tr role="row" class="even">
-                                	<td class="txt_Bold">AE5110012</td>
-                                    <td class="txt_Weight">王大明</td>
+                                    <td class="txt_Bold">AE5110012</td>
+                                    <td class="txt_Weight">王起照</td>
                                     <td class="sorting_1">銀聯卡</td>
-                                    <td><span class="sorting_1 txt_Weight">1000000.00</span></td>
+                                    <td><span class="sorting_1 txt_Weight">2322001.00</span></td>
                                     <td class="sorting_1">處理中</td>
                                     <td>
-                                    	2016/01/01 12:55:33
+                                        2015/12/11 12:44:44
                                     </td>
                                     <td>
-                                    	<div class="btn_Position">
-                                            <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="BTN_Check" href="/mt4/withdraw_check">審核</a>
+                                        <div class="btn_Position">
+                                            <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="BTN_Check" href="/mt4/funding_check">審核</a>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
-                                	<td class="txt_Bold">AE3210684</td>
-                                    <td class="txt_Weight">林小華</td>
+                                    <td class="txt_Bold">AE3330684</td>
+                                    <td class="txt_Weight">林小易</td>
                                     <td class="sorting_1">銀聯卡</td>
-                                    <td><span class="sorting_1 txt_Weight">2000000.00</span></td>
+                                    <td><span class="sorting_1 txt_Weight">23221.00</span></td>
                                     <td class="sorting_1">
-                                    	<span class="txt_Check">同意</span>
+                                        <span class="txt_Check">同意</span>
                                     </td>
                                     <td>
-                                    	2016/01/01 12:55:33
+                                        2016/06/05 14:31:24
                                     </td> 
                                     <td>
-                                    	<div class="btn_Position">
-                                            <a class="btn btn-info btn_sm_Width Gradient_Orange" id="BTN_Examination" href="/mt4/withdraw_check">檢查</a>
+                                        <div class="btn_Position">
+                                            <a class="btn btn-info btn_sm_Width Gradient_Orange" id="BTN_Examination" href="/mt4/funding_check">檢查</a>
                                         </div>
                                     </td>                                  
                                 </tr>
                                 <tr role="row" class="even">
-                                	<td class="txt_Bold">AE3210695</td>
+                                    <td class="txt_Bold">AE3870695</td>
                                     <td class="txt_Weight">范小小</td>
                                     <td class="sorting_1">銀聯卡</td>
-                                    <td><span class="sorting_1 txt_Weight">1000000.00</span></td>
+                                    <td><span class="sorting_1 txt_Weight">12121.00</span></td>
                                     <td class="sorting_1">處理中</td>
                                     <td>
-                                    	2016/01/01 12:55:33
+                                        2016/05/21 23:11:21
                                     </td>
                                     <td>
-                                    	<div class="btn_Position">
-                                            <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="BTN_Check" href="/mt4/withdraw_check">審核</a>
+                                        <div class="btn_Position">
+                                            <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="BTN_Check" href="/mt4/funding_check">審核</a>
                                         </div>
                                     </td>                                    
                                 </tr>
                                 <tr role="row" class="odd">
-                                	<td class="txt_Bold">AE5110012</td>
+                                    <td class="txt_Bold">AE5110322</td>
                                     <td class="txt_Weight">王大明</td>
                                     <td class="sorting_1">銀聯卡</td>
-                                    <td><span class="sorting_1 txt_Weight">2000000.00</span></td>
+                                    <td><span class="sorting_1 txt_Weight">775857.00</span></td>
                                     <td class="sorting_1">
-                                    	<span class="txt_Check">同意</span>
+                                        <span class="txt_Check">同意</span>
                                     </td>
                                     <td>
-                                    	2016/01/01 12:55:33
+                                        2016/11/12 15:22:11
                                     </td> 
                                     <td>
-                                    	<div class="btn_Position">
-                                            <a class="btn btn-info btn_sm_Width Gradient_Orange" id="BTN_Examination" href="/mt4/withdraw_check">檢查</a>
+                                        <div class="btn_Position">
+                                            <a class="btn btn-info btn_sm_Width Gradient_Orange" id="BTN_Examination" href="/mt4/funding_check">檢查</a>
                                         </div>
                                     </td>                                  
                                 </tr>
                                 <tr role="row" class="even">
-                                	<td class="txt_Bold">AE3210695</td>
+                                    <td class="txt_Bold">AE3218895</td>
                                     <td class="txt_Weight">林小華</td>
                                     <td class="sorting_1">銀聯卡</td>
-                                    <td><span class="sorting_1 txt_Weight">1000000.00</span></td>
+                                    <td><span class="sorting_1 txt_Weight">45444.00</span></td>
                                     <td class="sorting_1">處理中</td>
                                     <td>
-                                    	2016/01/01 12:55:33
+                                        2016/12/12 21:34:11
                                     </td> 
                                     <td>
-                                    	<div class="btn_Position">
-                                            <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="BTN_Check" href="/mt4/withdraw_check">審核</a>
+                                        <div class="btn_Position">
+                                            <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="BTN_Check" href="/mt4/funding_check">審核</a>
                                         </div>
                                     </td>                                  
                                 </tr>
                                 <tr role="row" class="odd">
-                                	<td class="txt_Bold">AE3210684</td>
+                                    <td class="txt_Bold">AE3210984</td>
                                     <td class="txt_Weight">蔡小婷</td>
                                     <td class="sorting_1">銀聯卡</td>
-                                    <td><span class="sorting_1 txt_Weight">2000000.00</span></td>
+                                    <td><span class="sorting_1 txt_Weight">545753.00</span></td>
                                     <td class="sorting_1">處理中</td>
                                     <td>
-                                    	2016/01/01 12:55:33
+                                        2016/11/11 22:22:55
                                     </td> 
                                     <td>
-                                    	<div class="btn_Position">
-                                            <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="BTN_Check" href="/mt4/withdraw_check">審核</a>
+                                        <div class="btn_Position">
+                                            <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="BTN_Check" href="/mt4/funding_check">審核</a>
                                         </div>
                                     </td>                                  
                                 </tr>
                                 <tr role="row" class="even">
-                                	<td class="txt_Bold">AE3210695</td>
+                                    <td class="txt_Bold">AE3218695</td>
                                     <td class="txt_Weight">劉小雯</td>
                                     <td class="sorting_1">銀聯卡</td>
-                                    <td><span class="sorting_1 txt_Weight">1000000.00</span></td>
+                                    <td><span class="sorting_1 txt_Weight">1288644.00</span></td>
                                     <td class="sorting_1">處理中</td>
                                     <td>
-                                    	2016/01/01 12:55:33
+                                        2016/04/01 21:21:22
                                     </td>
-                                  	<td>
-                                    	<div class="btn_Position">
-                                            <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="BTN_Check" href="/mt4/withdraw_check">審核</a>
+                                    <td>
+                                        <div class="btn_Position">
+                                            <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="BTN_Check" href="/mt4/funding_check">審核</a>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
-                                	<td class="txt_Bold">AE5110012</td>
-                                    <td class="txt_Weight">林小華</td>
+                                    <td class="txt_Bold">AE5110712</td>
+                                    <td class="txt_Weight">林必賢</td>
                                     <td class="sorting_1">銀聯卡</td>
-                                    <td><span class="sorting_1 txt_Weight">2000000.00</span></td>
+                                    <td><span class="sorting_1 txt_Weight">544278.00</span></td>
                                     <td class="sorting_1">處理中</td>    
                                     <td>
-                                    	2016/01/01 12:55:33
+                                        2016/02/01 19:11:33
                                     </td>
                                     <td>
-                                    	<div class="btn_Position">
-                                            <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="BTN_Check" href="/mt4/withdraw_check">審核</a>
+                                        <div class="btn_Position">
+                                            <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="BTN_Check" href="/mt4/funding_check">審核</a>
                                         </div>
                                     </td>                                     
                                 </tr>
                                 <tr role="row" class="even">
-                                	<td class="txt_Bold">AE3210684</td>
-                                    <td class="txt_Weight">王大明</td>
+                                    <td class="txt_Bold">AE3210234</td>
+                                    <td class="txt_Weight">王啟超</td>
                                     <td class="sorting_1">銀聯卡</td>
-                                    <td><span class="sorting_1 txt_Weight">1000000.00</span></td> 
+                                    <td><span class="sorting_1 txt_Weight">412687.00</span></td> 
                                     <td class="sorting_1">處理中</td> 
                                     <td>
-                                    	2016/01/01 12:55:33
+                                        2016/03/10 17:33:45
                                     </td>
                                     <td>
-                                    	<div class="btn_Position">
-                                            <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="BTN_Check" href="/mt4/withdraw_check">審核</a>
+                                        <div class="btn_Position">
+                                            <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="BTN_Check" href="/mt4/funding_check">審核</a>
                                         </div>
                                     </td>                                      
                                 </tr>
                                  <tr role="row" class="odd">
-                                	<td class="txt_Bold">AE3210684</td>
-                                    <td class="txt_Weight">王大明</td>
+                                    <td class="txt_Bold">AE3218524</td>
+                                    <td class="txt_Weight">陳柏林</td>
                                     <td class="sorting_1">銀聯卡</td>
-                                    <td><span class="sorting_1 txt_Weight">2000000.00</span></td> 
+                                    <td><span class="sorting_1 txt_Weight">858587.00</span></td> 
                                     <td class="sorting_1">處理中</td>    
                                     <td>
-                                    	2016/01/01 12:55:33
+                                        2016/04/01 23:11:33
                                     </td>
                                     <td>
-                                    	<div class="btn_Position">
-                                            <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="BTN_Check" href="/mt4/withdraw_check">審核</a>
+                                        <div class="btn_Position">
+                                            <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="BTN_Check" href="/mt4/funding_check">審核</a>
                                         </div>
                                     </td>                                   
                                 </tr>
                                 <tr role="row" class="even">
-                                	<td class="txt_Bold">AE3210684</td>
-                                    <td class="txt_Weight">王大明</td>
+                                    <td class="txt_Bold">AE3219824</td>
+                                    <td class="txt_Weight">王大建</td>
                                     <td class="sorting_1">銀聯卡</td>
-                                    <td><span class="sorting_1 txt_Weight">1000000.00</span></td>
+                                    <td><span class="sorting_1 txt_Weight">212378.00</span></td>
                                     <td class="sorting_1">處理中</td>   
                                     <td>
-                                    	2016/01/01 12:55:33
+                                        2016/05/01 21:11:33
                                     </td> 
                                     <td>
-                                    	<div class="btn_Position">
-                                            <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="BTN_Check" href="/mt4/withdraw_check">審核</a>
+                                        <div class="btn_Position">
+                                            <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="BTN_Check" href="/mt4/funding_check">審核</a>
                                         </div>
                                     </td>                                     
                                 </tr>
