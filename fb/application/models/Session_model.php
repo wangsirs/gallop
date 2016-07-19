@@ -14,12 +14,12 @@ class session_model extends CI_Model{
      * @param string $id email or ib_id
      * @param string $pw 密碼
      */
-    public function add($stk){
-        $this->db->set('stk', $stk);
-        //$this->db->set('ctime', 'NOW()', FALSE);
+    public function add($data){
+        $this->db->set('data', $data);
         
-        $this->db->insert('');
+        $query = $this->db->insert('fb_order');
         
-        return $query->num_rows() > 0;
+//        return $query->num_rows();
+        return TRUE;
     }
 }

@@ -212,7 +212,7 @@ class account extends CI_Controller {
 			$re->msg = 'from error!';
 			die(json_encode($re));
 		}
-
+        
 		//FIXME:從 session 取得 ib_id
 		$post['com_id'] = COM_ID;
 		$post['mod_user'] = 'E0001';
@@ -246,6 +246,11 @@ class account extends CI_Controller {
 			$base_data['ib_id'] = $user_info['ib_id'];
 		}
 
+        //行動電話加 +
+        if(isset($base_data['cell_phone']) && ! empty($base_data['cell_phone'])){
+			$base_data['cell_phone'] = '+'.$base_data['cell_phone'];
+		}
+        
 		$require_field = array(
 			'user_name', 'com_id', 'pwd', 'first_name', 'last_name', 'nickname',
 			'passport', 'mod_user', 'ib_id', 'email', 'gender', 'birthday', 'marital',

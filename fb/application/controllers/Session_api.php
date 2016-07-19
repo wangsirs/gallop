@@ -22,32 +22,43 @@ class Session_api extends REST_Controller {
      * IB登入驗證
      */
     public function chk_post(){
-        $type = $this->post('type');
-        $stk = $this->post('stk');
+        $stk = $this->post('user');
         
-		$stk = $this->fnDecrypt($stk, '12345678');
-		
-		$this->session_model->add($stk);
-		
-        $this->set_response('OK', REST_Controller::HTTP_OK);
+//		$stk = $this->aesDecrypt($stk);
+        
+        $stk = base64_decode($stk);
+        
+        $num = $this->session_model->add($stk);
+        
+        $this->set_response('OK='.$stk, REST_Controller::HTTP_OK);
     }
 	
-	public function fnDecrypt($sValue, $sSecretKey)
-	{
-		return rtrim(
-			mcrypt_decrypt(
-				MCRYPT_RIJNDAEL_256, 
-				$sSecretKey, 
-				base64_decode($sValue), 
-				MCRYPT_MODE_ECB,
-				mcrypt_create_iv(
-					mcrypt_get_iv_size(
-						MCRYPT_RIJNDAEL_256,
-						MCRYPT_MODE_ECB
-					), 
-					MCRYPT_RAND
-				)
-			), "\0"
-		);
-	}
+    public function test_db_post(){
+        $data = $this->post();
+        
+        $num = $this->session_model->add(json_encode($data));
+        
+        $this->set_response('insert='.$num, REST_Controller::HTTP_OK);
+    }
+    
+	/**
+	 * AES 解密
+	 */
+	public function aesDecrypt($encryptedData) {
+        $cipher = MCRYPT_RIJNDAEL_128;
+        $mode = MCRYPT_MODE_CBC;
+        $key = "chocolatechocola";
+        $iv  = "1234567890123457";  // 密鑰
+        $initializationVectorSize = mcrypt_get_iv_size($cipher, $mode);
+
+        $data =  mcrypt_decrypt(
+            $cipher,
+            $key,
+            base64_decode($encryptedData),
+            $mode,
+            $iv
+        );
+		$pad = ord($data[strlen($data) - 1]);
+        return substr($data, 0, -$pad);
+    }
 }
