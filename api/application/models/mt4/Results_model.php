@@ -133,6 +133,7 @@ class results_model extends CI_Model{
                 $this->db->where('mt4_id', $row['mt4_id']);
                 $this->db->where('close_date', $row['close_date']);
                 $this->db->where_not_in('ctime', $row['ctime']);
+                $this->db->where('expired', 0);
 
                 $this->db->set('expired', 1);
                 $this->db->set('extime', 'NOW()', FALSE);

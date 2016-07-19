@@ -823,7 +823,13 @@ abstract class REST_Controller extends CI_Controller {
      */
     public function set_response($data = NULL, $http_code = NULL)
     {
-        logger(LOG_INFO, "API RESP:".$http_code.', '.json_encode($data));
+        $log_st = LOG_INFO;
+        if($http_code > 200 && $http_code < 300){
+            $log_st = LOG_WARNING;
+        }elseif($http_code >= 300){
+            $log_st = LOG_ERR;
+        }
+        logger($log_st, "API RESP:".$http_code.', '.json_encode($data));
 //        error_log("API RESP:".$http_code.', '.json_encode($data));
         $this->response($data, $http_code, TRUE);
     }

@@ -24,6 +24,22 @@ class admin_api extends REST_Controller {
         $this->load->model($this->_app_id.'/user_model');        
     }  
         
+    /**
+     * 新增大IB
+     */
+    public function add_org(){
+        
+        //新增佣金群組
+    }
     
+    /**
+     * 新增佣金群組
+     */
+    public function add_symbol_plan(){
+        
+    }
     
+    private function _add_symbol_plan(){
+        
+    }
 }

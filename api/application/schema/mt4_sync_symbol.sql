@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機: localhost
--- 產生時間： 2016 年 07 月 12 日 21:00
+-- 產生時間： 2016 年 07 月 19 日 20:53
 -- 伺服器版本: 5.7.13
 -- PHP 版本： 7.0.8-3+deb.sury.org~trusty+1
 
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `mt4_sync_symbol` (
-  `mss_id` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'MT4商品編號',
+  `mss_id` smallint(8) UNSIGNED NOT NULL COMMENT 'MT4商品編號',
   `symbol` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'MT4商品名稱',
   `security_group` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '商品群組',
   `ctime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '新建日期',
@@ -37,17 +37,9 @@ CREATE TABLE `mt4_sync_symbol` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='MT4商品';
 
 --
--- 已匯出資料表的索引
---
-
---
 -- 資料表索引 `mt4_sync_symbol`
 --
 ALTER TABLE `mt4_sync_symbol`
-  ADD PRIMARY KEY (`mss_id`),
+  ADD PRIMARY KEY (`mss_id`,`symbol`,`security_group`),
   ADD KEY `symbol` (`symbol`),
   ADD KEY `security_group` (`security_group`);
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
