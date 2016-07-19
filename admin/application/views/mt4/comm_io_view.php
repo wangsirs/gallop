@@ -146,13 +146,11 @@
                                 <tr role="row" class="odd parent">
                                 	<td class="txt_Bold">AE3210695</td>
                                     <td class="txt_Weight">99999999999999</td>
-                                    <td class="sorting_1">128.68</td>
-                                    <td><span class="sorting_1 txt_Weight">128.68</span></td>
-                                    <td class="sorting_1">128.68</td>
-                                    <td>
-                                        128.68
-                                    </td> 
-                                    <td>0</td>   
+                                    <td class="sorting_1">50.00</td>
+                                    <td><span class="sorting_1 txt_Weight">50.00</span></td>
+                                    <td class="sorting_1">100.00</td>
+                                    <td>60.00</td> 
+                                    <td>40</td>   
                                     <td>
                                     	<div class="btn_Position">
                                             <a class="btn btn-info btn_sm_Width Gradient_Orange" id="Deposit" href="#">重新計算</a>
@@ -161,10 +159,10 @@
                                             <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="Withdrawal" href="#">自動存入 </a>
                                         </div>
                                         <div class="btn_Position">
-                                            <a class="btn btn-info btn_sm_Width Gradient_Red" id="Deposit" href="commission_Deposit.html">手動存入</a>
+                                            <a class="btn btn-info btn_sm_Width Gradient_Red" id="Deposit" href="/mt4/comm_funding">手動存入</a>
                                         </div>
                                         <div class="btn_Position">
-                                            <a class="btn btn-danger btn_sm_Width Gradient_Brown" id="Withdrawal" href="commission_Withdrawal.html">提款</a>
+                                            <a class="btn btn-danger btn_sm_Width Gradient_Brown" id="Withdrawal" href="/mt4/comm_withdraw">提款</a>
                                         </div>
                                     </td>                                 
                                 </tr>
@@ -172,12 +170,12 @@
                                 	<td class="txt_Bold">AE5110012</td>
                                     <td class="txt_Weight">王孝民</td>
                                     <td class="sorting_1">50.00</td>
-                                    <td><span class="sorting_1 txt_Weight">00.00</span></td>
-                                    <td class="sorting_1">50.00</td>
+                                    <td><span class="sorting_1 txt_Weight">100.00</span></td>
+                                    <td class="sorting_1">150.00</td>
                                     <td>
-                                    	00.00
+                                    	50.00
                                     </td>
-                                    <td>0</td>   
+                                    <td>100.00</td>   
                                     <td>
                                     	<div class="btn_Position">
                                             <a class="btn btn-info btn_sm_Width Gradient_Orange" id="Deposit" href="#">重新計算</a>
@@ -186,23 +184,23 @@
                                             <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="Withdrawal" href="#">自動存入 </a>
                                         </div>
                                         <div class="btn_Position">
-                                            <a class="btn btn-info btn_sm_Width Gradient_Red" id="Deposit" href="commission_Deposit.html">手動存入</a>
+                                            <a class="btn btn-info btn_sm_Width Gradient_Red" id="Deposit" href="/mt4/comm_funding">手動存入</a>
                                         </div>
                                         <div class="btn_Position">
-                                            <a class="btn btn-danger btn_sm_Width Gradient_Brown" id="Withdrawal" href="commission_Withdrawal.html">提款</a>
+                                            <a class="btn btn-danger btn_sm_Width Gradient_Brown" id="Withdrawal" href="/mt4/comm_withdraw">提款</a>
                                         </div>
                                     </td> 
                                 </tr>
                                 <tr role="row" class="odd">
                                 	<td class="txt_Bold">AE3210684</td>
                                     <td class="txt_Weight">CS</td>
-                                    <td class="sorting_1">189.36</td>
-                                    <td><span class="sorting_1 txt_Weight">189.36</span></td>
-                                    <td class="sorting_1">189.36</td>
+                                    <td class="sorting_1">37.00</td>
+                                    <td><span class="sorting_1 txt_Weight">68.00</span></td>
+                                    <td class="sorting_1">105.00</td>
                                     <td>
-                                    	189.36
+                                    	45.00
                                     </td> 
-                                    <td>0</td>   
+                                    <td>60.00</td>   
                                     <td>
                                     	<div class="btn_Position">
                                             <a class="btn btn-info btn_sm_Width Gradient_Orange" id="Deposit" href="#">重新計算</a>
@@ -211,10 +209,10 @@
                                             <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="Withdrawal" href="#">自動存入 </a>
                                         </div>
                                         <div class="btn_Position">
-                                            <a class="btn btn-info btn_sm_Width Gradient_Red" id="Deposit" href="commission_Deposit.html">手動存入</a>
+                                            <a class="btn btn-info btn_sm_Width Gradient_Red" id="Deposit" href="/mt4/comm_funding">手動存入</a>
                                         </div>
                                         <div class="btn_Position">
-                                            <a class="btn btn-danger btn_sm_Width Gradient_Brown" id="Withdrawal" href="commission_Withdrawal.html">提款</a>
+                                            <a class="btn btn-danger btn_sm_Width Gradient_Brown" id="Withdrawal" href="/mt4/comm_withdraw">提款</a>
                                         </div>
                                     </td>                                  
                                 </tr>
@@ -225,9 +223,9 @@
                                     <td><span class="sorting_1 txt_Weight">400.00</span></td>
                                     <td class="sorting_1">1600.14</td>
                                     <td>
-                                    	0.00
+                                    	0
                                     </td>
-                                    <td>0</td>   
+                                    <td>1600.14</td>   
                                     <td>
                                     	<div class="btn_Position">
                                             <a class="btn btn-info btn_sm_Width Gradient_Orange" id="Deposit" href="#">重新計算</a>
@@ -236,21 +234,21 @@
                                             <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="Withdrawal" href="#">自動存入 </a>
                                         </div>
                                         <div class="btn_Position">
-                                            <a class="btn btn-info btn_sm_Width Gradient_Red" id="Deposit" href="commission_Deposit.html">手動存入</a>
+                                            <a class="btn btn-info btn_sm_Width Gradient_Red" id="Deposit" href="/mt4/comm_funding">手動存入</a>
                                         </div>
                                         <div class="btn_Position">
-                                            <a class="btn btn-danger btn_sm_Width Gradient_Brown" id="Withdrawal" href="commission_Withdrawal.html">提款</a>
+                                            <a class="btn btn-danger btn_sm_Width Gradient_Brown" id="Withdrawal" href="/mt4/comm_withdraw">提款</a>
                                         </div>
                                     </td>                                    
                                 </tr>
                                 <tr role="row" class="odd">
                                 	<td class="txt_Bold">AE5110012</td>
                                     <td class="txt_Weight">100000599</td>
-                                    <td class="sorting_1">189.36</td>
-                                    <td><span class="sorting_1 txt_Weight">189.36</span></td>
-                                    <td class="sorting_1">189.36</td>
+                                    <td class="sorting_1">38500.00</td>
+                                    <td><span class="sorting_1 txt_Weight">48321.00</span></td>
+                                    <td class="sorting_1">86821.00</td>
                                     <td>
-                                    	189.36
+                                    	86821.00
                                     </td>  
                                     <td>0</td>   
                                     <td>
@@ -261,10 +259,10 @@
                                             <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="Withdrawal" href="#">自動存入 </a>
                                         </div>
                                         <div class="btn_Position">
-                                            <a class="btn btn-info btn_sm_Width Gradient_Red" id="Deposit" href="commission_Deposit.html">手動存入</a>
+                                            <a class="btn btn-info btn_sm_Width Gradient_Red" id="Deposit" href="/mt4/comm_funding">手動存入</a>
                                         </div>
                                         <div class="btn_Position">
-                                            <a class="btn btn-danger btn_sm_Width Gradient_Brown" id="Withdrawal" href="commission_Withdrawal.html">提款</a>
+                                            <a class="btn btn-danger btn_sm_Width Gradient_Brown" id="Withdrawal" href="/mt4/comm_withdraw">提款</a>
                                         </div>
                                     </td>                                  
                                 </tr>
@@ -273,9 +271,9 @@
                                     <td class="txt_Weight">林一連</td>
                                     <td class="sorting_1">48.68</td>
                                     <td><span class="sorting_1 txt_Weight">556.68</span></td>
-                                    <td class="sorting_1">13.68</td>
+                                    <td class="sorting_1">605.36</td>
                                     <td>
-                                    	128.68
+                                    	605.36
                                     </td>  
                                     <td>0</td>   
                                     <td>
@@ -286,10 +284,10 @@
                                             <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="Withdrawal" href="#">自動存入 </a>
                                         </div>
                                         <div class="btn_Position">
-                                            <a class="btn btn-info btn_sm_Width Gradient_Red" id="Deposit" href="commission_Deposit.html">手動存入</a>
+                                            <a class="btn btn-info btn_sm_Width Gradient_Red" id="Deposit" href="/mt4/comm_funding">手動存入</a>
                                         </div>
                                         <div class="btn_Position">
-                                            <a class="btn btn-danger btn_sm_Width Gradient_Brown" id="Withdrawal" href="commission_Withdrawal.html">提款</a>
+                                            <a class="btn btn-danger btn_sm_Width Gradient_Brown" id="Withdrawal" href="/mt4/comm_withdraw">提款</a>
                                         </div>
                                     </td>                                 
                                 </tr>
@@ -311,10 +309,10 @@
                                             <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="Withdrawal" href="#">自動存入 </a>
                                         </div>
                                         <div class="btn_Position">
-                                            <a class="btn btn-info btn_sm_Width Gradient_Red" id="Deposit" href="commission_Deposit.html">手動存入</a>
+                                            <a class="btn btn-info btn_sm_Width Gradient_Red" id="Deposit" href="/mt4/comm_funding">手動存入</a>
                                         </div>
                                         <div class="btn_Position">
-                                            <a class="btn btn-danger btn_sm_Width Gradient_Brown" id="Withdrawal" href="commission_Withdrawal.html">提款</a>
+                                            <a class="btn btn-danger btn_sm_Width Gradient_Brown" id="Withdrawal" href="/mt4/comm_withdraw">提款</a>
                                         </div>
                                     </td>                                   
                                 </tr>
@@ -323,11 +321,11 @@
                                     <td class="txt_Weight">劉小雯</td>
                                     <td class="sorting_1">128.68</td>
                                     <td><span class="sorting_1 txt_Weight">128.68</span></td>
-                                    <td class="sorting_1">128.68</td>
+                                    <td class="sorting_1">257.26</td>
                                     <td>
                                     	128.68
                                     </td>
-                                  	<td>0</td>   
+                                  	<td>128.68</td>   
                                     <td>
                                     	<div class="btn_Position">
                                             <a class="btn btn-info btn_sm_Width Gradient_Orange" id="Deposit" href="#">重新計算</a>
@@ -336,23 +334,23 @@
                                             <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="Withdrawal" href="#">自動存入 </a>
                                         </div>
                                         <div class="btn_Position">
-                                            <a class="btn btn-info btn_sm_Width Gradient_Red" id="Deposit" href="commission_Deposit.html">手動存入</a>
+                                            <a class="btn btn-info btn_sm_Width Gradient_Red" id="Deposit" href="/mt4/comm_funding">手動存入</a>
                                         </div>
                                         <div class="btn_Position">
-                                            <a class="btn btn-danger btn_sm_Width Gradient_Brown" id="Withdrawal" href="commission_Withdrawal.html">提款</a>
+                                            <a class="btn btn-danger btn_sm_Width Gradient_Brown" id="Withdrawal" href="/mt4/comm_withdraw">提款</a>
                                         </div>
                                     </td> 
                                 </tr>
                                 <tr role="row" class="odd">
                                 	<td class="txt_Bold">AE5110012</td>
                                     <td class="txt_Weight">林小華</td>
-                                    <td class="sorting_1">189.36</td>
-                                    <td><span class="sorting_1 txt_Weight">189.36</span></td>
-                                    <td class="sorting_1">189.36</td>    
+                                    <td class="sorting_1">15000</td>
+                                    <td><span class="sorting_1 txt_Weight">3000</span></td>
+                                    <td class="sorting_1">18000</td>    
                                     <td>
-                                    	189.36
+                                    	10000
                                     </td>
-                                    <td>0</td>   
+                                    <td>8000</td>   
                                     <td>
                                     	<div class="btn_Position">
                                             <a class="btn btn-info btn_sm_Width Gradient_Orange" id="Deposit" href="#">重新計算</a>
@@ -361,10 +359,10 @@
                                             <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="Withdrawal" href="#">自動存入 </a>
                                         </div>
                                         <div class="btn_Position">
-                                            <a class="btn btn-info btn_sm_Width Gradient_Red" id="Deposit" href="commission_Deposit.html">手動存入</a>
+                                            <a class="btn btn-info btn_sm_Width Gradient_Red" id="Deposit" href="/mt4/comm_funding">手動存入</a>
                                         </div>
                                         <div class="btn_Position">
-                                            <a class="btn btn-danger btn_sm_Width Gradient_Brown" id="Withdrawal" href="commission_Withdrawal.html">提款</a>
+                                            <a class="btn btn-danger btn_sm_Width Gradient_Brown" id="Withdrawal" href="/mt4/comm_withdraw">提款</a>
                                         </div>
                                     </td>                                      
                                 </tr>
@@ -386,23 +384,23 @@
                                             <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="Withdrawal" href="#">自動存入 </a>
                                         </div>
                                         <div class="btn_Position">
-                                            <a class="btn btn-info btn_sm_Width Gradient_Red" id="Deposit" href="commission_Deposit.html">手動存入</a>
+                                            <a class="btn btn-info btn_sm_Width Gradient_Red" id="Deposit" href="/mt4/comm_funding">手動存入</a>
                                         </div>
                                         <div class="btn_Position">
-                                            <a class="btn btn-danger btn_sm_Width Gradient_Brown" id="Withdrawal" href="commission_Withdrawal.html">提款</a>
+                                            <a class="btn btn-danger btn_sm_Width Gradient_Brown" id="Withdrawal" href="/mt4/comm_withdraw">提款</a>
                                         </div>
                                     </td>                                      
                                 </tr>
                                  <tr role="row" class="odd">
                                 	<td class="txt_Bold">AE3210684</td>
                                     <td class="txt_Weight">王大明</td>
-                                    <td class="sorting_1">189.36</td>
-                                    <td><span class="sorting_1 txt_Weight">189.36</span></td> 
-                                    <td class="sorting_1">189.36</td>    
+                                    <td class="sorting_1">900.00</td>
+                                    <td><span class="sorting_1 txt_Weight">1055.00</span></td> 
+                                    <td class="sorting_1">1955.00</td>    
                                     <td>
-                                    	189.36
+                                    	1000.00
                                     </td>
-                                    <td>0</td>   
+                                    <td>955.00</td>   
                                     <td>
                                     	<div class="btn_Position">
                                             <a class="btn btn-info btn_sm_Width Gradient_Orange" id="Deposit" href="#">重新計算</a>
@@ -411,10 +409,10 @@
                                             <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="Withdrawal" href="#">自動存入 </a>
                                         </div>
                                         <div class="btn_Position">
-                                            <a class="btn btn-info btn_sm_Width Gradient_Red" id="Deposit" href="commission_Deposit.html">手動存入</a>
+                                            <a class="btn btn-info btn_sm_Width Gradient_Red" id="Deposit" href="/mt4/comm_funding">手動存入</a>
                                         </div>
                                         <div class="btn_Position">
-                                            <a class="btn btn-danger btn_sm_Width Gradient_Brown" id="Withdrawal" href="commission_Withdrawal.html">提款</a>
+                                            <a class="btn btn-danger btn_sm_Width Gradient_Brown" id="Withdrawal" href="/mt4/comm_withdraw">提款</a>
                                         </div>
                                     </td>                                   
                                 </tr>
@@ -436,10 +434,10 @@
                                             <a class="btn btn-danger btn_sm_Width Gradient_Blue" id="Withdrawal" href="#">自動存入 </a>
                                         </div>
                                         <div class="btn_Position">
-                                            <a class="btn btn-info btn_sm_Width Gradient_Red" id="Deposit" href="commission_Deposit.html">手動存入</a>
+                                            <a class="btn btn-info btn_sm_Width Gradient_Red" id="Deposit" href="/mt4/comm_funding">手動存入</a>
                                         </div>
                                         <div class="btn_Position">
-                                            <a class="btn btn-danger btn_sm_Width Gradient_Brown" id="Withdrawal" href="commission_Withdrawal.html">提款</a>
+                                            <a class="btn btn-danger btn_sm_Width Gradient_Brown" id="Withdrawal" href="/mt4/comm_withdraw">提款</a>
                                         </div>
                                     </td>                                       
                                 </tr>

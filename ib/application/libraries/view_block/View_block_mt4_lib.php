@@ -16,7 +16,8 @@ class View_block_mt4_lib
         
         $data = array(
             'ib_id' => ib_lib::ib_id(),
-            'scale' => sprintf('%01.2f', intval($api_re['data']['scale'])) - 0.01
+            //'scale' => sprintf('%01.2f', intval($api_re['data']['scale'])) - 0.01
+            'scale' => '12.00',
         );
         
 		return $CI->parser->parse('mt4/ib_register_view', $data, TRUE);

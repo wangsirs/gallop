@@ -260,7 +260,7 @@
                         <label>*行動電話:</label>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                            <input name="cell_phone" class="form-control " type="text" placeholder="行動電話">
+                            <input name="cell_phone" class="form-control " type="text" placeholder="行動電話(請加上國碼，如+886910000000)">
                         </div>
                         <!-- /.form-group -->
                     </div>

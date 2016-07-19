@@ -36,9 +36,6 @@
 <link href="<?=ASSETS_CSS?>datepicker_style.css" rel="stylesheet" type="text/css">
 
 <!--fonts-->
-<!--<link href="<?=ASSETS_CSS?>font_style.css" rel="stylesheet" type="text/css" media="all" />-->
-<link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
-<link href='http://fonts.useso.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'><!--//fonts-->
 <link href="<?=ASSETS_CSS?>font-awesome.min.css" rel="stylesheet" />
 
 <!--引用 表單核心 css-->
@@ -237,8 +234,8 @@
                         <table id="myTable" class="cell-border display nowrap dataTable dtr-inline table_style" cellspacing="0" width="" role="grid" aria-describedby="example_info" style="width: 100%;">
                             <thead>
                                 <tr role="row" class="BG_Gray">
-                                    <th class="sorting Color_Gray min_Width" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 120px;">交易編號</th>
-                                    <th id="" class="sorting Color_Gray min_Width" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="" style="width: 136px;">商品別</th>
+                                    <th class="sorting Color_Gray min_Width" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 120px;">客戶帳號</th>
+                                    <th id="" class="sorting Color_Gray min_Width" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="" style="width: 136px;">客戶姓名</th>
                                     <th id="" class="sorting_asc Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending">手數</th>
                                     <th id="" class="sorting Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 150px;">進場時間</th> 
                                     <th id="" class="sorting_asc Color_Gray" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="">進場價位</th> 
@@ -250,8 +247,8 @@
                             </thead>
                             <tbody>
                                 <tr role="row" class="odd parent">
-                                    <td class="txt_Bold">1275587740</td>
-                                    <td class="txt_Weight">GBPUSD</td>
+                                    <td class="txt_Bold">AE083215</td>
+                                    <td class="txt_Weight">馬立先</td>
                                     <td class="sorting_1">2.0</td>
                                     <td><span class="sorting_1 txt_Weight">2016/04/01 21:55:33</span></td>
                                     <td class="sorting_1">1.05115</td>
@@ -267,8 +264,8 @@
                                     <td></td>                                 
                                 </tr>
                                 <tr role="row" class="even">
-                                    <td class="txt_Bold">1275587714</td>
-                                    <td class="txt_Weight">SGDUSD</td>
+                                    <td class="txt_Bold">AE089915</td>
+                                    <td class="txt_Weight">林宜連</td>
                                     <td class="sorting_1">1.0</td>
                                     <td><span class="sorting_1 txt_Weight">2016/06/04 21:44:23</span></td>
                                     <td class="sorting_1">215.52</td>
@@ -284,8 +281,8 @@
                                     <td></td>   
                                 </tr>
                                 <tr role="row" class="odd">
-                                    <td class="txt_Bold">1270587745</td>
-                                    <td class="txt_Weight">AUDUSD</td>
+                                    <td class="txt_Bold">AE083275</td>
+                                    <td class="txt_Weight">王建安</td>
                                     <td class="sorting_1">0.02</td>
                                     <td><span class="sorting_1 txt_Weight">2016/07/11 15:12:11</span></td>
                                     <td class="sorting_1">1.0899</td>
@@ -301,8 +298,8 @@
                                     <td></td>                                    
                                 </tr>
                                 <tr role="row" class="even">
-                                    <td class="txt_Bold">1271657755</td>
-                                    <td class="txt_Weight">GBPJPY</td>
+                                    <td class="txt_Bold">AE083999</td>
+                                    <td class="txt_Weight">劉鍵超</td>
                                     <td class="sorting_1">0.05</td>
                                     <td><span class="sorting_1 txt_Weight">2016/04/08 19:26:53</span></td>
                                     <td class="sorting_1">1.16688</td>
@@ -318,8 +315,8 @@
                                     <td></td>                                     
                                 </tr>
                                 <tr role="row" class="odd">
-                                    <td class="txt_Bold">1275587756</td>
-                                    <td class="txt_Weight">EURUSD</td>
+                                    <td class="txt_Bold">AE065555</td>
+                                    <td class="txt_Weight">林書逸</td>
                                     <td class="sorting_1">0</td>
                                     <td><span class="sorting_1 txt_Weight">2016/06/22 12:11:33</span></td>
                                     <td class="sorting_1">1.10575</td>
@@ -335,8 +332,8 @@
                                     <td></td>                                    
                                 </tr>
                                 <tr role="row" class="even">
-                                    <td class="txt_Bold">1275587758</td>
-                                    <td class="txt_Weight">EURUSD</td>
+                                    <td class="txt_Bold">AE083008</td>
+                                    <td class="txt_Weight">畢書靜</td>
                                     <td class="sorting_1">0</td>
                                     <td><span class="sorting_1 txt_Weight">2016/07/14 21:31:21</span></td>
                                     <td class="sorting_1">1.10575</td>
@@ -352,8 +349,8 @@
                                     <td></td>                                     
                                 </tr>
                                 <tr role="row" class="odd">
-                                    <td class="txt_Bold">1275211721</td>
-                                    <td class="txt_Weight">EURUSD</td>
+                                    <td class="txt_Bold">AE080125</td>
+                                    <td class="txt_Weight">黃民張</td>
                                     <td class="sorting_1">2.5</td>
                                     <td><span class="sorting_1 txt_Weight">2016/06/12 13:44:12</span></td>
                                     <td class="sorting_1">1.08232</td>
@@ -369,8 +366,8 @@
                                     <td></td>                                    
                                 </tr>
                                 <tr role="row" class="even">
-                                    <td class="txt_Bold">1275921732</td>
-                                    <td class="txt_Weight">CFDJPY</td>
+                                    <td class="txt_Bold">AE083080</td>
+                                    <td class="txt_Weight">羅畢嫌</td>
                                     <td class="sorting_1">0.02</td>
                                     <td><span class="sorting_1 txt_Weight">2016/06/26 23:11:33</span></td>
                                     <td class="sorting_1">1.65501</td>
@@ -386,8 +383,8 @@
                                     <td></td>   
                                 </tr>
                                 <tr role="row" class="odd">
-                                    <td class="txt_Bold">1275234744</td>
-                                    <td class="txt_Weight">EURUSD</td>
+                                    <td class="txt_Bold">AE008085</td>
+                                    <td class="txt_Weight">馬超鍵</td>
                                     <td class="sorting_1">0.3</td>
                                     <td><span class="sorting_1 txt_Weight">2016/05/11 13:55:33</span></td>
                                     <td class="sorting_1">1.14275</td>
@@ -403,8 +400,8 @@
                                     <td></td>                                    
                                 </tr>
                                 <tr role="row" class="even">
-                                    <td class="txt_Bold">1275587323</td>
-                                    <td class="txt_Weight">EURUSD</td>
+                                    <td class="txt_Bold">AE083491</td>
+                                    <td class="txt_Weight">安興亞</td>
                                     <td class="sorting_1">0.15</td>
                                     <td><span class="sorting_1 txt_Weight">2016/04/05 21:12:45</span></td>
                                     <td class="sorting_1">1.15022</td>
@@ -420,8 +417,8 @@
                                     <td></td>                                    
                                 </tr>
                                  <tr role="row" class="odd">
-                                    <td class="txt_Bold">1275587781</td>
-                                    <td class="txt_Weight">EURUSD</td>
+                                    <td class="txt_Bold">AE081815</td>
+                                    <td class="txt_Weight">黃柏</td>
                                     <td class="sorting_1">0.15</td>
                                     <td><span class="sorting_1 txt_Weight">2016/07/07 12:55:33</span></td>
                                     <td class="sorting_1">1.10575</td>
@@ -437,8 +434,8 @@
                                     <td></td>                                   
                                 </tr>
                                 <tr role="row" class="even">
-                                    <td class="txt_Bold">1275514280</td>
-                                    <td class="txt_Weight">EURUSD</td>
+                                    <td class="txt_Bold">AE083113</td>
+                                    <td class="txt_Weight">李大耗</td>
                                     <td class="sorting_1">0.5</td>
                                     <td><span class="sorting_1 txt_Weight">2016/03/03 14:55:33</span></td>
                                     <td class="sorting_1">1.10575</td>

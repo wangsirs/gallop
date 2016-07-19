@@ -172,6 +172,22 @@ class mt4 extends CI_Controller {
     }
 
     /**
+    * 佣金存入細節
+    */
+    public function comm_funding(){
+        $data = array();
+        load_frame( __CLASS__, __FUNCTION__, $data);
+    }
+
+    /**
+    * 佣金提款細節
+    */
+    public function comm_withdraw(){
+        $data = array();
+        load_frame( __CLASS__, __FUNCTION__, $data);
+    }
+
+    /**
     * 存提款紀錄
     */
     public function io_record(){
