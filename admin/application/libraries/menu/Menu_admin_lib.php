@@ -39,7 +39,7 @@ class Menu_admin_lib
                 'count' => 0,
                 'list' => array(
                     array('name' => lang('menu_mt4_add_great_ib'), 'url' => '/mt4/gib_reg_1', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
-                    array('name' => lang('menu_mt4_staff_check'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 3, 'list' => array(
+                    array('name' => lang('menu_mt4_staff_check'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 4, 'list' => array(
                         array('name' => lang('menu_mt4_ib_check'), 'url' => '/mt4/ib_check', 'popup' => FALSE, 'page_title' => '', 'count' => 4),
                         array('name' => lang('menu_mt4_client_check'), 'url' => '/mt4/client_check', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
                         array('name' => lang('menu_mt4_sub_check'), 'url' => '/mt4/sub_check', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
@@ -54,9 +54,9 @@ class Menu_admin_lib
                         array('name' => lang('menu_mt4_dir_bonus'), 'url' => '/mt4/client_bonus', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
                         )),
                     array('name' => lang('menu_mt4_scale_detail'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0, 'list' => array(
-                        array('name' => lang('menu_mt4_scale_io'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
-                        array('name' => lang('menu_mt4_io_record'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
-                        array('name' => lang('menu_mt4_trade_rep'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
+                        array('name' => lang('menu_mt4_scale_io'), 'url' => '/mt4/comm_io', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
+                        array('name' => lang('menu_mt4_io_record'), 'url' => '/mt4/io_record', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
+                        array('name' => lang('menu_mt4_trade_rep'), 'url' => '/mt4/trade_report', 'popup' => FALSE, 'page_title' => '', 'count' => 0),
                         )),
                     array('name' => lang('menu_mt4_assets_mgt'), 'url' => '', 'popup' => FALSE, 'page_title' => '', 'count' => 0, 'list' => array(
                         array('name' => lang('menu_mt4_io_mgt'), 'url' => '/mt4/io_mgt', 'popup' => FALSE, 'page_title' => '', 'count' => 0),

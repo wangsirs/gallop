@@ -164,6 +164,30 @@ class mt4 extends CI_Controller {
     }
 
     /**
+    * 佣金存入提款
+    */
+    public function comm_io(){
+        $data = array();
+        load_frame( __CLASS__, __FUNCTION__, $data);
+    }
+
+    /**
+    * 存提款紀錄
+    */
+    public function io_record(){
+        $data = array();
+        load_frame( __CLASS__, __FUNCTION__, $data);
+    }
+
+    /**
+    * 直客獎金
+    */
+    public function trade_report(){
+        $data = array();
+        load_frame( __CLASS__, __FUNCTION__, $data);
+    }
+
+    /**
     * 客戶出入金管理
     */
     public function io_mgt(){
