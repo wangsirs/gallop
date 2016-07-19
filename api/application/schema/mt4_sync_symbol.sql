@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機: localhost
--- 產生時間： 2016 年 07 月 19 日 20:53
+-- 產生時間： 2016 年 07 月 19 日 23:02
 -- 伺服器版本: 5.7.13
 -- PHP 版本： 7.0.8-3+deb.sury.org~trusty+1
 
@@ -31,8 +31,8 @@ CREATE TABLE `mt4_sync_symbol` (
   `symbol` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'MT4商品名稱',
   `security_group` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '商品群組',
   `ctime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '新建日期',
-  `utime` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '更新時間',
-  `extime` datetime DEFAULT NULL COMMENT '刪除時間',
+  `utime` datetime NOT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '更新時間',
+  `extime` datetime NOT NULL COMMENT '刪除時間',
   `expired` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否刪除'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='MT4商品';
 
@@ -40,6 +40,10 @@ CREATE TABLE `mt4_sync_symbol` (
 -- 資料表索引 `mt4_sync_symbol`
 --
 ALTER TABLE `mt4_sync_symbol`
-  ADD PRIMARY KEY (`mss_id`,`symbol`,`security_group`),
+  ADD PRIMARY KEY (`mss_id`,`symbol`,`security_group`,`expired`,`extime`) USING BTREE,
   ADD KEY `symbol` (`symbol`),
   ADD KEY `security_group` (`security_group`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
