@@ -108,10 +108,10 @@
                                 <tbody>
                                     <tr role="row" class="odd parent">
                                         <td class="txt_Bold">AE3210695</td>
-                                        <td class="txt_Weight">范小小</td>
-                                        <td class="sorting_1">100000</td>
-                                        <td><span class="sorting_1 txt_Weight">2500</span></td>
-                                        <td class="sorting_1">15000</td>
+                                        <td class="txt_Weight">范佑線</td>
+                                        <td class="sorting_1">23213</td>
+                                        <td><span class="sorting_1 txt_Weight">23111</span></td>
+                                        <td class="sorting_1">2341</td>
                                         <td>
                                             <span class="sorting_1 txt_Weight">
                                                 <div class="btn_Position">
@@ -123,9 +123,9 @@
                                     <tr role="row" class="even">
                                         <td class="txt_Bold">AE5110012</td>
                                         <td class="txt_Weight">王大明</td>
-                                        <td class="sorting_1">100000</td>
-                                        <td><span class="sorting_1 txt_Weight">2500</span></td>
-                                        <td class="sorting_1">100000</td>
+                                        <td class="sorting_1">45621</td>
+                                        <td><span class="sorting_1 txt_Weight">7321</span></td>
+                                        <td class="sorting_1">1212744</td>
                                         <td>
                                             <span class="sorting_1 txt_Weight">
                                                 <div class="btn_Position">
@@ -136,10 +136,10 @@
                                     </tr>
                                     <tr role="row" class="odd">
                                         <td class="txt_Bold">AE3210684</td>
-                                        <td class="txt_Weight">林小華</td>
-                                        <td class="sorting_1">100000</td>
-                                        <td><span class="sorting_1 txt_Weight">2500</span></td>
-                                        <td class="sorting_1">100000</td>
+                                        <td class="txt_Weight">林安安</td>
+                                        <td class="sorting_1">547865</td>
+                                        <td><span class="sorting_1 txt_Weight">45477</span></td>
+                                        <td class="sorting_1">44547</td>
                                         <td>
                                             <span class="sorting_1 txt_Weight">
                                                 <div class="btn_Position">
@@ -150,42 +150,42 @@
                                     </tr>
                                     <tr role="row" class="even">
                                         <td class="txt_Bold">AE3210695</td>
-                                        <td class="txt_Weight">范小小</td>
-                                        <td class="sorting_1">100000</td>
-                                        <td><span class="sorting_1 txt_Weight">2500</span></td>
-                                        <td class="sorting_1">100000</td>
+                                        <td class="txt_Weight">范麻安</td>
+                                        <td class="sorting_1">8945645</td>
+                                        <td><span class="sorting_1 txt_Weight">888</span></td>
+                                        <td class="sorting_1">45645</td>
                                         <td>
                                             <span class="sorting_1 txt_Weight">
                                                 <div class="btn_Position">
-                                                    <span class="btn btn-pink btn-sm cursor_Default disLine_Block" id="">-19.25</span>
+                                                    <span class="btn btn-pink btn-sm cursor_Default disLine_Block" id="">-55.25</span>
                                                 </div>
                                             </span>
                                         </td>
                                     </tr>
                                     <tr role="row" class="odd">
                                         <td class="txt_Bold">AE5110012</td>
-                                        <td class="txt_Weight">王大明</td>
-                                        <td class="sorting_1">100000</td>
-                                        <td><span class="sorting_1 txt_Weight">2500</span></td>
-                                        <td class="sorting_1">100000</td>
+                                        <td class="txt_Weight">陳言安</td>
+                                        <td class="sorting_1">565624</td>
+                                        <td><span class="sorting_1 txt_Weight">78987</span></td>
+                                        <td class="sorting_1">232453</td>
                                         <td>
                                             <span class="sorting_1 txt_Weight">
                                                 <div class="btn_Position">
-                                                    <span class="btn btn-pink btn-sm cursor_Default disLine_Block" id="">-19.25</span>
+                                                    <span class="btn btn-pink btn-sm cursor_Default disLine_Block" id="">-66.25</span>
                                                 </div>
                                             </span>
                                         </td>
                                     </tr>
                                     <tr role="row" class="even">
                                         <td class="txt_Bold">AE3210695</td>
-                                        <td class="txt_Weight">林小華</td>
+                                        <td class="txt_Weight">李湘安</td>
                                         <td class="sorting_1">100000</td>
                                         <td><span class="sorting_1 txt_Weight">2500</span></td>
                                         <td class="sorting_1">100000</td>
                                         <td>
                                             <span class="sorting_1 txt_Weight">
                                                 <div class="btn_Position">
-                                                    <span class="btn btn-pink btn-sm cursor_Default disLine_Block" id="">-19.25</span>
+                                                    <span class="btn btn-pink btn-sm cursor_Default disLine_Block" id="">-872.25</span>
                                                 </div>
                                             </span>
                                         </td>
@@ -199,7 +199,7 @@
                                         <td>
                                             <span class="sorting_1 txt_Weight">
                                                 <div class="btn_Position">
-                                                    <span class="btn btn-pink btn-sm cursor_Default disLine_Block" id="">-19.25</span>
+                                                    <span class="btn btn-pink btn-sm cursor_Default disLine_Block" id="">-6564.12</span>
                                                 </div>
                                             </span>
                                         </td>
@@ -207,13 +207,13 @@
                                     <tr role="row" class="even">
                                         <td class="txt_Bold">AE3210695</td>
                                         <td class="txt_Weight">劉小雯</td>
-                                        <td class="sorting_1">100000</td>
-                                        <td><span class="sorting_1 txt_Weight">2500</span></td>
-                                        <td class="sorting_1">100000</td>
+                                        <td class="sorting_1">564621</td>
+                                        <td><span class="sorting_1 txt_Weight">254500</span></td>
+                                        <td class="sorting_1">123545</td>
                                         <td>
                                             <span class="sorting_1 txt_Weight">
                                                 <div class="btn_Position">
-                                                    <span class="btn btn-pink btn-sm cursor_Default disLine_Block" id="">-19.25</span>
+                                                    <span class="btn btn-pink btn-sm cursor_Default disLine_Block" id="">-7898.23</span>
                                                 </div>
                                             </span>
                                         </td>
@@ -221,56 +221,56 @@
                                     </tr>
                                     <tr role="row" class="odd">
                                         <td class="txt_Bold">AE5110012</td>
-                                        <td class="txt_Weight">林小華</td>
-                                        <td class="sorting_1">100000</td>
-                                        <td><span class="sorting_1 txt_Weight">2500</span></td>
-                                        <td class="sorting_1">100000</td>
+                                        <td class="txt_Weight">林砍一</td>
+                                        <td class="sorting_1">56564</td>
+                                        <td><span class="sorting_1 txt_Weight">5654</span></td>
+                                        <td class="sorting_1">1127</td>
                                         <td>
                                             <span class="sorting_1 txt_Weight">
                                                 <div class="btn_Position">
-                                                    <span class="btn btn-secondary btn-sm cursor_Default disLine_Block" id="">18.38</span>
+                                                    <span class="btn btn-secondary btn-sm cursor_Default disLine_Block" id="">788.38</span>
                                                 </div>
                                             </span>
                                         </td>
                                     </tr>
                                     <tr role="row" class="even">
                                         <td class="txt_Bold">AE3210684</td>
-                                        <td class="txt_Weight">王大明</td>
-                                        <td class="sorting_1">100000</td>
-                                        <td><span class="sorting_1 txt_Weight">2500</span></td>
-                                        <td class="sorting_1">100000</td>
+                                        <td class="txt_Weight">林平之</td>
+                                        <td class="sorting_1">55456</td>
+                                        <td><span class="sorting_1 txt_Weight">212345</span></td>
+                                        <td class="sorting_1">887898</td>
                                         <td>
                                             <span class="sorting_1 txt_Weight">
                                                 <div class="btn_Position">
-                                                    <span class="btn btn-secondary btn-sm cursor_Default disLine_Block" id="">18.38</span>
+                                                    <span class="btn btn-secondary btn-sm cursor_Default disLine_Block" id="">8987.77</span>
                                                 </div>
                                             </span>
                                         </td>
                                     </tr>
                                     <tr role="row" class="odd">
                                         <td class="txt_Bold">AE3210684</td>
-                                        <td class="txt_Weight">王大明</td>
-                                        <td class="sorting_1">100000</td>
-                                        <td><span class="sorting_1 txt_Weight">2500</span></td>
-                                        <td class="sorting_1">100000</td>
+                                        <td class="txt_Weight">岳不群</td>
+                                        <td class="sorting_1">564562</td>
+                                        <td><span class="sorting_1 txt_Weight">9127</span></td>
+                                        <td class="sorting_1">1414</td>
                                         <td>
                                             <span class="sorting_1 txt_Weight">
                                                 <div class="btn_Position">
-                                                    <span class="btn btn-secondary btn-sm cursor_Default disLine_Block" id="">18.38</span>
+                                                    <span class="btn btn-secondary btn-sm cursor_Default disLine_Block" id="">18.58</span>
                                                 </div>
                                             </span>
                                         </td>
                                     </tr>
                                     <tr role="row" class="even">
                                         <td class="txt_Bold">AE3210684</td>
-                                        <td class="txt_Weight">王大明</td>
-                                        <td class="sorting_1">100000</td>
-                                        <td><span class="sorting_1 txt_Weight">2500</span></td>
-                                        <td class="sorting_1">100000</td>
+                                        <td class="txt_Weight">王八膽</td>
+                                        <td class="sorting_1">5454</td>
+                                        <td><span class="sorting_1 txt_Weight">77</span></td>
+                                        <td class="sorting_1">444477</td>
                                         <td>
                                             <span class="sorting_1 txt_Weight">
                                                 <div class="btn_Position">
-                                                    <span class="btn btn-secondary btn-sm cursor_Default disLine_Block" id="">18.38</span>
+                                                    <span class="btn btn-secondary btn-sm cursor_Default disLine_Block" id="">477.24</span>
                                                 </div>
                                             </span>
                                         </td>

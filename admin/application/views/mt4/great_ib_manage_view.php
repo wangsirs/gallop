@@ -87,11 +87,11 @@
                             </thead>
                             <tbody>
                                 <tr role="row" class="odd parent">
-                                	<td class="txt_Bold">AE3210695</td>
-                                    <td class="txt_Weight">范小小</td>
-                                    <td class="sorting_1">2016/01/01 12:55:33</td>
+                                	<td class="txt_Bold">AE5453695</td>
+                                    <td class="txt_Weight">范曉篠</td>
+                                    <td class="sorting_1">2016/06/01 23:41:33</td>
                                     <td><span class="sorting_1">12%</span></td>
-                                    <td class="sorting_1">9999.94</td>
+                                    <td class="sorting_1">2345.12</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                     	<div class="btn-group btn-group-justified btn_Width btn_Width_100">
@@ -100,11 +100,11 @@
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
-                                	<td class="txt_Bold">AE5110012</td>
-                                    <td class="txt_Weight">王大明</td>
-                                    <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1">12%</span></td>
-                                    <td class="sorting_1">9999.94</td>
+                                	<td class="txt_Bold">AE5110232</td>
+                                    <td class="txt_Weight">王大旻</td>
+                                    <td class="sorting_1">2016/07/01 11:44:55</td>
+                                    <td><span class="sorting_1">25%</span></td>
+                                    <td class="sorting_1">122232.66</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
@@ -115,9 +115,9 @@
                                 <tr role="row" class="odd">
                                 	<td class="txt_Bold">AE3210684</td>
                                     <td class="txt_Weight">林小華</td>
-                                    <td class="sorting_1">2016/01/01 12:55:33</td>
+                                    <td class="sorting_1">2016/07/07 16:11:33</td>
                                     <td><span class="sorting_1">12%</span></td>
-                                    <td class="sorting_1">9999.94</td>
+                                    <td class="sorting_1">6678783.23</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
@@ -127,10 +127,10 @@
                                 </tr>
                                 <tr role="row" class="even">
                                 	<td class="txt_Bold">AE3210695</td>
-                                    <td class="txt_Weight">范小小</td>
-                                    <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1">12%</span></td>
-                                    <td class="sorting_1">9999.94</td>
+                                    <td class="txt_Weight">范左線</td>
+                                    <td class="sorting_1">2016/01/01 18:21:33</td>
+                                    <td><span class="sorting_1">28%</span></td>
+                                    <td class="sorting_1">2354.14</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
@@ -139,11 +139,11 @@
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
-                                	<td class="txt_Bold">AE5110012</td>
-                                    <td class="txt_Weight">王大明</td>
-                                    <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1">12%</span></td>
-                                    <td class="sorting_1">9999.94</td>
+                                	<td class="txt_Bold">AE1001251</td>
+                                    <td class="txt_Weight">李崗</td>
+                                    <td class="sorting_1">2016/07/08 21:11:33</td>
+                                    <td><span class="sorting_1">25%</span></td>
+                                    <td class="sorting_1">18321.5</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
@@ -153,10 +153,10 @@
                                 </tr>
                                 <tr role="row" class="even">
                                 	<td class="txt_Bold">AE3210695</td>
-                                    <td class="txt_Weight">林小華</td>
-                                    <td class="sorting_1">2016/01/01 12:55:33</td>
+                                    <td class="txt_Weight">林華</td>
+                                    <td class="sorting_1">2016/02/02 02:41:33</td>
                                     <td><span class="sorting_1">11%</span></td>
-                                    <td class="sorting_1">9999.94</td>
+                                    <td class="sorting_1">123522.22</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
@@ -167,9 +167,9 @@
                                 <tr role="row" class="odd">
                                 	<td class="txt_Bold">AE3210684</td>
                                     <td class="txt_Weight">蔡小婷</td>
-                                    <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1t">11%</span></td>
-                                    <td class="sorting_1">9999.94</td>
+                                    <td class="sorting_1">2016/05/12 23:11:33</td>
+                                    <td><span class="sorting_1t">23%</span></td>
+                                    <td class="sorting_1">1234.55</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
@@ -193,9 +193,9 @@
                                 <tr role="row" class="odd">
                                 	<td class="txt_Bold">AE5110012</td>
                                     <td class="txt_Weight">林小華</td>
-                                    <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1">11%</span></td>
-                                    <td class="sorting_1">9999.94</td>
+                                    <td class="sorting_1">2016/05/14 23:22:33</td>
+                                    <td><span class="sorting_1">20%</span></td>
+                                    <td class="sorting_1">127933.55</td>
                                     <td><span class="sorting_1s">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
@@ -205,8 +205,8 @@
                                 </tr>
                                 <tr role="row" class="even">
                                 	<td class="txt_Bold">AE3210684</td>
-                                    <td class="txt_Weight">王大明</td>
-                                    <td class="sorting_1">2016/01/01 12:55:33</td>
+                                    <td class="txt_Weight">王中線</td>
+                                    <td class="sorting_1">2016/02/22 05:22:33</td>
                                     <td><span class="sorting_1">11%</span></td>
                                     <td class="sorting_1">9999.94</td>
                                     <td><span class="sorting_1">ok</span></td>
@@ -218,10 +218,10 @@
                                 </tr>
                                 <tr role="row" class="odd">
                                 	<td class="txt_Bold">AE3210684</td>
-                                    <td class="txt_Weight">王大明</td>
-                                    <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1">11%</span></td>
-                                    <td class="sorting_1">9999.94</td>
+                                    <td class="txt_Weight">劉文超</td>
+                                    <td class="sorting_1">2016/05/12 22:55:33</td>
+                                    <td><span class="sorting_1">14%</span></td>
+                                    <td class="sorting_1">8232.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
@@ -233,8 +233,8 @@
                                 	<td class="txt_Bold">AE3210684</td>
                                     <td class="txt_Weight">王大明</td>
                                     <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1">11%</span></td>
-                                    <td class="sorting_1">9999.94</td>
+                                    <td><span class="sorting_1">15%</span></td>
+                                    <td class="sorting_1">1835.22</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">

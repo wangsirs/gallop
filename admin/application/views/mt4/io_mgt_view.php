@@ -148,10 +148,10 @@
                             <tbody>
                                 <tr role="row" class="odd parent">
                                 	<td class="txt_Bold">AE3210695</td>
-                                    <td class="txt_Weight">范小小</td>
+                                    <td class="txt_Weight">范改攬</td>
                                     <td class="sorting_1">2016/01/01</td>
-                                    <td><span class="sorting_1 txt_Weight">0</span></td>
-                                    <td class="sorting_1">0</td>
+                                    <td><span class="sorting_1 txt_Weight">23252</span></td>
+                                    <td class="sorting_1">753</td>
                                     <td>
                                         OK
                                     </td> 
@@ -165,11 +165,11 @@
                                     </td>                                   
                                 </tr>
                                 <tr role="row" class="even">
-                                	<td class="txt_Bold">AE5110012</td>
-                                    <td class="txt_Weight">王大明</td>
-                                    <td class="sorting_1">2016/01/01</td>
-                                    <td><span class="sorting_1 txt_Weight">1000000.00</span></td>
-                                    <td class="sorting_1">9999999999.94</td>
+                                	<td class="txt_Bold">AE5160012</td>
+                                    <td class="txt_Weight">王旻建</td>
+                                    <td class="sorting_1">2015/02/01</td>
+                                    <td><span class="sorting_1 txt_Weight">123232.00</span></td>
+                                    <td class="sorting_1">54323.94</td>
                                     <td>
                                     	OK
                                     </td>
@@ -183,11 +183,11 @@
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
-                                	<td class="txt_Bold">AE3210684</td>
-                                    <td class="txt_Weight">林小華</td>
-                                    <td class="sorting_1">2016/01/01</td>
-                                    <td><span class="sorting_1 txt_Weight">2000000.00</span></td>
-                                    <td class="sorting_1">199995472</td>
+                                	<td class="txt_Bold">AE3232384</td>
+                                    <td class="txt_Weight">林小飛</td>
+                                    <td class="sorting_1">2016/07/01</td>
+                                    <td><span class="sorting_1 txt_Weight">334334.00</span></td>
+                                    <td class="sorting_1">65634</td>
                                     <td>
                                     	OK
                                     </td> 
@@ -201,11 +201,11 @@
                                     </td>                                  
                                 </tr>
                                 <tr role="row" class="even">
-                                	<td class="txt_Bold">AE3210695</td>
-                                    <td class="txt_Weight">范小小</td>
-                                    <td class="sorting_1">2016/01/01</td>
-                                    <td><span class="sorting_1 txt_Weight">1000000.00</span></td>
-                                    <td class="sorting_1">9999999999.94</td>
+                                	<td class="txt_Bold">AE3280695</td>
+                                    <td class="txt_Weight">范大時</td>
+                                    <td class="sorting_1">2016/04/01</td>
+                                    <td><span class="sorting_1 txt_Weight">1244425.00</span></td>
+                                    <td class="sorting_1">34343.94</td>
                                     <td>
                                     	OK
                                     </td>
@@ -219,11 +219,11 @@
                                     </td>                                    
                                 </tr>
                                 <tr role="row" class="odd">
-                                	<td class="txt_Bold">AE5110012</td>
-                                    <td class="txt_Weight">王大明</td>
-                                    <td class="sorting_1">2016/01/01</td>
-                                    <td><span class="sorting_1 txt_Weight">2000000.00</span></td>
-                                    <td class="sorting_1">9999999999.94</td>
+                                	<td class="txt_Bold">AE5156512</td>
+                                    <td class="txt_Weight">王左線</td>
+                                    <td class="sorting_1">2016/03/01</td>
+                                    <td><span class="sorting_1 txt_Weight">123783.00</span></td>
+                                    <td class="sorting_1">5466241.94</td>
                                     <td>
                                     	OK
                                     </td> 
@@ -237,11 +237,11 @@
                                     </td>                                  
                                 </tr>
                                 <tr role="row" class="even">
-                                	<td class="txt_Bold">AE3210695</td>
-                                    <td class="txt_Weight">林小華</td>
-                                    <td class="sorting_1">2016/01/01</td>
-                                    <td><span class="sorting_1 txt_Weight">1000000.00</span></td>
-                                    <td class="sorting_1">199995472</td>
+                                	<td class="txt_Bold">AE3233215</td>
+                                    <td class="txt_Weight">林易連</td>
+                                    <td class="sorting_1">2016/01/15</td>
+                                    <td><span class="sorting_1 txt_Weight">54514.00</span></td>
+                                    <td class="sorting_1">55623434</td>
                                     <td>
                                     	OK
                                     </td> 
@@ -255,11 +255,11 @@
                                     </td>                                  
                                 </tr>
                                 <tr role="row" class="odd">
-                                	<td class="txt_Bold">AE3210684</td>
-                                    <td class="txt_Weight">蔡小婷</td>
-                                    <td class="sorting_1">2016/01/01</td>
-                                    <td><span class="sorting_1 txt_Weight">2000000.00</span></td>
-                                    <td class="sorting_1">9999999999.94</td>
+                                	<td class="txt_Bold">AE3111684</td>
+                                    <td class="txt_Weight">蔡男非</td>
+                                    <td class="sorting_1">2016/01/03</td>
+                                    <td><span class="sorting_1 txt_Weight">77724.00</span></td>
+                                    <td class="sorting_1">875652.94</td>
                                     <td>
                                     	OK
                                     </td> 
@@ -274,10 +274,10 @@
                                 </tr>
                                 <tr role="row" class="even">
                                 	<td class="txt_Bold">AE3210695</td>
-                                    <td class="txt_Weight">劉小雯</td>
-                                    <td class="sorting_1">2016/01/01</td>
-                                    <td><span class="sorting_1 txt_Weight">1000000.00</span></td>
-                                    <td class="sorting_1">199995472</td>
+                                    <td class="txt_Weight">劉西非</td>
+                                    <td class="sorting_1">2016/01/21</td>
+                                    <td><span class="sorting_1 txt_Weight">87314.00</span></td>
+                                    <td class="sorting_1">2323223</td>
                                     <td>
                                     	OK
                                     </td>
@@ -292,10 +292,10 @@
                                 </tr>
                                 <tr role="row" class="odd">
                                 	<td class="txt_Bold">AE5110012</td>
-                                    <td class="txt_Weight">林小華</td>
-                                    <td class="sorting_1">2016/01/01</td>
-                                    <td><span class="sorting_1 txt_Weight">2000000.00</span></td>
-                                    <td class="sorting_1">9999999999.94</td>    
+                                    <td class="txt_Weight">林重慶</td>
+                                    <td class="sorting_1">2016/01/25</td>
+                                    <td><span class="sorting_1 txt_Weight">85811.00</span></td>
+                                    <td class="sorting_1">12323.94</td>    
                                     <td>
                                     	OK
                                     </td>
@@ -309,11 +309,11 @@
                                     </td>                                     
                                 </tr>
                                 <tr role="row" class="even">
-                                	<td class="txt_Bold">AE3210684</td>
-                                    <td class="txt_Weight">王大明</td>
-                                    <td class="sorting_1">2016/01/01</td>
-                                    <td><span class="sorting_1 txt_Weight">1000000.00</span></td> 
-                                    <td class="sorting_1">199995472</td> 
+                                	<td class="txt_Bold">AE3210334</td>
+                                    <td class="txt_Weight">王西安</td>
+                                    <td class="sorting_1">2016/01/28</td>
+                                    <td><span class="sorting_1 txt_Weight">96712.00</span></td> 
+                                    <td class="sorting_1">54522</td> 
                                     <td>
                                     	OK
                                     </td>
@@ -327,11 +327,11 @@
                                     </td>                                      
                                 </tr>
                                  <tr role="row" class="odd">
-                                	<td class="txt_Bold">AE3210684</td>
-                                    <td class="txt_Weight">王大明</td>
-                                    <td class="sorting_1">2016/01/01</td>
-                                    <td><span class="sorting_1 txt_Weight">2000000.00</span></td> 
-                                    <td class="sorting_1">9999999999.94</td>    
+                                	<td class="txt_Bold">AE3278684</td>
+                                    <td class="txt_Weight">李奕華</td>
+                                    <td class="sorting_1">2016/01/15</td>
+                                    <td><span class="sorting_1 txt_Weight">657864.00</span></td> 
+                                    <td class="sorting_1">343413.94</td>    
                                     <td>
                                     	OK
                                     </td>
@@ -345,11 +345,11 @@
                                     </td>                                   
                                 </tr>
                                 <tr role="row" class="even">
-                                	<td class="txt_Bold">AE3210684</td>
-                                    <td class="txt_Weight">王大明</td>
-                                    <td class="sorting_1">2016/01/01</td>
-                                    <td><span class="sorting_1 txt_Weight">1000000.00</span></td>
-                                    <td class="sorting_1">199995472</td>   
+                                	<td class="txt_Bold">AE3232684</td>
+                                    <td class="txt_Weight">王撢撢</td>
+                                    <td class="sorting_1">2016/01/16</td>
+                                    <td><span class="sorting_1 txt_Weight">424422.00</span></td>
+                                    <td class="sorting_1">545122</td>   
                                     <td>
                                     	OK
                                     </td> 

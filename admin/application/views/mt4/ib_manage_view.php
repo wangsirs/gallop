@@ -85,11 +85,11 @@
                             </thead>
                             <tbody>
                                 <tr role="row" class="odd parent">
-                                    <td class="txt_Bold">AE3210695</td>
-                                    <td class="txt_Weight">范小小</td>
-                                    <td class="sorting_1">2016/01/01 12:55:33</td>
+                                    <td class="txt_Bold">AE3232555</td>
+                                    <td class="txt_Weight">佐藤建</td>
+                                    <td class="sorting_1">2016/07/11 23:12:44</td>
                                     <td><span class="sorting_1">11%</span></td>
-                                    <td class="sorting_1">9999.94</td>
+                                    <td class="sorting_1">1134.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
@@ -99,10 +99,10 @@
                                 </tr>
                                 <tr role="row" class="even">
                                     <td class="txt_Bold">AE5110012</td>
-                                    <td class="txt_Weight">王大明</td>
-                                    <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1">11%</span></td>
-                                    <td class="sorting_1">9999.94</td>
+                                    <td class="txt_Weight">陳百玲</td>
+                                    <td class="sorting_1">2016/05/30 12:11:33</td>
+                                    <td><span class="sorting_1">9.5%</span></td>
+                                    <td class="sorting_1">16774.33</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
@@ -111,11 +111,11 @@
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
-                                    <td class="txt_Bold">AE3210684</td>
-                                    <td class="txt_Weight">林小華</td>
-                                    <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1">11%</span></td>
-                                    <td class="sorting_1">9999.94</td>
+                                    <td class="txt_Bold">AE3276784</td>
+                                    <td class="txt_Weight">王建超</td>
+                                    <td class="sorting_1">2016/06/12 15:12:45</td>
+                                    <td><span class="sorting_1">9.5%</span></td>
+                                    <td class="sorting_1">53268.11</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
@@ -124,11 +124,11 @@
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
-                                    <td class="txt_Bold">AE3210695</td>
-                                    <td class="txt_Weight">范小小</td>
-                                    <td class="sorting_1">2016/01/01 12:55:33</td>
+                                    <td class="txt_Bold">AE3217677</td>
+                                    <td class="txt_Weight">范逆天</td>
+                                    <td class="sorting_1">2016/01/01 12:27:33</td>
                                     <td><span class="sorting_1">11%</span></td>
-                                    <td class="sorting_1">9999.94</td>
+                                    <td class="sorting_1">2354.5</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
@@ -137,11 +137,11 @@
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
-                                    <td class="txt_Bold">AE5110012</td>
-                                    <td class="txt_Weight">王大明</td>
-                                    <td class="sorting_1">2016/01/01 12:55:33</td>
+                                    <td class="txt_Bold">AE51143412</td>
+                                    <td class="txt_Weight">王包民</td>
+                                    <td class="sorting_1">2016/01/01 12:11:33</td>
                                     <td><span class="sorting_1">12%</span></td>
-                                    <td class="sorting_1">9999.94</td>
+                                    <td class="sorting_1">1132.42</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
@@ -150,11 +150,11 @@
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
-                                    <td class="txt_Bold">AE3210695</td>
-                                    <td class="txt_Weight">林小華</td>
-                                    <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1">12%</span></td>
-                                    <td class="sorting_1">9999.94</td>
+                                    <td class="txt_Bold">AE3546795</td>
+                                    <td class="txt_Weight">林安億</td>
+                                    <td class="sorting_1">2016/01/01 20:33:05</td>
+                                    <td><span class="sorting_1">9.5%</span></td>
+                                    <td class="sorting_1">2389.21</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
@@ -163,11 +163,11 @@
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
-                                    <td class="txt_Bold">AE3210684</td>
+                                    <td class="txt_Bold">AE3210124</td>
                                     <td class="txt_Weight">蔡小婷</td>
-                                    <td class="sorting_1">2016/01/01 12:55:33</td>
+                                    <td class="sorting_1">2016/01/01 12:34:33</td>
                                     <td><span class="sorting_1t">12%</span></td>
-                                    <td class="sorting_1">9999.94</td>
+                                    <td class="sorting_1">6578.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
@@ -176,11 +176,11 @@
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
-                                    <td class="txt_Bold">AE3210695</td>
-                                    <td class="txt_Weight">劉小雯</td>
-                                    <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1">12%</span></td>
-                                    <td class="sorting_1">9999.94</td>
+                                    <td class="txt_Bold">AE51105452</td>
+                                    <td class="txt_Weight">陳宣旭</td>
+                                    <td class="sorting_1">2016/06/01 21:11:13</td>
+                                    <td><span class="sorting_1">14%</span></td>
+                                    <td class="sorting_1">1111.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
@@ -193,7 +193,7 @@
                                     <td class="txt_Weight">林小華</td>
                                     <td class="sorting_1">2016/01/01 12:55:33</td>
                                     <td><span class="sorting_1">12%</span></td>
-                                    <td class="sorting_1">9999.94</td>
+                                    <td class="sorting_1">74345.94</td>
                                     <td><span class="sorting_1s">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
@@ -202,12 +202,12 @@
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
-                                    <td class="txt_Bold">AE3210684</td>
-                                    <td class="txt_Weight">王大明</td>
+                                    <td class="txt_Bold">AE51132212</td>
+                                    <td class="txt_Weight">王華紹</td>
                                     <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1">12%</span></td>
-                                    <td class="sorting_1">9999.94</td>
-                                    <td><span class="sorting_1">ok</span></td>
+                                    <td><span class="sorting_1">24%</span></td>
+                                    <td class="sorting_1">75065.56</td>
+                                    <td><span class="sorting_1s">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
                                             <a type="button" class="btn btn-success bg-lg Gradient_Green btn_Multiple_Account_Manage" href="/mt4/ib_manage_edit" >修改</a>
@@ -215,11 +215,11 @@
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
-                                    <td class="txt_Bold">AE3210684</td>
-                                    <td class="txt_Weight">王大明</td>
+                                    <td class="txt_Bold">AE3233384</td>
+                                    <td class="txt_Weight">李安</td>
                                     <td class="sorting_1">2016/01/01 12:55:33</td>
                                     <td><span class="sorting_1">12%</span></td>
-                                    <td class="sorting_1">9999.94</td>
+                                    <td class="sorting_1">5454.94</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
@@ -228,11 +228,11 @@
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
-                                    <td class="txt_Bold">AE3210684</td>
-                                    <td class="txt_Weight">王大明</td>
-                                    <td class="sorting_1">2016/01/01 12:55:33</td>
-                                    <td><span class="sorting_1">12%</span></td>
-                                    <td class="sorting_1">9999.94</td>
+                                    <td class="txt_Bold">AE32556456</td>
+                                    <td class="txt_Weight">李大木</td>
+                                    <td class="sorting_1">2016/01/01 09:12:43</td>
+                                    <td><span class="sorting_1">18%</span></td>
+                                    <td class="sorting_1">12383.66</td>
                                     <td><span class="sorting_1">ok</span></td>
                                     <td class="sorting_1">
                                         <div class="btn-group btn-group-justified btn_Width btn_Width_100">
