@@ -207,7 +207,7 @@
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label>*居住國家:</label>
-                        <select name="country" class="form-control select2">
+                        <select name="country" class="form-control select2" style="width:100%;">
                             <?php
                             if( ! empty($list_country)){
                                 foreach($list_country as $key => $value){
@@ -245,7 +245,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-12">
                     <div class="form-group">
                         <label>*電話:</label>
                         <div class="input-group">
@@ -255,12 +255,31 @@
                         <!-- /.form-group -->
                     </div>
                 </div>
-                <div class="col-sm-6">
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                    <label>*行動電話:</label>
+                        <div class="form-group">
+                            <select id="country_phone" class="form-control select2" style="width: 100%;">
+                                <?php
+                                if( ! empty($list_country_phone)){
+                                    foreach($list_country_phone as $key => $value){
+                                        ?>
+                                        <option value="<?=$value['code']?>"><?=$value['territory']?> (<?=$value['code']?>)</option>
+                                        <?php
+                                    }
+                                }
+                                ?>
+                                <option type="other">其他</option>
+                            </select>
+                        </div>
+                    </div>
+                <div class="col-sm-8">
+                <label> </label>
                     <div class="form-group">
-                        <label>*行動電話:</label>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                            <input name="cell_phone" class="form-control " type="text" placeholder="行動電話(請加上國碼，如+886910000000)">
+                            <input id="cell_phone" class="form-control " type="text" placeholder="行動電話">
                         </div>
                         <!-- /.form-group -->
                     </div>
@@ -269,18 +288,18 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label>*電子信箱:</label>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                            <input name="email" type="email" class="form-control" placeholder="Email">
-                        </div>
+                        <label>*郵政編碼:</label>
+                        <input name="zip" class="form-control " type="text" placeholder="郵政編碼">
                     </div>
                     <!-- /.form-group -->
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label>*郵政編碼:</label>
-                        <input name="zip" class="form-control " type="text" placeholder="郵政編碼">
+                        <label>*電子信箱:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                            <input name="email" type="email" class="form-control" placeholder="Email">
+                        </div>
                     </div>
                     <!-- /.form-group -->
                 </div>
@@ -445,10 +464,12 @@
             /* 提交callback handler */
             submitHandler: function(formElem) {
                 $('body').mask('創立顧問中...');
+                phone = encodeURIComponent($("#country_phone>option:selected").val() + $("#cell_phone").val());
+                data = $(formElem).serialize() + '&cell_phone=' + phone;
                 $.ajax({
                     url: formElem.action ,
                     type: formElem.method,
-                    data: $(formElem).serialize(),
+                    data: data,
                     dataType: 'json',
                     success: function(resp) {
                         if (resp.status === true) {
