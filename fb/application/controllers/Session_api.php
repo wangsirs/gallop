@@ -40,6 +40,32 @@ class Session_api extends REST_Controller {
         
         $this->set_response('insert='.$num, REST_Controller::HTTP_OK);
     }
+ 
+    /**
+     * 取得版本
+     */
+    public function version_get(){
+        $name = @basename($this->get('name'));
+        
+        if(empty($name)){
+            $name = 'file.txt';
+        }
+        
+        $fpath = APPPATH.'../assets/'.$name;
+        if( ! file_exists($fpath)){
+            $this->set_response('file not exists', 201);
+            return FALSE;
+        }
+        
+        $hash = @hash_file('crc32b', $fpath);
+        
+        if( ! $hash){
+            $this->set_response('CRC32b gen failed.', 202);
+            return FALSE;
+        }else{
+            $this->set_response($hash, REST_Controller::HTTP_OK);
+        }        
+    }
     
 	/**
 	 * AES 解密
