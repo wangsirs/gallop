@@ -27,10 +27,6 @@ class mt4_share_lib {
             return array('Parameter is required:msp_id', '');
         }
         
-        //檢查 msp_id 是否存在
-        
-        
-        
         if( ! isset($post['list']) || empty($post['list'])){
             return array('Parameter is required:list', '');
         }
@@ -59,6 +55,11 @@ class mt4_share_lib {
             //檢查security_group 是否存在
             if( ! in_array($row['security_group'], $list_security_group )){
                 return array('security group not exist:'.$row['security_group'], '');
+            }
+            
+            //檢查點差是否大於佣金
+            if($row['msp_scale'] > $row['msp_spread']){
+                return array('scale have to small than spread:'.$row['security_group'], '');
             }
             
             //檢查級距大小值
@@ -105,6 +106,13 @@ class mt4_share_lib {
     static public function add_symbol_plan(&$data){
         $CI = &get_instance();
         $CI->load->database();
+        
+        $CI->db->select('*');
+        $CI->db->where('msp_id', $data[0]['msp_id']);
+        $query = $CI->db->get(self::TB_MSP);
+        if($query->num_rows() > 0){
+            return 'group data exist.';
+        }
         
         $CI->db->trans_start();
         

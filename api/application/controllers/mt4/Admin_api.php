@@ -42,18 +42,14 @@ class admin_api extends REST_Controller {
         include_once APPPATH.'libraries/Mt4_share_lib.php';
         list($err_msg, $data) = mt4_share_lib::add_symbol_plan_chk($post);
         if( ! empty($err_msg)){
-                $this->set_response($err_msg, 202);
-                return FALSE;
+            $this->set_response($err_msg, 201);
+            return FALSE;
         }
-        
-        echo '<pre>';
-        var_dump($data);
-        echo '</pre>';
         
         $err_msg = mt4_share_lib::add_symbol_plan($data);
         if( ! empty($err_msg)){
-                $this->set_response($err_msg, 301);
-                return FALSE;
+            $this->set_response($err_msg, 301);
+            return FALSE;
         }
         
         $this->set_response('OK', REST_Controller::HTTP_OK);
