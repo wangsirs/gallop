@@ -483,16 +483,6 @@
     </div>  
 </div>
 <!--content end-->
-
-
-<!--footer start-->
-<div class="footer">
-    <div class="footer-class">
-        <p>Copyright &copy; 2016 <a href="#">GALLOP Studio</a>. All rights reserved.</p>
-    </div>
-</div>
-<!--footer end-->
-
 <!--引用Google CDN jQuery-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 

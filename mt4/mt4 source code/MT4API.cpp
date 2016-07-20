@@ -439,6 +439,77 @@ int main(int argc, char* argv[])
 						manager->MemFree(cs);
 						manager->MemFree(csg);
 					}
+					else if (strcmp(opcode, "add_group") == 0) {
+						char group_name[16];
+						int total, i;
+						ConGroup* cg = manager->CfgRequestGroup(&total);
+						for (i = 0; i < total; i++) {
+							if (strcmp(cg[i].group,DUP_GROUP) == 0) {
+								_snprintf(logStr, sizeof(logStr), "Index = %d, group name = %s, enable = %d", i, cg[i].group, cg[i].enable );
+								logToFile(logStr);
+								break;
+							}
+						}
+						GetStrParam(buffer, "GROUP=", group_name, sizeof(group_name) - 1);
+						strcpy(cg[i].group, group_name);
+						cg[i].default_leverage = DEF_LEVERAGE;
+						//modify all security groups to be disabled.
+						int j = 0;
+						for (j = 0; j < MAX_SEC_GROUPS; j++) {
+							cg[i].secgroups[j].trade = 0;
+							cg[i].secgroups[j].show = 0;
+						}
+						int ret = manager->CfgUpdateGroup(&cg[i]);
+						if (ret == RET_OK) {
+							_snprintf(sendbuf, sizeof(sendbuf), "0\r\n");
+						}
+						else {
+							_snprintf(sendbuf, sizeof(sendbuf), "%d\r\n", ret);
+						}
+						manager->MemFree(cg);
+					}
+					else if (strcmp(opcode, "edit_symbol_group") == 0) {
+						char group_name[16];
+						char symbol_group[16];
+						int enable, spread, i, total;
+						GetStrParam(buffer, "GROUP=", group_name, sizeof(group_name) - 1);
+						GetStrParam(buffer, "NAME=", symbol_group, sizeof(symbol_group) - 1);
+						GetIntParam(buffer, "ENABLE=", &enable);
+						GetIntParam(buffer, "SPREAD=", &spread);
+						BOOLEAN is_edit_success = FALSE;
+						ConGroup* cg = manager->CfgRequestGroup(&total);
+						for (i = 0; i < total; i++) {
+							if (strcmp(cg[i].group, group_name) == 0) {
+								break;
+							}
+						}
+
+						ConSymbolGroup* csg = new ConSymbolGroup[MAX_SEC_GROUPS];
+						manager->CfgRequestSymbolGroup(csg);
+						int j;
+						for (j = 0; j < MAX_SEC_GROUPS; j++) {
+							_snprintf(logStr, sizeof(logStr), "Symbol group = %s, selected = %s\r\n", csg[j].name, symbol_group);
+							logToFile(logStr);
+							if (strcmp(csg[j].name, symbol_group) == 0) {
+								cg[i].secgroups[j].show = enable;
+								cg[i].secgroups[j].trade = enable;
+								cg[i].secgroups[j].spread_diff = spread;
+								int ret = manager->CfgUpdateGroup(&cg[i]);
+								_snprintf(logStr, sizeof(logStr), "Return code = %d, group name = %s, enable = %d, group = %s\r\n", ret, symbol_group, enable, cg[i].group);
+								logToFile(logStr);
+								is_edit_success = TRUE;
+								break;
+							}
+						}
+						if (is_edit_success) {
+							_snprintf(sendbuf, sizeof(sendbuf), "0\r\n");
+						}
+						else {
+							_snprintf(sendbuf, sizeof(sendbuf), "1\r\n");
+						}
+						manager->MemFree(cg);
+						manager->MemFree(csg);
+					}
 					else {
 						_snprintf(sendbuf, sizeof(sendbuf), "14\r\n");
 					}
