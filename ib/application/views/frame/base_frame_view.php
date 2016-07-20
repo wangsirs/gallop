@@ -16,7 +16,6 @@
         'css/AdminLTE.css',
         'css/skins/_all-skins.min.css',
         'css/bootstrap-dialog.css',
-        'css/pagination_modity.css',
         'js/thirdParty/plugins/select2/select2.min.css',
         'js/thirdParty/plugins/datatables/jquery.dataTables.min.css',
         'js/thirdParty/plugins/datatables/responsive.dataTables.min.css',
