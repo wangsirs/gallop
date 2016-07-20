@@ -35,8 +35,28 @@ class admin_api extends REST_Controller {
     /**
      * 新增佣金群組
      */
-    public function add_symbol_plan(){
+    public function add_symbol_plan_post(){        
+        $post = $this->post();
         
+        //檢查基本資料
+        include_once APPPATH.'libraries/Mt4_share_lib.php';
+        list($err_msg, $data) = mt4_share_lib::add_symbol_plan_chk($post);
+        if( ! empty($err_msg)){
+                $this->set_response($err_msg, 202);
+                return FALSE;
+        }
+        
+        echo '<pre>';
+        var_dump($data);
+        echo '</pre>';
+        
+        $err_msg = mt4_share_lib::add_symbol_plan($data);
+        if( ! empty($err_msg)){
+                $this->set_response($err_msg, 301);
+                return FALSE;
+        }
+        
+        $this->set_response('OK', REST_Controller::HTTP_OK);
     }
     
     private function _add_symbol_plan(){

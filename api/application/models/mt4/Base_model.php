@@ -185,4 +185,25 @@ class base_model extends CI_Model{
 
         $this->db->update(self::TB_MSS); 
     }
+    
+    /**
+     * 取得 security_group 
+     * @return type
+     */
+    public function list_security_group(){
+        $sql = "SELECT security_group FROM ".self::TB_MSS." WHERE expired = 0 GROUP BY security_group";
+        
+        $query = $this->db->query($sql);
+                
+        if($query->num_rows() == 0){
+            return array();
+        }
+        
+        $list = array();
+        foreach($query->result_array() as $row){
+            $list[] = $row['security_group'];
+        }
+        
+        return array_values($list);
+    }
 }

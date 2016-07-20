@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `mt4_money_transfer`;
 CREATE TABLE IF NOT EXISTS `mt4_money_transfer` (
-  `mmt_id` int(16) unsigned NOT NULL AUTO_INCREMENT COMMENT 'MT4內轉流水號',
+  `mmt_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'MT4內轉流水號',
   `mt4_id` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'MT4帳號',
   `target_mt4_id` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '目標MT4帳號',
   `mmt_status` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '內轉狀態(申請中=0,成功=1,駁回=2,重複申請=3)',

@@ -76,7 +76,7 @@ class base_api extends REST_Controller {
         $list = $this->base_model->chk_symbol($mt4_re['data']);
         
         if(empty($list)){
-            $this->set_response('nothing change', REST_Controller::HTTP_OK);
+            $this->set_response(array(), REST_Controller::HTTP_OK);
             return FALSE;
         }
         
@@ -95,4 +95,18 @@ class base_api extends REST_Controller {
         $this->set_response($re, REST_Controller::HTTP_OK);
     }
     
+    /**
+     * 取得 security group 清單
+     */
+    public function list_security_group_post(){
+        //寫入資料庫
+        $list = $this->base_model->list_security_group();
+        
+        if(empty($list)){
+            $this->set_response('symbol table is empty! please init first.', 301);
+            return FALSE;
+        }
+        
+        $this->set_response($list, REST_Controller::HTTP_OK);
+    }
 }
