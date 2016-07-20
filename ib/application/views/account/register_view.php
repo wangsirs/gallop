@@ -130,11 +130,13 @@
                 }
             },
             /* 送出allback handler */
-            submitHandler: function(formElem) {
+                submitHandler: function(formElem) {
+                phone = encodeURIComponent($("#country_phone>option:selected").val() + $("#cell_phone").val());
+                data = $(formElem).serialize() + '&cell_phone=' + phone;
                 $.ajax({
                     url: formElem.action + '?is_ajax=1',
                     type: formElem.method,
-                    data: $(formElem).serialize(),
+                    data: data,
                     dataType: 'json',
                     success: function(resp) {
                         if (resp.status === true) {
@@ -275,12 +277,11 @@ function form_step_3() {
         },
         /* 送出callback handler */
         submitHandler: function(formElem) {
-
             $('body').mask('創立客戶中...');
             $.ajax({
                 url: formElem.action + '?is_ajax=1',
                 type: formElem.method,
-                data: $(formElem).serialize(),
+                data: data,
                 dataType: 'json',
                 success: function(resp) {
                     if (resp.status === true) {
@@ -382,7 +383,7 @@ function form_step_3() {
                         </div>
                     </div>
                     <div class="form-group col-xs-8">
-                        <input id="cell_phone" name="cell_phone" class="form-control" type="number" placeholder="行動電話">
+                        <input id="cell_phone" class="form-control" type="number" placeholder="行動電話">
                     </div>
                 </div>
                 <div class="row">

@@ -15,6 +15,8 @@
 #define LOG_FILE "/var/log/mt4.log"
 #define OP_MAX_RETRY 3
 #define CUSTOM_TZ_OFFSET 8
+#define DEF_LEVERAGE 200
+#define DUP_GROUP "manager"
 #include <time.h>
 #include <conio.h>
 #include <process.h>

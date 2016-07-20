@@ -51,8 +51,8 @@
                                             <button class="btn btn-block btn-danger btn-flat"><i class="fa fa-credit-card"></i>&nbsp;存入資金</button>
                                         </a>
                                     </td>
-                                    <td><img style="width:6em;" src="<?=ASSETS_IMG?>pay8.jpg"></td>
-                                    <td>銀聯卡</td>
+                                    <td><img style="width:6em;" src="<?=ASSETS_IMG?>baopay.png"></td>
+                                    <td>寶付</td>
                                     <td>•美金</td>
                                     <td>依線上支付服務提供商條款規定</td>
                                     <td>一個工作天(星期一至星期五)</td>

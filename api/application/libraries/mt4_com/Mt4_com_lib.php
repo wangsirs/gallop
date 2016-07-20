@@ -452,6 +452,34 @@ class mt4_com_lib {
 
 	/**
 	* @author martin
+	* @version [1.0.0] [Add group]
+	* @todo nothing
+	* @param [string] $[group] [群組名稱]
+	* @return array ('status'=>$retVal, 'data'=> $data)
+	*/		
+	public function add_group($group, $symbol_groups){
+		try{
+			$query='OP='.__FUNCTION__.STR_SPLITTER.
+			'GROUP='.$group;
+			$retVal = $this->MQ_Query($query);
+			if(intval($retVal) === 0){
+				foreach($symbol_groups as $single_sec_group){
+					$query = 'OP=edit_symbol_group'.STR_SPLITTER.
+					'GROUP='.$group.STR_SPLITTER.
+					'NAME='.$single_sec_group['name'].STR_SPLITTER.
+					'ENABLE='.$single_sec_group['enable'].STR_SPLITTER.
+					'SPREAD='.$single_sec_group['spread'];
+					$retVal = $this->MQ_Query($query);
+				}
+			}
+			return array('status' => intval($retVal), 'data' => null);
+		}catch(Exception $e){
+			return array('status' => self::RET_EXCEPTION, 'data' => $e->getMessage());
+		}
+	}
+
+	/**
+	* @author martin
 	* @version [1.0.0] [start to query using socket connection, notice that this function call should be protected]
 	* @todo [Add isEmpty() judgement for each params]
 	* @todo  目前只支援繁中，後期需支援多國語系 (至少需支援簡中)
