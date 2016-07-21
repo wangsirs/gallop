@@ -35,7 +35,7 @@ $(document).ready(function() {
                 <div class="col-sm-12 invoice-col">
                     <div class="panel panel-default">
                         <div class="panel-body panel-body-enlarge">
-                        <form>
+                        <form method="POST" action="/mt4/union_pay">
                             <img src="<?=ASSETS_IMG?>baopay.png" alt="BaoPay" class="BaoPay">
                             <table class="table funding-step">
                                 <tbody>

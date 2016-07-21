@@ -129,3 +129,14 @@ define('TMPL_PATH', '/var/www/gamfx-tmpl/');
 
 //餘額顯示位數
 define('BAL_DIGITS', 2);
+
+//寶付第三方資訊
+define('MEMBER_ID', 100000178);
+define('MT4_RET_URL', 'http://client.gamfx.com/mt4/bfu_confirm');
+define('KEY_TYPE', 1);
+define('TERM_ID', "10000001");
+define('PAYURL', 'http://tgw.bfopay.com/payindex');
+define('MD5KEY', 'abcdefg');
+define('BFU_VER', '4.0');
+define('BFU_MARK', '|');
+define('PROD_NAME', 'GALLOP');

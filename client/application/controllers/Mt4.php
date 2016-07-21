@@ -340,6 +340,14 @@ class mt4 extends CI_Controller {
         $data = array('username' => client_lib::full_name(),
             'main_mt4_id' => isset($list_mt4[0]['mt4_id'])?$list_mt4[0]['mt4_id'] : '',
             );
+        if( ! empty($post = $this->input->post())){
+            $amount = $post['amount'];
+            if(! is_numeric($amount)){
+                die(json_encode(array('status'=> FALSE, 'msg'=> 'Amount is not a number')));
+            }
+            $this->load->library('payment/bfopay_lib');
+            $this->bfopay_lib->create_payment($amount, $data['main_mt4_id']);
+        }
         load_frame($this->_app, __CLASS__, __FUNCTION__, $data);
     }
 
@@ -364,6 +372,19 @@ class mt4 extends CI_Controller {
         $api_re = $this->api_lib->call_api(API_PATH.$this->_app.'/client_api/money_history', json_encode($param));
         $data = array('info' => ($api_re['status'] === TRUE) ? $api_re['data'] : array(),
             'flag'=>$flag);
+        load_frame($this->_app, __CLASS__, __FUNCTION__, $data);
+    }
+
+    public function bfu_confirm(){
+        $get = $this->input->get();
+        $data = array(
+        'transID' => $get['TransID'],
+        'result' => $get['Result'],
+        'result_desc' => $get['ResultDesc'],
+        'real_funding' => $get['FactMoney'],
+        'trade_comp_time' => $get['SuccTime'],
+        'bank_id' => $get['BankID'],
+        );
         load_frame($this->_app, __CLASS__, __FUNCTION__, $data);
     }
 
