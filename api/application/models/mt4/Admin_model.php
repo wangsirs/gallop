@@ -51,7 +51,12 @@ class admin_model extends CI_Model{
         
         $list = array();
         foreach($query->result_array() as $row){
-            $list[$row['msp_id']][$row['security_group']] = $row['msp_spread'];
+            $list[$row['msp_id']][$row['security_group']] = array(
+                'scale' => floatval($row['msp_scale']),
+                'spread' => floatval($row['msp_spread']),
+                'enable' => TRUE,
+                'msp_private' => boolval($row['msp_private'])
+            );
         }
         
         return $list;

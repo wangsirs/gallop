@@ -114,6 +114,7 @@ class admin_api extends REST_Controller {
         }
         
         $report = array();
+        $mail_content = array();
         
 		include_once APPPATH.'libraries/mt4_com/Mt4_com_lib.php';
 		$mt4_com = new mt4_com_lib();
@@ -123,39 +124,54 @@ class admin_api extends REST_Controller {
                 $report['failed'][$group_name] = $mt4_re['status'];
                 continue;
             }
-//            echo '<pre>';
-//            var_dump($mt4_re['data']);
-//            echo '</pre>';
+          
             $msp_id = substr($group_name, 2);
-//            echo '<pre>';
-//            var_dump($list[$msp_id]);
-//            echo '</pre>';
-//            if(empty($mt4_re['data']['secuirty_group']) && !empty($list[$msp_id])){
-//                $report['failed'][$group_name] = $mt4_re['status']; 
-//            }
             
             foreach($mt4_re['data']['secuirty_group'] as $sec){
-                $web_spread = isset($list[$msp_id][$sec['name']]) ? $list[$msp_id][$sec['name']] : null;
-                
-                if( !is_null($web_spread) != $sec['enable']){
-                    $report[$group_name][$sec['name']]['enable'] = 'web='.(!is_null($web_spread)).',MT4='.$sec['enable'];
+                $web = isset($list[$msp_id][$sec['name']]) ? $list[$msp_id][$sec['name']] : array();
+                $err = array();
+                if( !empty($web) != $sec['enable']){
+                    $err['enable'] = 'error';
                 }
                 
-                
-//                if(isset($list[$sec['name']]) && $sec['enable'] == FALSE){
-//                    $report[$group_name][$sec['name']]['enable'] = 'web=enalbe,MT4=disable';
-//                }
-                
-                if(is_null($web_spread)){
-                    continue;
+                if( ! empty($web)){
+                    if($sec['spread'] <= $web['scale']){
+                        $err['scale'] = 'info';
+                        $err['spread'] = 'error';
+                    }elseif($sec['spread'] > $web['spread']){
+                        $err['spread'] = 'info';
+                    }elseif($sec['spread'] < $web['spread']){
+                        $err['spread'] = 'warning';
+                    }
                 }
                 
-                if($sec['spread'] != $web_spread){
-                    $report[$group_name][$sec['name']]['spread'] = 'web='.$web_spread.',MT4='.$sec['spread'];
+                if(!empty($err)){
+                    $ct = array(
+                        'group' => $group_name,
+                        'sec' => $sec['name'],
+                        'web' => $web,
+                        'mt4' => $sec,
+                        'err' => $err
+                    );
+                    
+                    $report[] = $ct;
+                    
+                    if(@in_array('error', array_values($err))){
+                        $mail_content[] = $ct;
+                    }
                 }
             }
             
         }
+        
+        //FIXME:通知完，間隔 10分鐘才能發第二封
+        //有 Error 發送 Email 通知
+//        if( ! empty($mail_content)){
+//            $this->load->library('email_lib');
+//            foreach(array('wild0522@gmail.com', 'dailohaha@gmail.com') as $ads){
+//                $email_re = $this->email_lib->send($ads, 'MT4客戶群組 異動有嚴重錯誤', json_encode($mail_content), FALSE);
+//            }
+//        }
         
         $this->set_response($report, REST_Controller::HTTP_OK);
     }
