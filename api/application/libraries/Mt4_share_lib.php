@@ -137,12 +137,19 @@ class mt4_share_lib {
         
 		include_once APPPATH.'libraries/mt4_com/Mt4_com_lib.php';
 		$mt4_com = new mt4_com_lib();
-		$mt4_re = $mt4_com->add_group($data[0]['msp_id'], $symbol_group);
         
+        //建立 B Book user group
+		$mt4_re = $mt4_com->add_group('B_'.$data[0]['msp_id'], $symbol_group);        
         if( (int)$mt4_re['status'] !== mt4_com_lib::RET_SUCCESS){
             //這批有錯就直接復原並且終止
             $CI->db->trans_rollback();
             return 'mt4_com add_group failed.'.$mt4_re['status'];
+        }
+        
+        //建立 A Book user group
+		$mt4_re = $mt4_com->add_group('A_'.$data[0]['msp_id'], $symbol_group);
+        if( (int)$mt4_re['status'] !== mt4_com_lib::RET_SUCCESS){
+            logger_err(__CLASS__, __FUNCTION__, 'Create MT4 user group part failed:'.'A_'.$data[0]['msp_id'].', mt4_re:'.$mt4_re['status']);
         }
         
         $CI->db->trans_commit();
