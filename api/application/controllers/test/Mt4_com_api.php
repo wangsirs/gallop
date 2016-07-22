@@ -247,4 +247,19 @@ class mt4_com_api extends REST_Controller {
 		var_dump($mt4_re);
 		echo '</pre>';
 	}
+
+	/*
+	* 取得群組資訊
+	 */
+	public function get_group_info_post(){
+		$mt4_data = $this->post();
+		$group_name = isset($mt4_data['group'])?$mt4_data['group']:'';
+		include_once APPPATH.'libraries/mt4_com/Mt4_com_lib.php';
+		$mt4_com = new mt4_com_lib();
+		$mt4_re = $mt4_com->get_group_info($group_name);
+		
+		echo '<pre>';
+		var_dump($mt4_re);
+		echo '</pre>';
+	}
 }

@@ -510,6 +510,30 @@ int main(int argc, char* argv[])
 						manager->MemFree(cg);
 						manager->MemFree(csg);
 					}
+					else if (strcmp(opcode, "get_group_info") == 0) {
+						char group_name[16];
+						int total, i, offset = 0, group_match;
+						GetStrParam(buffer, "GROUP=", group_name, sizeof(group_name) - 1);
+						ConGroup* cg = manager->CfgRequestGroup(&total);
+						ConSymbolGroup* csg = new ConSymbolGroup[MAX_SEC_GROUPS];
+						manager->CfgRequestSymbolGroup(csg);
+							for (i = 0; i < total; i++) {
+								int j = 0;
+								if (strlen(group_name) == 0 ||
+									(group_match = strcmp(group_name, cg[i].group)) == 0) {
+									offset += _snprintf(offset + sendbuf, sizeof(sendbuf), "group=%s\r\n", cg[i].group);
+									for (j = 0; j < MAX_SEC_GROUPS; j++) {
+										if (strlen(csg[j].name) == 0) {
+											break;
+										}
+										offset += _snprintf(offset + sendbuf, sizeof(sendbuf), "%s,%d,%d\r\n", csg[j].name, cg[i].secgroups[j].spread_diff, cg[i].secgroups[j].show);
+									}
+									if (group_match == 0) {
+										break;
+									}
+								}
+							}
+					}
 					else {
 						_snprintf(sendbuf, sizeof(sendbuf), "14\r\n");
 					}

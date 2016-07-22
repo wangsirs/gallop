@@ -98,6 +98,10 @@ class mt4_com_lib {
 	 * 更改密碼 - 唯讀密碼
 	 */
 	const CPW_READ = 1;
+
+	/* 取得群組資訊
+	回傳群組名稱起始印記*/
+	const GROUP_START_TOKEN = 'group=';
 	
 	public function __construct()
 	{
@@ -480,6 +484,52 @@ class mt4_com_lib {
 
 	/**
 	* @author martin
+	* @version [1.0.0] [Add group]
+	* @todo nothing
+	* @param [string] $[group] [群組名稱]
+	* @return array ('status'=>$retVal, 'data'=> $data)
+	*/		
+	public function get_group_info($group){
+		try{
+			$query='OP='.__FUNCTION__.STR_SPLITTER.
+			'GROUP='.$group;
+			$retVal = $this->MQ_Query($query);
+
+			$single_group_info = array('group'=>'', 'secuirty_group' => array());
+
+			// Start to parse return data
+			foreach(explode("\r\n", $retVal) as $key => $val){
+				if($this->startsWith($val, self::GROUP_START_TOKEN)){
+					$single_group_info['group'] = substr($val, strlen(self::GROUP_START_TOKEN));
+				}else{
+					$tmp = array();
+					foreach(explode(',' , $val) as $key2 => $val2){
+						switch ($key2) {
+							case 0:
+								$tmp['name'] = $val2;
+								break;
+							case 1:
+								$tmp['spread'] = $val2;
+								break;
+							case 2:
+								$tmp['enable'] = $val2;
+								break;
+							default:
+								# do nothing
+								break;
+						}									
+					}
+					array_push($single_group_info['secuirty_group'], $tmp);
+				}
+			}
+			return array('status' => self::RET_SUCCESS, 'data' => $single_group_info);
+		}catch(Exception $e){
+			return array('status' => self::RET_EXCEPTION, 'data' => $e->getMessage());
+		}
+	}
+
+	/**
+	* @author martin
 	* @version [1.0.0] [start to query using socket connection, notice that this function call should be protected]
 	* @todo [Add isEmpty() judgement for each params]
 	* @todo  目前只支援繁中，後期需支援多國語系 (至少需支援簡中)
@@ -521,6 +571,12 @@ class mt4_com_lib {
 		}
 		return trim($ret);
 	}
+
+	private function startsWith($haystack, $needle) {
+		// search backwards starting from haystack length characters from the end
+		return $needle === "" || strrpos($haystack, $needle, -strlen($haystack)) !== false;
+	}
+
 }
 
 ?>
