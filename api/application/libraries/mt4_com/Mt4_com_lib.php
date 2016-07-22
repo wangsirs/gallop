@@ -461,7 +461,7 @@ class mt4_com_lib {
 	* @param [string] $[group] [群組名稱]
 	* @return array ('status'=>$retVal, 'data'=> $data)
 	*/		
-	public function add_group($group, $support_page, $enable = 0, $symbol_groups){
+	public function add_group($group, $support_page, $enable, $symbol_groups){
 		try{
 			$query='OP='.__FUNCTION__.STR_SPLITTER.
 			'GROUP='.$group.STR_SPLITTER.
