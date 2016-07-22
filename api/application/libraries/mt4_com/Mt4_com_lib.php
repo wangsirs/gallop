@@ -461,10 +461,12 @@ class mt4_com_lib {
 	* @param [string] $[group] [群組名稱]
 	* @return array ('status'=>$retVal, 'data'=> $data)
 	*/		
-	public function add_group($group, $symbol_groups){
+	public function add_group($group, $support_page, $enable = 0, $symbol_groups){
 		try{
 			$query='OP='.__FUNCTION__.STR_SPLITTER.
-			'GROUP='.$group;
+			'GROUP='.$group.STR_SPLITTER.
+			'SUPPORT_PAGE='.$support_page.STR_SPLITTER.
+			'ENABLE='.$enable;
 			$retVal = $this->MQ_Query($query);
 			if(intval($retVal) === 0){
 				foreach($symbol_groups as $single_sec_group){
@@ -494,13 +496,14 @@ class mt4_com_lib {
 			$query='OP='.__FUNCTION__.STR_SPLITTER.
 			'GROUP='.$group;
 			$retVal = $this->MQ_Query($query);
-
+			$is_group_exist = FALSE;
 			$single_group_info = array('group'=>'', 'secuirty_group' => array());
 
 			// Start to parse return data
 			foreach(explode("\r\n", $retVal) as $key => $val){
 				if($this->startsWith($val, self::GROUP_START_TOKEN)){
 					$single_group_info['group'] = substr($val, strlen(self::GROUP_START_TOKEN));
+					$is_group_exist = TRUE;
 				}else{
 					$tmp = array();
 					foreach(explode(',' , $val) as $key2 => $val2){
@@ -521,6 +524,10 @@ class mt4_com_lib {
 					}
 					array_push($single_group_info['secuirty_group'], $tmp);
 				}
+			}
+
+			if( ! $is_group_exist){
+				$single_group_info = array();
 			}
 			return array('status' => self::RET_SUCCESS, 'data' => $single_group_info);
 		}catch(Exception $e){

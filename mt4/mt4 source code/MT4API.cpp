@@ -440,8 +440,8 @@ int main(int argc, char* argv[])
 						manager->MemFree(csg);
 					}
 					else if (strcmp(opcode, "add_group") == 0) {
-						char group_name[16];
-						int total, i;
+						char group_name[16], support_page[128];
+						int total, i, enable;
 						ConGroup* cg = manager->CfgRequestGroup(&total);
 						for (i = 0; i < total; i++) {
 							if (strcmp(cg[i].group,DUP_GROUP) == 0) {
@@ -451,7 +451,11 @@ int main(int argc, char* argv[])
 							}
 						}
 						GetStrParam(buffer, "GROUP=", group_name, sizeof(group_name) - 1);
+						GetStrParam(buffer, "SUPPORT_PAGE=", support_page, sizeof(support_page) - 1);
+						GetIntParam(buffer, "ENABLE=", &enable);
 						strcpy(cg[i].group, group_name);
+						strcpy(cg[i].support_page, support_page);
+						cg[i].enable = enable;
 						cg[i].default_leverage = DEF_LEVERAGE;
 						//modify all security groups to be disabled.
 						int j = 0;
