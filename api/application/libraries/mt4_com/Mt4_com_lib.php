@@ -509,10 +509,10 @@ class mt4_com_lib {
 								$tmp['name'] = $val2;
 								break;
 							case 1:
-								$tmp['spread'] = $val2;
+								$tmp['spread'] = intval($val2);
 								break;
 							case 2:
-								$tmp['enable'] = $val2;
+								$tmp['enable'] = ($val2 == 1)?TRUE: FALSE;
 								break;
 							default:
 								# do nothing
