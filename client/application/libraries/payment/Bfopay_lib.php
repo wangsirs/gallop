@@ -49,17 +49,10 @@ class Bfopay_lib
 			'PageUrl' => $PageUrl,
 			'ReturnUrl' => $ReturnUrl,
 			'Signature' => $Signature,
-			'NoticeType' => $NoticeType
+			'NoticeType' => $NoticeType,
+			'payUrl' => $payUrl,
 		);
-		//traverse array and prepare data for posting (key1=value1)
-		foreach ( $post_arrays as $key => $value) {
-		    $post_items[] = $key . '=' . $value;
-		}
-		 
-		//create the final string to be posted using implode()
-		$post_string = implode('&', $post_items);
-		$post_url = $payUrl.'?'.$post_string;
-		redirect($post_url);
+		return $post_arrays;
 	}
 }
 

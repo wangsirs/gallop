@@ -346,7 +346,9 @@ class mt4 extends CI_Controller {
                 die(json_encode(array('status'=> FALSE, 'msg'=> 'Amount is not a number')));
             }
             $this->load->library('payment/bfopay_lib');
-            $this->bfopay_lib->create_payment($amount, $data['main_mt4_id']);
+            $ret_array = $this->bfopay_lib->create_payment($amount, $data['main_mt4_id']);
+            $this->load->view('/mt4/bfu_post_view', $ret_array);
+            return;
         }
         load_frame($this->_app, __CLASS__, __FUNCTION__, $data);
     }
