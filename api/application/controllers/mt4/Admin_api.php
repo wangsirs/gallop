@@ -175,4 +175,48 @@ class admin_api extends REST_Controller {
         
         $this->set_response($report, REST_Controller::HTTP_OK);
     }
+    
+    /**
+     * 還原 mt4 user group
+     * @param string $msp_id 群組名稱
+     * @return boolean
+     */
+    public function revert_mt4_user_group_post(){
+        $msp_id = $this->post('msp_id');
+        
+        if(empty($msp_id)){
+            $this->set_response('msp_id is required.', 201);
+            return FALSE;
+        }
+        
+        $detail = $this->admin_model->symbol_plan_detail($msp_id);
+        if(empty($detail)){
+            $this->set_response('This symbol plan is not exist.', 301);
+            return FALSE;
+        }
+        
+        $symbol_group = array();
+        foreach($detail as $row){
+            $symbol_group[$row['security_group']] = array('name' => $row['security_group'], 'enable' => 1, 'spread' => $row['msp_spread']);
+        }
+        
+		include_once APPPATH.'libraries/mt4_com/Mt4_com_lib.php';
+		$mt4_com = new mt4_com_lib();
+        
+        //建立 B Book user group
+		$mt4_re = $mt4_com->add_group('B_'.$msp_id, $symbol_group);        
+        if( (int)$mt4_re['status'] !== mt4_com_lib::RET_SUCCESS){
+            $this->set_response('revert mt4 user_group failed.'.$mt4_re['status'], 301);
+            return FALSE;
+        }
+        
+        //建立 A Book user group
+		$mt4_re = $mt4_com->add_group('A_'.$msp_id, $symbol_group);
+        if( (int)$mt4_re['status'] !== mt4_com_lib::RET_SUCCESS){
+            $this->set_response('revert mt4 user_group part failed:A_'.$msp_id.', mt4_re:'.$mt4_re['status'], 302);
+            return FALSE;
+        }
+        
+        $this->set_response($detail, REST_Controller::HTTP_OK);
+    }
 }
