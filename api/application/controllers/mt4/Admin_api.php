@@ -182,10 +182,15 @@ class admin_api extends REST_Controller {
         $this->set_response($report, REST_Controller::HTTP_OK);
     }
     
+    /**
+     * 取得 user group 檢查報表
+     */
     public function get_user_group_report_post(){
         $report = json_read('cron/', 'chk_user_group.json');
         
-        $this->set_response($report, REST_Controller::HTTP_OK);
+        $abook = $this->admin_model->unset_abook_user_group();
+        
+        $this->set_response(array('diff' => $report, 'abook' => $abook), REST_Controller::HTTP_OK);
     }
     
     /**
