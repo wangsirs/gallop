@@ -147,7 +147,7 @@ class mt4_share_lib {
         }
         
         //建立 A Book user group
-		$url_msg = '!!注意!!尚未設定拋上手，若已設定完成，請將群組[啟用]、刪除此訊息並從[行政系統]回報';
+		$url_msg = '!!注意!!此群組未設定拋上手，若已設定完成，請將群組[啟用]、刪除此訊息並從[行政系統]回報';
         $mt4_re = $mt4_com->add_group('A_'.$data[0]['msp_id'], $url_msg, 0, $symbol_group);
         if( (int)$mt4_re['status'] !== mt4_com_lib::RET_SUCCESS){
             logger_err(__CLASS__, __FUNCTION__, 'Create MT4 user group part failed:'.'A_'.$data[0]['msp_id'].', mt4_re:'.$mt4_re['status']);
