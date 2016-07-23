@@ -134,6 +134,8 @@ class admin_api extends REST_Controller {
                     $err['enable'] = 'error';
                 }
                 
+                
+                
                 if( ! empty($web)){
                     if($sec['spread'] <= $web['scale']){
                         $err['scale'] = 'info';
@@ -164,6 +166,8 @@ class admin_api extends REST_Controller {
             
         }
         
+        json_save('cron/', 'chk_user_group.json', $report);
+        
         //FIXME:通知完，間隔 10分鐘才能發第二封
         //有 Error 發送 Email 通知
 //        if( ! empty($mail_content)){
@@ -172,6 +176,14 @@ class admin_api extends REST_Controller {
 //                $email_re = $this->email_lib->send($ads, 'MT4客戶群組 異動有嚴重錯誤', json_encode($mail_content), FALSE);
 //            }
 //        }
+        
+        
+        
+        $this->set_response($report, REST_Controller::HTTP_OK);
+    }
+    
+    public function get_user_group_report_post(){
+        $report = json_read('cron/', 'chk_user_group.json');
         
         $this->set_response($report, REST_Controller::HTTP_OK);
     }
