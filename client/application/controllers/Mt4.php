@@ -354,6 +354,43 @@ class mt4 extends CI_Controller {
     }
 
     /**
+     * 寶付交易程序完成
+     */
+    public function bfu_confirm(){
+        $get = $this->input->get();
+        $data = array(
+        'transID' => $get['TransID'],
+        'result' => $get['Result'],
+        'result_desc' => $get['ResultDesc'],
+        'real_funding' => $get['FactMoney'],
+        'trade_comp_time' => $get['SuccTime'],
+        'bank_id' => $get['BankID'],
+        'add_info' => $get['AdditionalInfo'],
+        );
+
+        $param = array(
+            'user_id' => client_lib::user_id(),
+            'only_approve' => '1'
+            );
+        $this->load->library('api_lib');
+        $api_re = $this->api_lib->call_api(API_PATH.$this->_app.'/client_api/mt4s', json_encode($param));
+        $list_mt4 = $api_re['status'] === TRUE ? $api_re['data'] : array();
+        $main_mt4_id = isset($list_mt4[0]['mt4_id'])?$list_mt4[0]['mt4_id'] : '';
+        $param = array(
+            'com_id' => COM_ID,
+            'user_id' => client_lib::user_id(),
+            'mt4_id' => $main_mt4_id,
+            'mf_type' => '1',
+            'mf_status' => $data['result'] == 1?1:2,
+            'amount' => (float)$data['real_funding'] / 100.0,
+            'note' => strip_tags($data['add_info']),
+            'ctime' => date_format(date_create($data['trade_comp_time']), 'Y/m/d H:i:s')
+            );
+        $api_re = $this->api_lib->call_api(API_PATH.$this->_app.'/client_api/funding', json_encode($param));
+        load_frame($this->_app, __CLASS__, __FUNCTION__, $data);
+    }
+
+    /**
      * 出入金查詢
      */
     public function money_history()
@@ -374,19 +411,6 @@ class mt4 extends CI_Controller {
         $api_re = $this->api_lib->call_api(API_PATH.$this->_app.'/client_api/money_history', json_encode($param));
         $data = array('info' => ($api_re['status'] === TRUE) ? $api_re['data'] : array(),
             'flag'=>$flag);
-        load_frame($this->_app, __CLASS__, __FUNCTION__, $data);
-    }
-
-    public function bfu_confirm(){
-        $get = $this->input->get();
-        $data = array(
-        'transID' => $get['TransID'],
-        'result' => $get['Result'],
-        'result_desc' => $get['ResultDesc'],
-        'real_funding' => $get['FactMoney'],
-        'trade_comp_time' => $get['SuccTime'],
-        'bank_id' => $get['BankID'],
-        );
         load_frame($this->_app, __CLASS__, __FUNCTION__, $data);
     }
 
