@@ -243,7 +243,7 @@ class mt4_com_api extends REST_Controller {
 		$symbol_group = isset($mt4_data['symbol_group'])?$mt4_data['symbol_group']:'';
 		include_once APPPATH.'libraries/mt4_com/Mt4_com_lib.php';
 		$mt4_com = new mt4_com_lib();
-		$mt4_re = $mt4_com->add_group($group_name, $group_support_page, $group_enable, $symbol_group);
+		$mt4_re = $mt4_com->add_group($group_name, $symbol_group);
 		
 		echo '<pre>';
 		var_dump($mt4_re);

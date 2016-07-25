@@ -461,12 +461,17 @@ class mt4_com_lib {
 	* @param [string] $[group] [群組名稱]
 	* @return array ('status'=>$retVal, 'data'=> $data)
 	*/		
-	public function add_group($group, $support_page, $enable, $symbol_groups){
+	public function add_group($group, $symbol_groups, $support_page = '', $enable = '' ){
 		try{
+			$simple_mode = 0;
+			if(strlen($support_page) === 0 && strlen($enable) === 0){
+				$simple_mode = 1;
+			}
 			$query='OP='.__FUNCTION__.STR_SPLITTER.
 			'GROUP='.$group.STR_SPLITTER.
 			'SUPPORT_PAGE='.$support_page.STR_SPLITTER.
-			'ENABLE='.$enable;
+			'ENABLE='.$enable.STR_SPLITTER.
+			'MODE='.$simple_mode;
 			$retVal = $this->MQ_Query($query);
 			if(intval($retVal) === 0){
 				foreach($symbol_groups as $single_sec_group){
