@@ -8,6 +8,10 @@ class admin_model extends CI_Model{
 
     const TB_MSP = 'mt4_symbol_plan';
     
+    const ABOOK_UNSET = 0;
+    const ABOOK_DONE = 1;
+    const ABOOK_NONEED = 2;
+    
     function __construct()
     {
         parent::__construct();
@@ -62,21 +66,10 @@ class admin_model extends CI_Model{
         return $list;
     }
     
-    public function symbol_plan_detail($msp_id){
-        $sql = "SELECT msp_seq, security_group, msp_scale, msp_spread, msp_volume_min, msp_volume_max "
-                . "FROM ".self::TB_MSP." WHERE msp_id = '".$msp_id."' AND expired = 0 "
-                . "ORDER BY security_group ASC,msp_volume_min ASC";
- 
-        $query = $this->db->query($sql);
-                
-        if($query->num_rows() == 0){
-            return array();
-        }
-                
-        return $query->result_array();
-        
-    }
-    
+    /**
+     * 取得未拋上手的 A book 群組
+     * @return array
+     */
     public function unset_abook_user_group(){
         $sql = "SELECT CONCAT('A_', msp_id) msp_id "
                 . "FROM ".self::TB_MSP." WHERE expired = 0 AND msp_abook = 0 GROUP BY msp_id ORDER BY ctime DESC";
@@ -94,10 +87,16 @@ class admin_model extends CI_Model{
         return $list;
     }
     
+    /**
+     * 更新 A book 狀態
+     * @param string $msp_id 佣金群組名稱
+     * @param int $type Abook 狀態
+     * @return boolean
+     */
     public function update_abook_type($msp_id, $type){
         $this->db->trans_start();
         
-        $this->db->set('abook', $type);
+        $this->db->set('msp_abook', $type);
         $this->db->where('msp_id', $msp_id);
         $this->db->where('expired', 0);
         $this->db->update(self::TB_MSP);

@@ -117,6 +117,7 @@ class admin_api extends REST_Controller {
         $mail_content = array();
         
 		include_once APPPATH.'libraries/mt4_com/Mt4_com_lib.php';
+        include_once APPPATH.'libraries/Mt4_share_lib.php';
 		$mt4_com = new mt4_com_lib();
         foreach($list_group_name as $group_name){
             $mt4_re = $mt4_com->get_group_info($group_name);
@@ -130,16 +131,21 @@ class admin_api extends REST_Controller {
             foreach($mt4_re['data']['secuirty_group'] as $sec){
                 $web = isset($list[$msp_id][$sec['name']]) ? $list[$msp_id][$sec['name']] : array();
                 $err = array();
-                if( !empty($web) != $sec['enable']){
+                //MT4有開 security_Group, web 沒有
+                if( empty($web) && $sec['enable']){
                     $err['enable'] = 'error';
+                    if('' === mt4_share_lib::revert_mt4_user_group($group_name)){
+                        $err['enable'] = 'revert';
+                    }
                 }
-                
-                
                 
                 if( ! empty($web)){
                     if($sec['spread'] <= $web['scale']){
                         $err['scale'] = 'info';
                         $err['spread'] = 'error';
+                        if('' === mt4_share_lib::revert_mt4_user_group($group_name)){
+                            $err['spread'] = 'revert';
+                        }
                     }elseif($sec['spread'] > $web['spread']){
                         $err['spread'] = 'info';
                     }elseif($sec['spread'] < $web['spread']){
@@ -158,7 +164,7 @@ class admin_api extends REST_Controller {
                     
                     $report[] = $ct;
                     
-                    if(@in_array('error', array_values($err))){
+                    if(@in_array('error', array_values($err)) || @in_array('revert', array_values($err))){
                         $mail_content[] = $ct;
                     }
                 }
@@ -168,16 +174,36 @@ class admin_api extends REST_Controller {
         
         json_save('cron/', 'chk_user_group.json', $report);
         
+        $msg = '';
+        if(!empty($report)){
+            foreach($report as $row){
+                if(!empty($row['err'])){
+                    foreach($row['err'] as $field => $level){
+                        if( ! in_array($level, array('error', 'revert'))){
+                            continue;
+                        }
+                        
+                        $rev = ($level == 'revert') ? ' (已還原)' : '';
+                        
+                        if($field == 'enable'){
+                            $msg .= '['.$row['group'].']['.$row['sec'].'] 此交易類型 MT4 有開，但 WEB 無此點差佣金設定'.$rev.'<br>'.PHP_EOL;
+                        }
+                        if($field == 'spread'){
+                            $msg .= '['.$row['group'].']['.$row['sec'].'] 點差比佣金小，公司虧錢啦~'.$rev.'<br>'.PHP_EOL;
+                        }
+                    }
+                }
+            }
+        }
+        
         //FIXME:通知完，間隔 10分鐘才能發第二封
         //有 Error 發送 Email 通知
-//        if( ! empty($mail_content)){
-//            $this->load->library('email_lib');
-//            foreach(array('wild0522@gmail.com', 'dailohaha@gmail.com') as $ads){
-//                $email_re = $this->email_lib->send($ads, 'MT4客戶群組 異動有嚴重錯誤', json_encode($mail_content), FALSE);
-//            }
-//        }
-        
-        
+        if( ! empty($mail_content)){
+            $this->load->library('email_lib');
+            foreach(array('wild0522@gmail.com', 'dailohaha@gmail.com') as $ads){
+                $email_re = $this->email_lib->send($ads, 'MT4客戶群組 異動有嚴重錯誤', $msg.PHP_EOL.'<br>'.json_encode($mail_content), FALSE);
+            }
+        }
         
         $this->set_response($report, REST_Controller::HTTP_OK);
     }
@@ -206,34 +232,34 @@ class admin_api extends REST_Controller {
             return FALSE;
         }
         
-        $detail = $this->admin_model->symbol_plan_detail($msp_id);
-        if(empty($detail)){
-            $this->set_response('This symbol plan is not exist.', 301);
+        include_once APPPATH.'libraries/Mt4_share_lib.php';
+        $err = mt4_share_lib::revert_mt4_user_group($msp_id);
+        if( !empty($err)){
+            $this->set_response($err, 301);
             return FALSE;
         }
         
-        $symbol_group = array();
-        foreach($detail as $row){
-            $symbol_group[$row['security_group']] = array('name' => $row['security_group'], 'enable' => 1, 'spread' => $row['msp_spread']);
-        }
-        
-		include_once APPPATH.'libraries/mt4_com/Mt4_com_lib.php';
-		$mt4_com = new mt4_com_lib();
-        
-        //建立 B Book user group
-		$mt4_re = $mt4_com->add_group('B_'.$msp_id, $symbol_group);        
-        if( (int)$mt4_re['status'] !== mt4_com_lib::RET_SUCCESS){
-            $this->set_response('revert mt4 user_group failed.'.$mt4_re['status'], 301);
-            return FALSE;
-        }
-        
-        //建立 A Book user group
-		$mt4_re = $mt4_com->add_group('A_'.$msp_id, $symbol_group);
-        if( (int)$mt4_re['status'] !== mt4_com_lib::RET_SUCCESS){
-            $this->set_response('revert mt4 user_group part failed:A_'.$msp_id.', mt4_re:'.$mt4_re['status'], 302);
-            return FALSE;
-        }
-        
-        $this->set_response($detail, REST_Controller::HTTP_OK);
+        $this->set_response('OK', REST_Controller::HTTP_OK);
     }
+    
+    /**
+     * 更新 Abook 狀態
+     * @param int $type Abook 狀態 (1=設定完成,2=不需要)
+     */
+    public function update_abook_status_post(){
+        $msp_id = $this->post('msp_id');
+        $type = $this->post('type');
+        
+        if(empty($msp_id) || ! in_array($type, array(admin_model::ABOOK_DONE, admin_model::ABOOK_NONEED))){
+            $this->set_response('msp_id and type is required.', 201);
+            return FALSE;
+        }
+        
+        if(TRUE === $this->admin_model->update_abook_type($msp_id, $type)){
+            $this->set_response('OK', REST_Controller::HTTP_OK);
+        }else{
+            $this->set_response('update abook status failed.', 301);
+        }
+    }
+    
 }

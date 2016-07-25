@@ -139,7 +139,7 @@ class mt4_share_lib {
 		$mt4_com = new mt4_com_lib();
         
         //建立 B Book user group
-		$mt4_re = $mt4_com->add_group('B_'.$data[0]['msp_id'], '', 1, $symbol_group);        
+		$mt4_re = $mt4_com->add_group('B_'.$data[0]['msp_id'], $symbol_group, '', 1);        
         if( (int)$mt4_re['status'] !== mt4_com_lib::RET_SUCCESS){
             //這批有錯就直接復原並且終止
             $CI->db->trans_rollback();
@@ -148,7 +148,7 @@ class mt4_share_lib {
         
         //建立 A Book user group
 		$url_msg = '!!注意!!此群組未設定拋上手，若已設定完成，請將群組[啟用]、刪除此訊息並從[行政系統]回報';
-        $mt4_re = $mt4_com->add_group('A_'.$data[0]['msp_id'], $url_msg, 0, $symbol_group);
+        $mt4_re = $mt4_com->add_group('A_'.$data[0]['msp_id'], $symbol_group, $url_msg, 0);
         if( (int)$mt4_re['status'] !== mt4_com_lib::RET_SUCCESS){
             logger_err(__CLASS__, __FUNCTION__, 'Create MT4 user group part failed:'.'A_'.$data[0]['msp_id'].', mt4_re:'.$mt4_re['status']);
         }
@@ -157,5 +157,44 @@ class mt4_share_lib {
         
         return '';
         
+    }
+    
+    /**
+     * 還原指定 user_group
+     * @param string $msp_id 佣金群組名稱
+     * @return string 錯誤訊息(成功為 '')
+     */
+    static public function revert_mt4_user_group($group_name){
+        $CI = &get_instance();
+        
+        $msp_id = substr($group_name, 2);
+        
+        $sql = "SELECT msp_seq, security_group, msp_scale, msp_spread, msp_volume_min, msp_volume_max "
+                . "FROM ".self::TB_MSP." WHERE msp_id = '".$msp_id."' AND expired = 0 "
+                . "ORDER BY security_group ASC,msp_volume_min ASC";
+ 
+        $query = $CI->db->query($sql);
+                
+        if($query->num_rows() == 0){
+            return 'This symbol plan is not exist:group_name='.$group_name.',msp_id='.$msp_id;
+        }
+                
+        $detail = $query->result_array();
+        
+        $symbol_group = array();
+        foreach($detail as $row){
+            $symbol_group[$row['security_group']] = array('name' => $row['security_group'], 'enable' => 1, 'spread' => $row['msp_spread']);
+        }
+        
+		include_once APPPATH.'libraries/mt4_com/Mt4_com_lib.php';
+		$mt4_com = new mt4_com_lib();
+        
+        //建立 B Book user group
+		$mt4_re = $mt4_com->add_group($group_name, $symbol_group);
+        if( (int)$mt4_re['status'] !== mt4_com_lib::RET_SUCCESS){
+            return 'revert mt4 user_group failed,name='.$group_name.',status='.$mt4_re['status'];
+        }
+        
+        return '';
     }
 }
