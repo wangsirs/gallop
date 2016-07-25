@@ -367,26 +367,32 @@ class mt4 extends CI_Controller {
         'bank_id' => $get['BankID'],
         'add_info' => $get['AdditionalInfo'],
         );
+        $MARK = '~|~';
+        $WaitSign=md5('MemberID='.$get['MemberID'].$MARK.'TerminalID='.$get['TerminalID'].$MARK.'TransID='.$get['TransID'].$MARK.'Result='.$get['Result'].$MARK.'ResultDesc='.$get['ResultDesc'].$MARK.'FactMoney='.$get['FactMoney'].$MARK.'AdditionalInfo='.$get['AdditionalInfo'].$MARK.'SuccTime='.$get['SuccTime'].$MARK.'Md5Sign='.MD5KEY);
 
-        $param = array(
-            'user_id' => client_lib::user_id(),
-            'only_approve' => '1'
-            );
-        $this->load->library('api_lib');
-        $api_re = $this->api_lib->call_api(API_PATH.$this->_app.'/client_api/mt4s', json_encode($param));
-        $list_mt4 = $api_re['status'] === TRUE ? $api_re['data'] : array();
-        $main_mt4_id = isset($list_mt4[0]['mt4_id'])?$list_mt4[0]['mt4_id'] : '';
-        $param = array(
-            'com_id' => COM_ID,
-            'user_id' => client_lib::user_id(),
-            'mt4_id' => $main_mt4_id,
-            'mf_type' => '1',
-            'mf_status' => $data['result'] == 1?1:2,
-            'amount' => (float)$data['real_funding'] / 100.0,
-            'note' => strip_tags($data['add_info']),
-            'ctime' => date_format(date_create($data['trade_comp_time']), 'Y/m/d H:i:s')
-            );
-        $api_re = $this->api_lib->call_api(API_PATH.$this->_app.'/client_api/funding', json_encode($param));
+        if($WaitSign == $get['Md5Sign']){
+            $param = array(
+                'user_id' => client_lib::user_id(),
+                'only_approve' => '1'
+                );
+            $this->load->library('api_lib');
+            $api_re = $this->api_lib->call_api(API_PATH.$this->_app.'/client_api/mt4s', json_encode($param));
+            $list_mt4 = $api_re['status'] === TRUE ? $api_re['data'] : array();
+            $main_mt4_id = isset($list_mt4[0]['mt4_id'])?$list_mt4[0]['mt4_id'] : '';
+            $param = array(
+                'com_id' => COM_ID,
+                'user_id' => client_lib::user_id(),
+                'mt4_id' => $main_mt4_id,
+                'mf_type' => '1',
+                'mf_status' => $data['result'] == 1?1:2,
+                'amount' => (float)$data['real_funding'] / 100.0,
+                'note' => strip_tags($data['add_info']),
+                'ctime' => date_format(date_create($data['trade_comp_time']), 'Y/m/d H:i:s')
+                );
+            $api_re = $this->api_lib->call_api(API_PATH.$this->_app.'/client_api/funding', json_encode($param));
+        }else{
+            die();
+        }
         load_frame($this->_app, __CLASS__, __FUNCTION__, $data);
     }
 

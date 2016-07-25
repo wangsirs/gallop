@@ -23,7 +23,7 @@ class Bfopay_lib
 		$Amount = 1;//商品数量
 		$Username = $uid;//支付用户名
 		$AdditionalInfo = '';//订单附加消息
-		$PageUrl = MT4_RET_URL;//通知商户页面端地址
+		$PageUrl = MT4_PAGE_URL;//通知商户页面端地址
 		$ReturnUrl = MT4_RET_URL;//服务器底层通知地址
 		$NoticeType = 1;//通知类型	
 		$Md5key = MD5KEY;//md5密钥（KEY）

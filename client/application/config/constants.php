@@ -132,7 +132,8 @@ define('BAL_DIGITS', 2);
 
 //寶付第三方資訊
 define('MEMBER_ID', 100000178);
-define('MT4_RET_URL', 'http://client.gamfx.com/mt4/bfu_confirm');
+define('MT4_PAGE_URL', 'http://client.gamfx.com/mt4/bfu_confirm');
+define('MT4_RET_URL', 'http://client.gamfx.com/mt4/bfu_callback');
 define('KEY_TYPE', 1);
 define('TERM_ID', "10000001");
 define('PAYURL', 'http://tgw.bfopay.com/payindex');
