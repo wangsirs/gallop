@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `mt4_ib_level` (
-  `mil_id` int(3) UNSIGNED NOT NULL COMMENT '方案編號',
+  `mil_seq` int(3) UNSIGNED NOT NULL COMMENT '方案流水號',
   `mil_name` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '方案名稱',
   `mil_level` smallint(3) UNSIGNED NOT NULL DEFAULT '0' COMMENT '等級',
   `mil_title` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '職級稱號',

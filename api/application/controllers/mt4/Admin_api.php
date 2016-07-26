@@ -92,7 +92,14 @@ class admin_api extends REST_Controller {
     /**
      * 更新佣金群組資料(加入排程)
      */
-    public function task_update_symbol_plan_post(){
+    public function task_symbol_plan_post(){
+        
+    }
+    public function cancel_symbol_plan_task_post(){
+        
+    }
+    
+    public function symbol_plan_task_post(){
         
     }
     
@@ -262,4 +269,83 @@ class admin_api extends REST_Controller {
         }
     }
     
+    /**
+     * 新增顧問層級
+     * @param string $mil_name 層級方案名稱
+     * @param array $levels 層級清單(mil_level=等級n~1, mil_title=職級稱號, mil_scale=佣金比例) 
+     * @return boolean
+     */
+    public function add_ib_level_post(){
+        $mil_name = $this->post('mil_name');
+        $levels = $this->post('levels');
+        
+        if(empty($mil_name)){
+            $this->set_response('mil_name is required.', 201);
+            return FALSE;
+        }
+           
+        if( ! empty($this->admin_model->ib_levels($mil_name))){
+            $this->set_response('This mil_name is exist.', 202);
+            return FALSE;
+        }
+        
+        $list_lv_scale = array();
+        foreach($levels as $row){
+            foreach(array('mil_level', 'mil_title','mil_scale') as $field){
+                if( ! isset($row[$field])){
+                    $this->set_response('Parameter is required:'.$field, 202);
+                    return FALSE;
+                }
+            }
+            
+            if(empty($row['mil_level'])){
+                $this->set_response('level have to bigger than 0.', 203);
+                return FALSE;
+            }
+                
+            if(floatval($row['mil_scale']) < 0){
+                $this->set_response('scale have to bigger or equal than 0.', 203);
+                return FALSE;
+            }
+        
+            $list_lv_scale[intval($row['mil_level'])] = floatval($row['mil_scale']);
+        }
+         
+        //檢查佣金比例
+        //反向排序
+        krsort($list_lv_scale);
+        
+        //100%
+        if(floatval(current($list_lv_scale)) != 100){
+            $this->set_response('The top level\'s scale have to 100 percent scale:'.current($list_lv_scale), 203);
+            return FALSE;
+        }
+        
+        $prev = -1;
+        foreach($list_lv_scale as $lv => $_scale){
+            if($prev !== -1 && $prev < $_scale){
+                $this->set_response('Level_'.$lv.' scale '.$prev.' have to bigger than '.$_scale, 203);
+                return FALSE;
+            }
+            $prev = $_scale;
+        }
+        
+        if( ! $this->admin_model->add_ib_levels($mil_name, $levels)){
+            $this->set_response('add ib levels failed.', 301);
+        }else{
+            $this->set_response('OK', REST_Controller::HTTP_OK);
+        }
+    }
+    
+    public function task_ib_level_post(){
+        
+    }
+    
+    public function cancel_ib_level_task_post(){
+        
+    }
+    
+    public function ib_level_task_post(){
+        
+    }
 }

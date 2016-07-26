@@ -7,6 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class admin_model extends CI_Model{
 
     const TB_MSP = 'mt4_symbol_plan';
+    const TB_MIL = 'mt4_ib_level';
     
     const ABOOK_UNSET = 0;
     const ABOOK_DONE = 1;
@@ -110,5 +111,54 @@ class admin_model extends CI_Model{
         $this->db->trans_commit();
         
         return TRUE;
+    }
+    
+    
+    /**
+     * 新增顧問層級
+     * @param string $mil_name 顧問層級名稱
+     * @param array $levels 顧問層級清單
+     * @return boolean
+     */
+    public function add_ib_levels($mil_name, $levels){
+        $this->db->trans_start();
+        
+        $sql_key = "mil_name,mil_level,mil_title,mil_scale";
+        
+        $sql_batch = array();
+        foreach($levels as $row){
+            $sql_batch[] = "('".$mil_name."',".$row['mil_level'].",'".$row['mil_title']."',".$row['mil_scale'].")";
+        }
+        $sql = "INSERT IGNORE INTO ".self::TB_MIL."(".$sql_key.") values".implode(',', $sql_batch);
+
+        $query = $this->db->query($sql);
+        
+        if ($this->db->trans_status() === FALSE || count($levels) !== $this->db->affected_rows())
+        {
+            $this->db->trans_rollback();
+            return FALSE;
+        }
+        
+        $this->db->trans_commit();
+        
+        return TRUE;
+    }
+    
+    /**
+     * 取得單一顧問層級資料
+     * @param string $mil_name 顧問層級名稱
+     * @return array
+     */
+    public function ib_levels($mil_name){
+        $sql = "SELECT mil_seq, mil_name, mil_level, mil_title, mil_scale "
+                . "FROM ".self::TB_MIL." WHERE mil_name='".$mil_name."' AND expired = 0 ORDER BY mil_level ASC";
+ 
+        $query = $this->db->query($sql);
+        
+        if($query->num_rows() == 0){
+            return array();
+        }
+        
+        return $query->result_array();
     }
 }
