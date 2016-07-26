@@ -70,13 +70,6 @@
                 </button>
                 <!-- Header Navbar: style can be found in header.less -->
                 <nav class="navbar" role="navigation">
-                    <?php
-                    if(!$isMobile){
-                        ?>
-                        <a href="" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-                            <?php
-                        }
-                        ?>
                         <span class="sr-only">Toggle navigation</span>
                     </a>
                     <ul class="nav navbar-nav navbar-collapse pull-left collapse" id="navbar-collapse" aria-expanded="false">

@@ -57,6 +57,31 @@
         $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
             checkboxClass: 'icheckbox_minimal-blue',
             radioClass: 'iradio_minimal-blue'
+        })
+        .on('ifChecked', function(event) {
+            if(this.name != 'third_party_auth')
+                return;
+            BootstrapDialog.show({
+                type: BootstrapDialog.TYPE_WARNING,
+                title: '第三方授權條款',
+                message: '條款內容: brabrabra',
+                size: BootstrapDialog.SIZE_LARGE,
+                buttons: [{
+                    label: '同意',
+                    icon: 'glyphicon glyphicon-ok',
+                    cssClass: 'btn-info',
+                    action: function(dialog){
+                        dialog.close();
+                    }
+                }, {
+                    label: '不同意',
+                    icon: 'glyphicon glyphicon-remove',
+                    cssClass: 'btn-danger',
+                    action: function(dialog){
+                        dialog.close();
+                    }
+                }]
+            });
         });
 
         //back step
@@ -610,12 +635,11 @@ function form_step_3() {
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>
-                                <div class="icheckbox_minimal-blue" aria-checked="false" aria-disabled="false" style="position: relative;">
-                                    <input type="checkbox" class="minimal gallopRule" name="third_party_auth" style="position: absolute; opacity: 0;">
-                                    <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins>
+                                <div class="icheckbox_minimal-blue" aria-checked="false" aria-disabled="false">
+                                    <input type="checkbox" class="minimal gallopRule" name="third_party_auth">
                                 </div>
                             </label>
-                            授權第三方管理我的帳戶
+                            <span class="text-red" style="font-size: larger;"><strong>授權第三方管理我的帳戶</strong></span>
                             <div class="errorMsg"></div>
 
                         </div>
