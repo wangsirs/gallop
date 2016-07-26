@@ -20,6 +20,32 @@ $(document).ready(function() {
    $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
       checkboxClass: 'icheckbox_minimal-blue',
       radioClass: 'iradio_minimal-blue'
+   })
+   .on('ifChecked', function(event) {
+      if(this.name != 'follow_auth')
+          return;
+      BootstrapDialog.show({
+          type: BootstrapDialog.TYPE_WARNING,
+          title: '第三方授權條款',
+          message: '條款內容: brabrabra',
+          size: BootstrapDialog.SIZE_LARGE,
+          buttons: [{
+              label: '同意',
+              icon: 'glyphicon glyphicon-ok',
+              cssClass: 'btn-info',
+              action: function(dialog){
+                  dialog.close();
+              }
+          }, {
+              label: '不同意',
+              icon: 'glyphicon glyphicon-remove',
+              cssClass: 'btn-danger',
+              action: function(dialog){
+                  $('input[name=follow_auth').iCheck('uncheck');
+                  dialog.close();
+              }
+          }]
+      });
    });
    $("#clientTable").DataTable(GetDataTableAttrs());
    $('form.sub_mt4').validate({
@@ -105,8 +131,7 @@ $(document).ready(function() {
                         <div class="form-group">
                            <label></label>
                            <input type="checkbox" class="minimal gallopRule" name="follow_auth" value="1">
-                           <ins class="iCheck-helper"></ins>
-                           授權第三方管理我的帳戶
+                           <span class="text-red" style="font-size: larger;"><strong>授權第三方管理我的帳戶</strong></span>
                            <div class="errorMsg"></div>
                         </div>
                         <!-- /.form-group -->

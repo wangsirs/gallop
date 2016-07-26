@@ -78,6 +78,7 @@
                     icon: 'glyphicon glyphicon-remove',
                     cssClass: 'btn-danger',
                     action: function(dialog){
+                        $('input[name=third_party_auth').iCheck('uncheck');
                         dialog.close();
                     }
                 }]
@@ -572,10 +573,10 @@ function form_step_3() {
             <!-- /.box-header -->
             <div class="box-body">
                 <div class="row">
-                    <div class="col-xs-4 form-group">
+                    <div class="col-xs-4 form-group has-error">
                         <label for="inputEmail3" class="control-label">客戶專區登入帳號</label>
                     </div>
-                    <div class="col-xs-8 form-group">
+                    <div class="col-xs-8 form-group has-error">
                         <input type="text" id="client_e_mail" name="client_e_mail" class="form-control" placeholder="" disabled value="">
                     </div>
                 </div>

@@ -11,7 +11,7 @@ $lang['menu_cli_reg'] = '客戶開戶';
 $lang['menu_info'] = '基本資料';
 $lang['menu_profile'] = '人事資料';
 $lang['menu_profile_full'] = '顧問人事資料';
-$lang['menu_change_pw'] = '密碼變更';
+$lang['menu_change_pw'] = '密碼變更 (登入密碼)';
 $lang['menu_promotion'] = '晉升紀錄';
 
 $lang['menu_client'] = '人員管理';
