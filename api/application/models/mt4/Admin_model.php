@@ -67,6 +67,19 @@ class admin_model extends CI_Model{
         return $list;
     }
     
+    public function symbol_plan_detail($msp_id){
+        $sql = "SELECT * "
+                . "FROM ".self::TB_MSP." WHERE msp_id = '".$msp_id."' AND expired = 0 ORDER BY security_group ASC, msp_volume_min ASC";
+ 
+        $query = $this->db->query($sql);
+        
+        if($query->num_rows() == 0){
+            return array();
+        }
+        
+        return $query->result_array();        
+    }
+    
     /**
      * 取得未拋上手的 A book 群組
      * @return array
@@ -113,6 +126,22 @@ class admin_model extends CI_Model{
         return TRUE;
     }
     
+    /**
+     * 產 IB 層級編號
+     * @return int
+     */
+    private function _gen_mil_id(){
+        $sql = "SELECT mil_id "
+                . "FROM ".self::TB_MIL." WHERE expired = 0 GROUP BY mil_id ORDER BY mil_id DESC LIMIT 1";
+ 
+        $query = $this->db->query($sql);
+        
+        if($query->num_rows() == 0){
+            return 1;
+        }
+        
+        return intval($query->row()->mil_id) + 1;
+    }
     
     /**
      * 新增顧問層級
@@ -123,11 +152,13 @@ class admin_model extends CI_Model{
     public function add_ib_levels($mil_name, $levels){
         $this->db->trans_start();
         
-        $sql_key = "mil_name,mil_level,mil_title,mil_scale";
+        $mil_id = $this->_gen_mil_id();
+                
+        $sql_key = "mil_id,mil_name,mil_level,mil_title,mil_scale";
         
         $sql_batch = array();
         foreach($levels as $row){
-            $sql_batch[] = "('".$mil_name."',".$row['mil_level'].",'".$row['mil_title']."',".$row['mil_scale'].")";
+            $sql_batch[] = "(".$mil_id.",'".$mil_name."',".$row['mil_level'].",'".$row['mil_title']."',".$row['mil_scale'].")";
         }
         $sql = "INSERT IGNORE INTO ".self::TB_MIL."(".$sql_key.") values".implode(',', $sql_batch);
 
@@ -146,12 +177,66 @@ class admin_model extends CI_Model{
     
     /**
      * 取得單一顧問層級資料
+     * @param int $mil_id 顧問層級方案編號
+     * @return array
+     */
+    public function ib_levels($mil_id){
+        $sql = "SELECT mil_id, mil_name, mil_level, mil_title, mil_scale "
+                . "FROM ".self::TB_MIL." WHERE mil_id='".$mil_id."' AND expired = 0 ORDER BY mil_level DESC";
+ 
+        $query = $this->db->query($sql);
+        
+        if($query->num_rows() == 0){
+            return array();
+        }
+        
+        $re = array();
+        foreach($query->result_array() as $row){
+            $re['mil_id'] = $row['mil_id'];
+            $re['mil_name'] = $row['mil_name'];
+            $re['levels'][] = array(
+                'mil_title' => $row['mil_title'],
+                'mil_level' => intval($row['mil_level']),
+                'mil_scale' => floatval($row['mil_scale']));
+        }
+        
+        return $re;
+    }
+    
+    /**
+     * 取得單一顧問層級資料
      * @param string $mil_name 顧問層級名稱
      * @return array
      */
-    public function ib_levels($mil_name){
-        $sql = "SELECT mil_seq, mil_name, mil_level, mil_title, mil_scale "
-                . "FROM ".self::TB_MIL." WHERE mil_name='".$mil_name."' AND expired = 0 ORDER BY mil_level ASC";
+    public function ib_levels_by_name($mil_name){
+        $sql = "SELECT mil_id, mil_name, mil_level, mil_title, mil_scale "
+                . "FROM ".self::TB_MIL." WHERE mil_name='".$mil_name."' AND expired = 0 ORDER BY mil_level DESC";
+ 
+        $query = $this->db->query($sql);
+        
+        if($query->num_rows() == 0){
+            return array();
+        }
+        
+        $re = array();
+        foreach($query->result_array() as $row){
+            $re['mil_id'] = $row['mil_id'];
+            $re['mil_name'] = $row['mil_name'];
+            $re['levels'][] = array(
+                'mil_title' => $row['mil_title'],
+                'mil_level' => intval($row['mil_level']),
+                'mil_scale' => floatval($row['mil_scale']));
+        }
+        
+        return $re;
+    }
+    
+    /**
+     * 取得所有顧問層級方案
+     * @return array
+     */
+    public function list_ib_level_plan(){
+        $sql = "SELECT mil_id, mil_name FROM ".self::TB_MIL." WHERE expired = 0 GROUP BY mil_id";
  
         $query = $this->db->query($sql);
         

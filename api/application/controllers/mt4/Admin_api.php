@@ -284,7 +284,7 @@ class admin_api extends REST_Controller {
             return FALSE;
         }
            
-        if( ! empty($this->admin_model->ib_levels($mil_name))){
+        if( ! empty($this->admin_model->ib_levels_by_name($mil_name))){
             $this->set_response('This mil_name is exist.', 202);
             return FALSE;
         }
@@ -335,6 +335,41 @@ class admin_api extends REST_Controller {
         }else{
             $this->set_response('OK', REST_Controller::HTTP_OK);
         }
+    }
+    
+    /**
+     * 取得 IB 層級資料
+     * @param int $mil_id 層級方案編號
+     * @return array
+     */    
+    public function ib_levels_post(){
+        $mil_id = $this->post('mil_id');
+        
+        if(empty($mil_id)){
+            $this->set_response('mil_id is required.', 201);
+            return FALSE;
+        }
+           
+        $levels = $this->admin_model->ib_levels($mil_id);
+        if(empty($levels)){
+            $this->set_response('This mil_name not exist.', 301);
+            return FALSE;
+        }
+        
+        $this->set_response($levels, REST_Controller::HTTP_OK);
+    }
+    
+    /**
+     * 取得所有顧問層級方案
+     */
+    public function list_ib_level_plan_post(){
+        $plans = $this->admin_model->list_ib_level_plan();
+        if(empty($plans)){
+            $this->set_response('IB level plan is empty.', 301);
+            return FALSE;
+        }
+        
+        $this->set_response($plans, REST_Controller::HTTP_OK);
     }
     
     public function task_ib_level_post(){
