@@ -50,7 +50,8 @@ INSERT INTO `phone_code` (`country`, `territory`, `code`) VALUES
 ('PH', 'ph', '+63'),
 ('SG', 'sg', '+65'),
 ('TW', 'tw', '+886'),
-('VN', 'vn', '+84');
+('VN', 'vn', '+84'),
+('JP', 'jp', '+81');
 
 --
 -- 已匯出資料表的索引

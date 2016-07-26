@@ -15,6 +15,7 @@ $lang['ct_ph'] = 'Philippines';
 $lang['ct_sg'] = 'Singapore';
 $lang['ct_tw'] = 'Taiwan';
 $lang['ct_vn'] = 'Vietnam';
+$lang['ct_jp'] = 'Japan';
 
 $lang['pc_au'] = 'Australia';
 $lang['pc_aat'] = 'Australian Antarctic Territory';
@@ -30,3 +31,4 @@ $lang['pc_ph'] = 'Philippines';
 $lang['pc_sg'] = 'Singapore';
 $lang['pc_tw'] = 'Taiwan';
 $lang['pc_vn'] = 'Vietnam';
+$lang['pc_jp'] = 'Japan';

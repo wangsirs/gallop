@@ -38,6 +38,7 @@ CREATE TABLE `country` (
 INSERT INTO `country` (`country`, `lang`) VALUES
 ('AU', 'en'),
 ('CN', 'zh-cn'),
+('JP', 'en'),
 ('HK', 'en'),
 ('ID', 'en'),
 ('MO', 'zh-tw'),

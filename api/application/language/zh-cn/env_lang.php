@@ -15,6 +15,7 @@ $lang['ct_ph'] = '菲律宾';
 $lang['ct_sg'] = '新加坡';
 $lang['ct_tw'] = '台湾';
 $lang['ct_vn'] = '越南';
+$lang['ct_jp'] = '日本';
 
 $lang['pc_au'] = '澳大利亚';
 $lang['pc_aat'] = '南极洲领地(澳大利亚)';
@@ -30,3 +31,4 @@ $lang['pc_ph'] = '菲律宾';
 $lang['pc_sg'] = '新加坡';
 $lang['pc_tw'] = '台湾';
 $lang['pc_vn'] = '越南';
+$lang['pc_jp'] = '日本';

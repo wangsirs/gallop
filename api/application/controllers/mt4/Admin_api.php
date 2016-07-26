@@ -221,19 +221,19 @@ class admin_api extends REST_Controller {
     
     /**
      * 還原 mt4 user group
-     * @param string $msp_id 群組名稱
+     * @param string $group_name 群組名稱
      * @return boolean
      */
     public function revert_mt4_user_group_post(){
-        $msp_id = $this->post('msp_id');
+        $group_name = $this->post('group_name');
         
-        if(empty($msp_id)){
+        if(empty($group_name)){
             $this->set_response('msp_id is required.', 201);
             return FALSE;
         }
         
         include_once APPPATH.'libraries/Mt4_share_lib.php';
-        $err = mt4_share_lib::revert_mt4_user_group($msp_id);
+        $err = mt4_share_lib::revert_mt4_user_group($group_name);
         if( !empty($err)){
             $this->set_response($err, 301);
             return FALSE;
