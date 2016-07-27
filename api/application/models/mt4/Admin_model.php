@@ -13,6 +13,10 @@ class admin_model extends CI_Model{
     const ABOOK_DONE = 1;
     const ABOOK_NONEED = 2;
     
+    const ORG_ST_DISABLE = 0;
+    const ORG_ST_ENABLE = 1;
+    const ORG_ST_UNCOMPLETED = 2;
+        
     function __construct()
     {
         parent::__construct();
@@ -245,5 +249,44 @@ class admin_model extends CI_Model{
         }
         
         return $query->result_array();
+    }
+    
+    /**
+     * 新增組織
+     * @param array $ib 顧問資料
+     * @param array $org 組織資料
+     * @param string $msp_id 共用的佣金群組編號
+     * @param int $mil_id 顧問階級編號
+     * @param array $symbol_plan 私有的佣金群組資料(非必要)
+     */
+    public function add_org($ib, $org, $msp_id, $mil_id, $symbol_plan = array()){
+        
+        $this->db->trans_start();
+        //新增 IB --------------------------------------------------------------
+        include_once APPPATH.'libraries/Ib_share_lib.php';
+        ib_share_lib::add_ib_model($ib, $this->db);
+        
+        //新增私有 佣金群組 ------------------------------------------------------
+        $err_msg = mt4_share_lib::add_symbol_plan($symbol_plan, $this->db);
+        if( ! empty($err_msg)){
+            return $err_msg;
+        }
+        
+        
+        //新增 組織 -------------------------------------------------------------
+//        $this->db->set();
+        
+        
+        if ($this->db->trans_status() === FALSE)
+        {
+            $this->db->trans_rollback();
+            return FALSE;
+        }
+        else
+        {
+            $this->db->trans_commit();
+        }
+        
+        return '';
     }
 }
