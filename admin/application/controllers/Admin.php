@@ -25,6 +25,13 @@ class admin extends CI_Controller {
         load_frame( __CLASS__, __FUNCTION__, $data, FALSE, __FUNCTION__.'_view');
     }
 
+    public function rd_monitor(){
+        $this->load->library('api_lib');
+        $api_re = $this->api_lib->call_api(API_PATH.'/mt4/admin_api/get_user_group_report', json_encode(array()));
+        $data = array('content' => ($api_re['status'] === TRUE) ? $api_re['data'] : array());
+        load_frame( __CLASS__, __FUNCTION__, $data);
+    }
+
     public function io_transfer(){
         $data = array();
         if( ! empty($post = $this->input->post())){
