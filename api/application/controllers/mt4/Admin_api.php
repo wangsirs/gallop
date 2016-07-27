@@ -227,7 +227,7 @@ class admin_api extends REST_Controller {
         $group_name = $this->post('group_name');
         
         if(empty($group_name)){
-            $this->set_response('msp_id is required.', 201);
+            $this->set_response('group_name is required.', 201);
             return FALSE;
         }
         
