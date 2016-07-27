@@ -21,9 +21,8 @@
     <link href="<?=ASSETS_CSS?>linecons.css" rel="stylesheet" type="text/css">
     <!--引用兼容ie bootstrap ui css-->
     <link href="<?=ASSETS_CSS?>bootstrap-ie7.css" rel="stylesheet" type="text/css" media="all" />
-    <!--引用最新編譯和最佳化的 bootstrap3.0 CSS-->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/<?=ASSETS_CSS?>bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
-
+    <!--引用兼容ie bootstrap ui css-->
+    <link href="<?=ASSETS_JS?>plugins/loadMask/jquery.loadmask.css" rel="stylesheet" type="text/css" media="all" />
     <!--自寫 css-->
     <link href="<?=ASSETS_CSS?>common.css" rel="stylesheet" type="text/css">
     <link href="<?=ASSETS_CSS?>menu.css" rel="stylesheet" type="text/css">
@@ -86,18 +85,79 @@
                                             <td class="txtC vertical_Align">Web點差</td>
                                             <td class="txtC vertical_Align">MT4點差</td>
                                             <td class="txtC vertical_Align">功能</td>
-                                        </tr>								                                    <?php 
+                                        </tr>  <?php 
                                         if( ! empty($content)){
                                             foreach($content as $key => $val){
                                                 if($key === 'diff'){
                                                     foreach($val as $val2){
                                                         ?>
                                                         <tr>
-                                                        <td class="txtC vertical_Align"><?=$val2['group'];?></td>
+                                                        <td class="txtC vertical_Align"
+                                                        <?php 
+                                                        if(isset($val2['err']['enable'])){
+                                                            echo 'style="background-color:';
+                                                        switch ($val2['err']['enable']) {
+                                                            case 'info':
+                                                                echo '#5ac65a';
+                                                                break;
+                                                            case 'warning':
+                                                                    echo '#f1f11c';
+                                                                    break;
+                                                            case 'error':
+                                                                    echo 'red';
+                                                                    break;
+                                                            case 'revert':
+                                                                    echo '#f790ce';
+                                                                    break;
+                                                            default:
+                                                                # code...
+                                                                break;
+                                                        }}?>"><?=$val2['group'];?></td>
                                                         <td class="txtC vertical_Align"><?=$val2['sec'];?></td>
-                                                        <td class="txtC vertical_Align"><?=$val2['web']['scale'];?></td>
-                                                        <td class="txtC vertical_Align"><?=$val2['web']['spread'];?></td>
-                                                        <td class="txtC vertical_Align"><?=$val2['mt4']['spread'];?></td>
+                                                        <td class="txtC vertical_Align" 
+                                                        <?php 
+                                                        if(isset($val2['err']['scale'])){
+                                                            echo 'style="background-color:';
+                                                        switch ($val2['err']['scale']) {
+                                                            case 'info':
+                                                                echo '#5ac65a';
+                                                                break;
+                                                            case 'warning':
+                                                                    echo '#f1f11c';
+                                                                    break;
+                                                            case 'error':
+                                                                    echo 'red';
+                                                                    break;
+                                                            case 'revert':
+                                                                    echo '#f790ce';
+                                                                    break;
+                                                            default:
+                                                                # code...
+                                                                break;
+                                                        }}?>"><?=isset($val2['web']['scale'])?$val2['web']['scale'] : 0;?></td>
+                                                        <td class="txtC vertical_Align"><?=isset($val2['web']['spread'])? $val2['web']['spread']: 0;?></td>
+                                                        <td class="txtC vertical_Align"
+                                                        <?php 
+                                                        if(isset($val2['err']['spread'])){
+                                                            echo 'style="background-color:';
+                                                        switch ($val2['err']['spread']) {
+                                                            case 'info':
+                                                               echo '#5ac65a';
+                                                                break;
+                                                            case 'warning':
+                                                                    echo '#f1f11c';
+                                                                    break;
+                                                            case 'error':
+                                                                    echo 'red';
+                                                                    break;
+                                                            case 'revert':
+                                                                    echo '#f790ce';
+                                                                    break;
+                                                            default:
+                                                                # code...
+                                                                break;
+                                                        }}?>
+                                                        "><?=$val2['mt4']['spread'];?></td>
                                                         <td class="txtC vertical_Align">
                                                             <div class="btn_Position">
                                                                 <a class="btn btn-info btn_sm_Width Gradient_Brown" onclick="javascript:restore('<?=$val2['group'];?>');">還原</a>
@@ -149,24 +209,24 @@
 
 <!--引用最新編譯和最佳化的bootstrap CDN jQuery-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?=ASSETS_JS?>plugins/loadMask/jquery.loadmask.min.js"></script>
 
 <script type="text/javascript">
        function GetCount(leftSecs, iid) {
-          if (leftSecs <= 1) { //過了該時間
+          if (leftSecs <= 0) { //過了該時間
              leftSecs = 180;
-          } else { //時間還沒到
-             out = "";
-             copyLeft = leftSecs;
-             mins = Math.floor(copyLeft / 60); //分
-             secs = Math.floor(copyLeft % 60); //秒
-             out += mins + "分";
-             out += secs + "秒";
-
-             $(iid).text(out);
-             setTimeout(function() {
-                GetCount(--leftSecs, iid)
-             }, 1000);
           }
+         out = "";
+         copyLeft = leftSecs;
+         mins = Math.floor(copyLeft / 60); //分
+         secs = Math.floor(copyLeft % 60); //秒
+         out += mins + "分";
+         out += secs + "秒";
+
+         $(iid).text(out);
+         setTimeout(function() {
+            GetCount(--leftSecs, iid)
+         }, 1000);
       }
 
    window.onload = function() {
@@ -191,12 +251,14 @@
    }
 
    function refreshTimer(){
+        $('body').mask('更新資料中...');
         $.ajax({
             url: '/admin/rd_monitor',
             type: 'POST',
             data: {action : 'refresh'},
             dataType: 'json',
             success: function(resp){
+                $('body').unmask();
                 if(resp.status){
                 location.href = '/admin/rd_monitor';
                 }

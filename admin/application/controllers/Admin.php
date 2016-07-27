@@ -34,10 +34,10 @@ class admin extends CI_Controller {
                 $data = array('status' => $api_re['status'] === TRUE?TRUE:FALSE);
                 die(json_encode($data));
             }else{
-                $param = array('msp_id' => $post['group']);
+                $param = array('group_name' => $post['group']);
                 $api_re = $this->api_lib->call_api(API_PATH.'/mt4/admin_api/revert_mt4_user_group', json_encode($param));
-                var_dump($api_re);
-                $data = array('status' => $api_re['status'] === TRUE?TRUE:FALSE);
+                $this->api_lib->call_api(API_PATH.'/mt4/admin_api/chk_user_group', json_encode(array()));
+                $data = array('status' => TRUE);
                 die(json_encode($data));
             }
         }
