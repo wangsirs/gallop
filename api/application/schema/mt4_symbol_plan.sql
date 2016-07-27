@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `mt4_symbol_plan` (
   `msp_seq` int(8) UNSIGNED NOT NULL COMMENT '流水號',
-  `msp_id` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'MT4商品編號',
+  `msp_id` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '佣金方案名稱',
   `security_group` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '商品群組',
   `msp_scale` double UNSIGNED NOT NULL DEFAULT '0' COMMENT '佣金',
   `msp_spread` double UNSIGNED NOT NULL DEFAULT '0' COMMENT '點差',

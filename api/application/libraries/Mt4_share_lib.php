@@ -98,23 +98,26 @@ class mt4_share_lib {
     
     /**
      * 新增佣金群組
-     * @param string $app 應用程式名稱
-     * @param string $app_uid 應用程式客戶編號
      * @param array $data 資料
-     * @param array $db
+     * @param object $db pdo (非必要)
      */
-    static public function add_symbol_plan(&$data){
-        $CI = &get_instance();
-        $CI->load->database();
+    static public function add_symbol_plan(&$data, &$db = null){
+        if( ! is_null($db)){
+            $_db = &$db;
+        }else{
+            $CI = &get_instance();
+            $CI->load->database();
+            $_db = &$CI->db;
+        }
         
-        $CI->db->select('*');
-        $CI->db->where('msp_id', $data[0]['msp_id']);
-        $query = $CI->db->get(self::TB_MSP);
+        $_db->select('*');
+        $_db->where('msp_id', $data[0]['msp_id']);
+        $query = $_db->get(self::TB_MSP);
         if($query->num_rows() > 0){
             return 'group data exist.';
         }
         
-        $CI->db->trans_start();
+        $_db->trans_start();
         
         $sql_key = "msp_id,security_group,msp_scale,msp_spread,msp_volume_min,msp_volume_max";
         
@@ -126,11 +129,11 @@ class mt4_share_lib {
         }
         $sql = "INSERT IGNORE INTO ".self::TB_MSP."(".$sql_key.") values".implode(',', $sql_batch);
 
-        $query = $CI->db->query($sql);
+        $query = $_db->query($sql);
         
-        if ($CI->db->trans_status() === FALSE || count($data) !== $CI->db->affected_rows())
+        if ($_db->trans_status() === FALSE || count($data) !== $_db->affected_rows())
         {
-            $CI->db->trans_rollback();
+            $_db->trans_rollback();
             return 'insert db failed.';
         }
         
@@ -142,7 +145,7 @@ class mt4_share_lib {
 		$mt4_re = $mt4_com->add_group('B_'.$data[0]['msp_id'], $symbol_group, '', 1);        
         if( (int)$mt4_re['status'] !== mt4_com_lib::RET_SUCCESS){
             //這批有錯就直接復原並且終止
-            $CI->db->trans_rollback();
+            $_db->trans_rollback();
             return 'mt4_com add_group failed.'.$mt4_re['status'];
         }
         
@@ -153,7 +156,10 @@ class mt4_share_lib {
             logger_err(__CLASS__, __FUNCTION__, 'Create MT4 user group part failed:'.'A_'.$data[0]['msp_id'].', mt4_re:'.$mt4_re['status']);
         }
         
-        $CI->db->trans_commit();
+        //若從外部送 pdo object，就不直接 commit
+        if(is_null($db)){
+            $_db->trans_commit();
+        }
         
         return '';
         

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機: localhost
--- 產生時間： 2016 年 07 月 27 日 00:14
+-- 產生時間： 2016 年 07 月 27 日 16:03
 -- 伺服器版本: 5.7.13
 -- PHP 版本： 7.0.8-3+deb.sury.org~trusty+1
 
@@ -39,14 +39,10 @@ CREATE TABLE `mt4_ib_level` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='MT4顧問層級';
 
 --
--- 已匯出資料表的索引
---
-
---
 -- 資料表索引 `mt4_ib_level`
 --
 ALTER TABLE `mt4_ib_level`
-  ADD PRIMARY KEY (`mil_id`);
+  ADD PRIMARY KEY (`mil_id`,`mil_level`,`extime`,`expired`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

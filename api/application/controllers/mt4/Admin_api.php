@@ -23,14 +23,6 @@ class admin_api extends REST_Controller {
                 
         $this->load->model($this->_app_id.'/admin_model');        
     }  
-        
-    /**
-     * 新增大IB
-     */
-    public function add_org(){
-        
-        //新增佣金群組
-    }
     
     /**
      * 新增佣金群組
@@ -270,9 +262,9 @@ class admin_api extends REST_Controller {
     }
     
     /**
-     * 新增顧問層級
-     * @param string $mil_name 層級方案名稱
-     * @param array $levels 層級清單(mil_level=等級n~1, mil_title=職級稱號, mil_scale=佣金比例) 
+     * 新增顧問階級
+     * @param string $mil_name 階級方案名稱
+     * @param array $levels 階級清單(mil_level=等級n~1, mil_title=職級稱號, mil_scale=佣金比例) 
      * @return boolean
      */
     public function add_ib_level_post(){
@@ -338,8 +330,8 @@ class admin_api extends REST_Controller {
     }
     
     /**
-     * 取得 IB 層級資料
-     * @param int $mil_id 層級方案編號
+     * 取得 IB 階級資料
+     * @param int $mil_id 階級方案編號
      * @return array
      */    
     public function ib_levels_post(){
@@ -360,7 +352,7 @@ class admin_api extends REST_Controller {
     }
     
     /**
-     * 取得所有顧問層級方案
+     * 取得所有顧問階級方案
      */
     public function list_ib_level_plan_post(){
         $plans = $this->admin_model->list_ib_level_plan();
@@ -382,5 +374,61 @@ class admin_api extends REST_Controller {
     
     public function ib_level_task_post(){
         
+    }
+       
+    /**
+     * 新增大IB
+     */
+    public function add_org_post(){
+        $ib = $this->post('ib');
+        $org = $this->post('org');
+        $symbol_plan = $this->post('symbol_plan');
+        $msp_id = $this->post('msp_id');
+        $mil_id = $this->post('mil_id');
+        
+        //檢查 IB 資料 ----------------------------------------------------------
+        include_once APPPATH.'libraries/Ib_share_lib.php';
+        list($err_msg, $ib) = ib_share_lib::add_ib_chk($ib);
+        if( ! empty($err_msg)){
+            $this->set_response($err_msg, 201);
+            return FALSE;
+        }
+        
+        //檢查 組織 資料 --------------------------------------------------------
+        if( ! in_array($org['approve'], array(admin_model::ORG_ST_DISABLE, admin_model::ORG_ST_ENABLE, admin_model::ORG_ST_UNCOMPLETED))){
+            $this->set_response('Approve value range have to in 0~2:'.$org['approve'], 202);
+            return FALSE;
+        }
+        
+        //檢查佣金群組資料 -------------------------------------------------------
+        if( ! empty($symbol_plan)){
+            include_once APPPATH.'libraries/Mt4_share_lib.php';
+            list($err_msg, $symbol_plan) = mt4_share_lib::add_symbol_plan_chk($symbol_plan);
+            if( ! empty($err_msg)){
+                $this->set_response($err_msg, 203);
+                return FALSE;
+            }
+        }else{
+            $symbol_plan = array();
+            if(empty($msp_id)){
+                $this->set_response('msp_id or symbol_plan is required.', 203);
+                return FALSE;
+            }
+        }
+        
+        //檢查階級資料 ----------------------------------------------------------
+        if(empty($mil_id)){
+            $this->set_response('mil_id is required.', 203);
+            return FALSE;
+        }
+        
+        //寫入
+        $msg = $this->admin_model->add_org($ib, $org, $msp_id, $mil_id, $symbol_plan);
+        if( ! empty($msg)){
+            $this->set_response($msg, 301);
+            return FALSE;
+        }
+        
+        $this->set_response('OK', REST_Controller::HTTP_OK);
     }
 }
