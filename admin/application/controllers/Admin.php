@@ -27,6 +27,20 @@ class admin extends CI_Controller {
 
     public function rd_monitor(){
         $this->load->library('api_lib');
+        if( ! empty($this->input->post())){
+            $post = $this->input->post();
+            if($post['action'] == 'refresh'){
+                $api_re = $this->api_lib->call_api(API_PATH.'/mt4/admin_api/chk_user_group', json_encode(array()));
+                $data = array('status' => $api_re['status'] === TRUE?TRUE:FALSE);
+                die(json_encode($data));
+            }else{
+                $param = array('msp_id' => $post['group']);
+                $api_re = $this->api_lib->call_api(API_PATH.'/mt4/admin_api/revert_mt4_user_group', json_encode($param));
+                var_dump($api_re);
+                $data = array('status' => $api_re['status'] === TRUE?TRUE:FALSE);
+                die(json_encode($data));
+            }
+        }
         $api_re = $this->api_lib->call_api(API_PATH.'/mt4/admin_api/get_user_group_report', json_encode(array()));
         $data = array('content' => ($api_re['status'] === TRUE) ? $api_re['data'] : array());
         load_frame( __CLASS__, __FUNCTION__, $data);

@@ -61,7 +61,7 @@
                     <div class="col-sm-12 padding0">
                         <!--button start--> 	
                         <div class="btn_Position rig">
-                            <a class="btn btn-info btn_sm_Width Gradient_Brown" id="" href="#">刷新時間</a>
+                            <a class="btn btn-info btn_sm_Width Gradient_Brown" id="" onclick="javascript:refreshTimer();">刷新時間</a>
                         </div>
                         <div class="clr"></div>
                         <div class="rig" style="font-size:1em;padding-right: 14px;padding-bottom: 10px;">時間倒數：<span class="leftTime" style="font-size:1.5em;background-color:#eee;display: inline-block;color:#FF0105;font-weight:600;"></span></div>
@@ -100,7 +100,7 @@
                                                         <td class="txtC vertical_Align"><?=$val2['mt4']['spread'];?></td>
                                                         <td class="txtC vertical_Align">
                                                             <div class="btn_Position">
-                                                                <a class="btn btn-info btn_sm_Width Gradient_Brown" onclick="javascript:restore();">還原</a>
+                                                                <a class="btn btn-info btn_sm_Width Gradient_Brown" onclick="javascript:restore('<?=$val2['group'];?>');">還原</a>
                                                             </div>
                                                         </td>
                                                         </tr>
@@ -152,7 +152,7 @@
 
 <script type="text/javascript">
        function GetCount(leftSecs, iid) {
-          if (leftSecs < 0) { //過了該時間
+          if (leftSecs <= 1) { //過了該時間
              leftSecs = 180;
           } else { //時間還沒到
              out = "";
@@ -173,13 +173,33 @@
       GetCount(180, '.leftTime');
    };
 
-   function restore(){
+   function restore(group){
         $.ajax({
-            url: '/admin/rd_monior',
+            url: '/admin/rd_monitor',
             type: 'POST',
+            data: {action : 'restore', group :group },
             dataType: 'json',
             success: function(resp){
+                if(resp.status){
                 alert('還原成功!');
+                location.href = '/admin/rd_monitor';
+                }else{
+                    alert('還原失敗!');
+                }
+            }
+        })
+   }
+
+   function refreshTimer(){
+        $.ajax({
+            url: '/admin/rd_monitor',
+            type: 'POST',
+            data: {action : 'refresh'},
+            dataType: 'json',
+            success: function(resp){
+                if(resp.status){
+                location.href = '/admin/rd_monitor';
+                }
             }
         })
    }
